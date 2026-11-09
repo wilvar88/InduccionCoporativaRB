@@ -497,6 +497,10 @@ const IDB_VERSION = 2;
 const IDB_STORE = 'custom_subtemas';
 const IDB_STORE_MEMORIA = 'memoria_json_store';
 
+// Mapa en memoria con todos los contenidos personalizados de temas (sincronizado con memoria-progreso.json)
+let customSubtemasCache = {};
+let contenidosDesdeArchivoJson = {};
+
 function abrirIndexedDB() {
     return new Promise((resolve) => {
         if (!window.indexedDB) {
@@ -518,10 +522,44 @@ function abrirIndexedDB() {
     });
 }
 
+async function guardarFileHandleEnIDB(handle) {
+    const db = await abrirIndexedDB();
+    if (!db || !db.objectStoreNames.contains(IDB_STORE_MEMORIA)) return;
+    return new Promise((resolve) => {
+        try {
+            const tx = db.transaction(IDB_STORE_MEMORIA, 'readwrite');
+            tx.objectStore(IDB_STORE_MEMORIA).put({ id: 'handle_archivo_memoria_json', handle });
+            tx.oncomplete = () => resolve(true);
+            tx.onerror = () => resolve(false);
+        } catch (e) {
+            resolve(false);
+        }
+    });
+}
+
+async function obtenerFileHandleDeIDB() {
+    const db = await abrirIndexedDB();
+    if (!db || !db.objectStoreNames.contains(IDB_STORE_MEMORIA)) return null;
+    return new Promise((resolve) => {
+        try {
+            const tx = db.transaction(IDB_STORE_MEMORIA, 'readonly');
+            const req = tx.objectStore(IDB_STORE_MEMORIA).get('handle_archivo_memoria_json');
+            req.onsuccess = () => resolve(req.result && req.result.handle ? req.result.handle : null);
+            req.onerror = () => resolve(null);
+        } catch (e) {
+            resolve(null);
+        }
+    });
+}
+
 async function guardarSubtemaCustomEnDB(colIndex, customData) {
+    const numCol = Number(colIndex);
+    const record = { ...customData, colIndex: numCol };
+    customSubtemasCache[numCol] = record;
+
     try {
         const metaMap = JSON.parse(localStorage.getItem('rb_custom_subtemas_v2') || '{}');
-        metaMap[colIndex] = customData;
+        metaMap[numCol] = record;
         localStorage.setItem('rb_custom_subtemas_v2', JSON.stringify(metaMap));
     } catch (e) {}
 
@@ -530,16 +568,20 @@ async function guardarSubtemaCustomEnDB(colIndex, customData) {
     return new Promise((resolve) => {
         const tx = db.transaction(IDB_STORE, 'readwrite');
         const store = tx.objectStore(IDB_STORE);
-        store.put({ colIndex, ...customData });
+        store.put(record);
         tx.oncomplete = () => resolve(true);
         tx.onerror = () => resolve(false);
     });
 }
 
 async function eliminarSubtemaCustomDeDB(colIndex) {
+    const numCol = Number(colIndex);
+    delete customSubtemasCache[numCol];
+    delete contenidosDesdeArchivoJson[numCol];
+
     try {
         const metaMap = JSON.parse(localStorage.getItem('rb_custom_subtemas_v2') || '{}');
-        delete metaMap[colIndex];
+        delete metaMap[numCol];
         localStorage.setItem('rb_custom_subtemas_v2', JSON.stringify(metaMap));
     } catch (e) {}
 
@@ -548,22 +590,45 @@ async function eliminarSubtemaCustomDeDB(colIndex) {
     return new Promise((resolve) => {
         const tx = db.transaction(IDB_STORE, 'readwrite');
         const store = tx.objectStore(IDB_STORE);
-        store.delete(colIndex);
+        store.delete(numCol);
         tx.oncomplete = () => resolve(true);
         tx.onerror = () => resolve(false);
     });
 }
 
+function esRegistroMasReciente(incoming, existing) {
+    if (!existing) return true;
+    if (!incoming) return false;
+    if (incoming.updatedAt && existing.updatedAt) {
+        return new Date(incoming.updatedAt).getTime() >= new Date(existing.updatedAt).getTime();
+    }
+    return true;
+}
+
 async function cargarTodosSubtemasCustomDeDB() {
     const customMap = {};
 
+    // 1. Cargar primero los contenidos incluidos en memoria-progreso.js / memoria-progreso.json del proyecto
+    Object.keys(contenidosDesdeArchivoJson).forEach(k => {
+        const numCol = Number(k);
+        if (numCol && contenidosDesdeArchivoJson[k]) {
+            customMap[numCol] = { ...contenidosDesdeArchivoJson[k], colIndex: numCol };
+        }
+    });
+
+    // 2. Fusionar con localStorage (si el registro local es más reciente o no existía en el archivo)
     try {
         const lsData = JSON.parse(localStorage.getItem('rb_custom_subtemas_v2') || '{}');
         Object.keys(lsData).forEach(k => {
-            customMap[k] = lsData[k];
+            const numCol = Number(k);
+            const item = lsData[k];
+            if (numCol && item && esRegistroMasReciente(item, customMap[numCol])) {
+                customMap[numCol] = { ...item, colIndex: numCol };
+            }
         });
     } catch (e) {}
 
+    // 3. Fusionar con IndexedDB (soporta archivos pesados HTML/PDF/Video y respeta la fecha más reciente)
     const db = await abrirIndexedDB();
     if (db) {
         await new Promise((resolve) => {
@@ -573,7 +638,10 @@ async function cargarTodosSubtemasCustomDeDB() {
             req.onsuccess = () => {
                 if (Array.isArray(req.result)) {
                     req.result.forEach(item => {
-                        customMap[item.colIndex] = item;
+                        const numCol = Number(item.colIndex);
+                        if (numCol && esRegistroMasReciente(item, customMap[numCol])) {
+                            customMap[numCol] = { ...item, colIndex: numCol };
+                        }
                     });
                 }
                 resolve();
@@ -581,6 +649,13 @@ async function cargarTodosSubtemasCustomDeDB() {
             req.onerror = () => resolve();
         });
     }
+
+    customSubtemasCache = customMap;
+
+    // Sincronizar localStorage con el mapa unificado
+    try {
+        localStorage.setItem('rb_custom_subtemas_v2', JSON.stringify(customSubtemasCache));
+    } catch (e) {}
 
     CATALOGO_MODULOS = JSON.parse(JSON.stringify(CATALOGO_MODULOS_BASE));
     CATALOGO_MODULOS.forEach(mod => {
@@ -596,6 +671,7 @@ async function cargarTodosSubtemasCustomDeDB() {
                     fileName: custom.fileName || null,
                     audio: custom.audio !== undefined ? custom.audio : st.audio,
                     popup: custom.popup !== undefined ? custom.popup : st.popup,
+                    updatedAt: custom.updatedAt || null,
                     isCustomized: true
                 };
             }
@@ -604,47 +680,123 @@ async function cargarTodosSubtemasCustomDeDB() {
 }
 
 // =============================================================================
-// SISTEMA DE MEMORIA .JSON PARA COLABORADORES (INGRESOS, AVANCE, MÓDULO Y TEMA ACTUAL)
+// SISTEMA DE MEMORIA .JSON EN LA NUBE (GITHUB + VERCEL API + LOCAL)
 // =============================================================================
+const GITHUB_REPO_OWNER = 'wilvar88';
+const GITHUB_REPO_NAME = 'InduccionCoporativaRB';
+const GITHUB_REPO_BRANCH = 'main';
+const GITHUB_API_MEMORIA_URL = `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/memoria-progreso.json`;
+
+function utf8ToBase64(str) {
+    return window.btoa(unescape(encodeURIComponent(str)));
+}
+
+function base64ToUtf8(b64) {
+    return decodeURIComponent(escape(window.atob(String(b64 || '').replace(/\s/g, ''))));
+}
+
 async function inicializarMemoriaJSON() {
-    // 1. Si existe window.RB_MEMORIA_INICIAL_JSON (de memoria-progreso.js), fusionar datos
-    if (window.RB_MEMORIA_INICIAL_JSON && window.RB_MEMORIA_INICIAL_JSON.colaboradores) {
-        fusionarDatosMemoriaExterna(window.RB_MEMORIA_INICIAL_JSON);
+    // 1. Si existe window.RB_MEMORIA_INICIAL_JSON (de memoria-progreso.js), cargar sus contenidos y colaboradores
+    if (window.RB_MEMORIA_INICIAL_JSON) {
+        await fusionarDatosMemoriaExterna(window.RB_MEMORIA_INICIAL_JSON);
     }
 
-    // 2. Intentar leer memoria-progreso.json si estamos en servidor http/https
+    // 2. Consultar en vivo el archivo memoria-progreso.json directamente desde la API de GitHub (funciona tanto en Vercel como en file:// sin caché)
+    try {
+        const ghToken = localStorage.getItem('rb_github_sync_token') || '';
+        const ghHeaders = { 'Accept': 'application/vnd.github+json' };
+        if (ghToken) ghHeaders['Authorization'] = `Bearer ${ghToken}`;
+
+        const resGh = await fetch(`${GITHUB_API_MEMORIA_URL}?ref=${GITHUB_REPO_BRANCH}&_ts=${Date.now()}`, {
+            headers: ghHeaders,
+            cache: 'no-store'
+        });
+        if (resGh.ok) {
+            const ghData = await resGh.json();
+            if (ghData && ghData.content) {
+                const decodedJson = JSON.parse(base64ToUtf8(ghData.content));
+                await fusionarDatosMemoriaExterna(decodedJson, true);
+            }
+        }
+    } catch (e) {}
+
+    // 3. Si estamos en servidor HTTP/HTTPS (Vercel), consultar también /api/memoria y memoria-progreso.json local
     if (window.location.protocol.startsWith('http')) {
         try {
-            const res = await fetch(`memoria-progreso.json?_ts=${Date.now()}`);
+            const resApi = await fetch(`/api/memoria?_ts=${Date.now()}`, { cache: 'no-store' });
+            if (resApi.ok) {
+                const jsonApi = await resApi.json();
+                if (jsonApi && (jsonApi.contenidosTemas || jsonApi.colaboradores)) {
+                    await fusionarDatosMemoriaExterna(jsonApi, true);
+                }
+            }
+        } catch (e) {}
+
+        try {
+            const res = await fetch(`memoria-progreso.json?_ts=${Date.now()}`, {
+                cache: 'no-store',
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache'
+                }
+            });
             if (res.ok) {
                 const json = await res.json();
-                if (json && json.colaboradores) {
-                    fusionarDatosMemoriaExterna(json);
+                if (json) {
+                    await fusionarDatosMemoriaExterna(json, true);
                 }
             }
         } catch (e) {}
     }
 
-    // 3. Intentar leer de IndexedDB por si hay respaldo previo
+    // 4. Intentar leer de IndexedDB por si hay cambios locales más recientes en el navegador
     const db = await abrirIndexedDB();
     if (db && db.objectStoreNames.contains(IDB_STORE_MEMORIA)) {
         await new Promise((resolve) => {
             const tx = db.transaction(IDB_STORE_MEMORIA, 'readonly');
             const store = tx.objectStore(IDB_STORE_MEMORIA);
             const req = store.get('memoria_global');
-            req.onsuccess = () => {
-                if (req.result && req.result.data && req.result.data.colaboradores) {
-                    fusionarDatosMemoriaExterna(req.result.data);
+            req.onsuccess = async () => {
+                if (req.result && req.result.data) {
+                    await fusionarDatosMemoriaExterna(req.result.data, false);
                 }
                 resolve();
             };
             req.onerror = () => resolve();
         });
     }
+
+    // 5. Recuperar handle de archivo físico si ya había sido vinculado antes
+    if (!jsonFileHandleDisco) {
+        const savedHandle = await obtenerFileHandleDeIDB();
+        if (savedHandle) {
+            jsonFileHandleDisco = savedHandle;
+            actualizarEstadoVisualBotonJsonVinculado(true);
+        }
+    }
 }
 
-function fusionarDatosMemoriaExterna(jsonObj) {
-    if (!jsonObj || !jsonObj.colaboradores) return;
+async function fusionarDatosMemoriaExterna(jsonObj, esDesdeArchivoProyecto = true) {
+    if (!jsonObj || typeof jsonObj !== 'object') return;
+
+    // A) Fusionar contenidos de temas personalizados (contenidosTemas)
+    const mapaTemas = jsonObj.contenidosTemas || jsonObj.customSubtemas || null;
+    if (mapaTemas && typeof mapaTemas === 'object') {
+        for (const k of Object.keys(mapaTemas)) {
+            const colIdx = Number(k);
+            const item = mapaTemas[k];
+            if (!colIdx || !item) continue;
+
+            const existing = contenidosDesdeArchivoJson[colIdx] || customSubtemasCache[colIdx];
+            if (esDesdeArchivoProyecto || esRegistroMasReciente(item, existing)) {
+                contenidosDesdeArchivoJson[colIdx] = { ...item, colIndex: colIdx };
+                await guardarSubtemaCustomEnDB(colIdx, { ...item, colIndex: colIdx });
+            }
+        }
+    }
+
+    // B) Fusionar historial y avance de colaboradores
+    if (!jsonObj.colaboradores || typeof jsonObj.colaboradores !== 'object') return;
 
     const logs = JSON.parse(localStorage.getItem('rb_user_logs') || '{}');
     const progressData = JSON.parse(localStorage.getItem('rb_user_progress') || '{}');
@@ -739,15 +891,147 @@ function construirObjetoMemoriaJSON() {
         }
     });
 
+    // Asegurar que todos los temas personalizados en cache o localStorage estén incluidos en contenidosTemas
+    const temasExport = { ...contenidosDesdeArchivoJson, ...customSubtemasCache };
+    try {
+        const lsCustom = JSON.parse(localStorage.getItem('rb_custom_subtemas_v2') || '{}');
+        Object.keys(lsCustom).forEach(k => {
+            const numCol = Number(k);
+            if (numCol && lsCustom[k] && esRegistroMasReciente(lsCustom[k], temasExport[numCol])) {
+                temasExport[numCol] = lsCustom[k];
+            }
+        });
+    } catch (e) {}
+
     return {
         ultimaActualizacion: new Date().toISOString(),
-        version: '2.0',
+        version: '2.1',
+        totalTemasPersonalizados: Object.keys(temasExport).length,
+        contenidosTemas: temasExport,
         totalColaboradores: Object.keys(colaboradoresMap).length,
         colaboradores: colaboradoresMap
     };
 }
 
-async function sincronizarMemoriaJSONPersistente() {
+function actualizarEstadoVisualBotonJsonVinculado(vinculado) {
+    const btns = [
+        document.getElementById('btnVincularJsonDisco'),
+        document.getElementById('btnVincularJsonContenidos')
+    ];
+    btns.forEach(btn => {
+        if (!btn) return;
+        if (vinculado) {
+            btn.classList.add('linked-active');
+            btn.innerHTML = '<i class="fas fa-check-circle"></i> memoria-progreso.json Vinculado (Auto-Guardando)';
+        }
+    });
+}
+
+async function guardarMemoriaEnNubeGitHubOVercel(payload, permitirPedirToken = false) {
+    let savedToken = localStorage.getItem('rb_github_sync_token') || '';
+
+    // 1. Si estamos en Vercel (http/https), intentar primero la función serverless /api/memoria
+    if (window.location.protocol.startsWith('http')) {
+        try {
+            const headers = { 'Content-Type': 'application/json' };
+            if (savedToken) headers['X-GitHub-Token'] = savedToken;
+
+            const apiRes = await fetch('/api/memoria', {
+                method: 'POST',
+                headers,
+                body: JSON.stringify(payload)
+            });
+
+            if (apiRes.ok) {
+                const data = await apiRes.json();
+                if (data && data.ok) {
+                    return { ok: true, via: 'vercel-api' };
+                }
+            } else if (apiRes.status === 401 && permitirPedirToken && !savedToken) {
+                const inputToken = prompt(
+                    '☁️ Conexión directa con GitHub y Vercel (Solo se configura 1 vez):\n\n' +
+                    'Para que al pulsar "Guardar" en Vercel el contenido quede guardado automáticamente en tu repositorio https://github.com/wilvar88/InduccionCoporativaRB sin reemplazar archivos manualmente:\n\n' +
+                    'Pega aquí tu Token de GitHub (Personal Access Token con permiso repo/contents) o configúralo como GITHUB_TOKEN en Vercel:'
+                );
+                if (inputToken && inputToken.trim()) {
+                    savedToken = inputToken.trim();
+                    localStorage.setItem('rb_github_sync_token', savedToken);
+                }
+            }
+        } catch (e) {}
+    }
+
+    // 2. Si tenemos token de GitHub configurado, guardar directamente contra la API de GitHub (funciona en Vercel y también en file://)
+    if (savedToken) {
+        try {
+            const ghHeaders = {
+                'Accept': 'application/vnd.github+json',
+                'Authorization': `Bearer ${savedToken}`,
+                'Content-Type': 'application/json'
+            };
+
+            let currentSha = undefined;
+            const getRes = await fetch(`${GITHUB_API_MEMORIA_URL}?ref=${GITHUB_REPO_BRANCH}&_ts=${Date.now()}`, {
+                headers: ghHeaders,
+                cache: 'no-store'
+            });
+            if (getRes.ok) {
+                const meta = await getRes.json();
+                currentSha = meta.sha;
+            }
+
+            const jsonString = JSON.stringify(payload, null, 2);
+            const putRes = await fetch(GITHUB_API_MEMORIA_URL, {
+                method: 'PUT',
+                headers: ghHeaders,
+                body: JSON.stringify({
+                    message: `Actualización automática desde plataforma (${new Date().toISOString()})`,
+                    content: utf8ToBase64(jsonString),
+                    sha: currentSha,
+                    branch: GITHUB_REPO_BRANCH
+                })
+            });
+
+            if (putRes.ok) {
+                return { ok: true, via: 'github-api' };
+            } else if (putRes.status === 401 || putRes.status === 403) {
+                if (permitirPedirToken) {
+                    localStorage.removeItem('rb_github_sync_token');
+                }
+            }
+        } catch (err) {
+            console.warn('Error guardando directamente en GitHub API:', err);
+        }
+    }
+
+    return { ok: false };
+}
+
+function configurarTokenGitHubManual() {
+    const actual = localStorage.getItem('rb_github_sync_token') || '';
+    const nuevo = prompt(
+        '☁️ Configurar guardado automático en GitHub / Vercel:\n\n' +
+        'Ingresa tu GitHub Personal Access Token (con permiso de escritura en wilvar88/InduccionCoporativaRB) para que cualquier cambio se guarde automáticamente en la nube sin subir archivos manualmente:',
+        actual
+    );
+    if (nuevo !== null) {
+        if (nuevo.trim()) {
+            localStorage.setItem('rb_github_sync_token', nuevo.trim());
+            sincronizarMemoriaJSONPersistente(true).then(res => {
+                if (res && res.guardadoEnNube) {
+                    alert('✓ ¡Conectado y sincronizado con GitHub y Vercel exitosamente! Todos tus contenidos ya quedaron guardados en el repositorio.');
+                } else {
+                    alert('Token guardado. Verifica que tenga permisos de escritura ("repo" o "Contents: Read and write") en wilvar88/InduccionCoporativaRB.');
+                }
+            });
+        } else {
+            localStorage.removeItem('rb_github_sync_token');
+            alert('Token de GitHub eliminado de este navegador.');
+        }
+    }
+}
+
+async function sincronizarMemoriaJSONPersistente(solicitarPermisoOArchivo = false) {
     const payload = construirObjetoMemoriaJSON();
 
     // 1. Guardar en localStorage
@@ -764,21 +1048,62 @@ async function sincronizarMemoriaJSONPersistente() {
         } catch (e) {}
     }
 
-    // 3. Si el Super Admin vinculó el archivo físico memoria-progreso.json en disco, escribir automáticamente
+    // 3. Intentar guardado automático en la nube (GitHub / Vercel Serverless API) sin intervención manual
+    const cloudRes = await guardarMemoriaEnNubeGitHubOVercel(payload, solicitarPermisoOArchivo);
+    if (cloudRes && cloudRes.ok) {
+        actualizarEstadoVisualBotonJsonVinculado(true);
+    }
+
+    // 4. Si el Super Admin ya vinculó el archivo físico memoria-progreso.json en disco local, escribir automáticamente
+    if (!jsonFileHandleDisco) {
+        jsonFileHandleDisco = await obtenerFileHandleDeIDB();
+    }
+
     if (jsonFileHandleDisco) {
         try {
-            const writable = await jsonFileHandleDisco.createWritable();
-            await writable.write(JSON.stringify(payload, null, 2));
-            await writable.close();
+            let perm = await jsonFileHandleDisco.queryPermission({ mode: 'readwrite' });
+            if (perm !== 'granted' && solicitarPermisoOArchivo && !cloudRes.ok) {
+                perm = await jsonFileHandleDisco.requestPermission({ mode: 'readwrite' });
+            }
+            if (perm === 'granted') {
+                const writable = await jsonFileHandleDisco.createWritable();
+                await writable.write(JSON.stringify(payload, null, 2));
+                await writable.close();
+                actualizarEstadoVisualBotonJsonVinculado(true);
+                return { guardadoEnDisco: true, guardadoEnNube: cloudRes.ok, payload };
+            }
         } catch (err) {
             console.warn('No se pudo escribir automáticamente en el archivo JSON vinculado:', err);
         }
     }
+
+    // 5. Solo si estamos en local (file://) y aún no se guardó en la nube ni hay archivo vinculado, ofrecer vincular memoria-progreso.json
+    if (solicitarPermisoOArchivo && !cloudRes.ok && window.location.protocol === 'file:' && window.showSaveFilePicker) {
+        try {
+            jsonFileHandleDisco = await window.showSaveFilePicker({
+                suggestedName: 'memoria-progreso.json',
+                types: [{
+                    description: 'Archivo JSON del Proyecto (Contenidos y Progreso)',
+                    accept: { 'application/json': ['.json'] }
+                }]
+            });
+            await guardarFileHandleEnIDB(jsonFileHandleDisco);
+            const writable = await jsonFileHandleDisco.createWritable();
+            await writable.write(JSON.stringify(payload, null, 2));
+            await writable.close();
+            actualizarEstadoVisualBotonJsonVinculado(true);
+            return { guardadoEnDisco: true, guardadoEnNube: false, payload };
+        } catch (err) {
+            // El usuario canceló el selector de archivos
+        }
+    }
+
+    return { guardadoEnDisco: false, guardadoEnNube: cloudRes.ok, payload };
 }
 
 async function vincularArchivoMemoriaJSONEnDisco() {
     if (!window.showSaveFilePicker) {
-        alert('Tu navegador descargará directamente el archivo memoria-progreso.json al pulsar "Descargar .JSON".');
+        alert('Tu navegador descargará directamente el archivo memoria-progreso.json para que lo guardes en la carpeta del proyecto.');
         descargarMemoriaProgresoJSON();
         return;
     }
@@ -786,17 +1111,14 @@ async function vincularArchivoMemoriaJSONEnDisco() {
         jsonFileHandleDisco = await window.showSaveFilePicker({
             suggestedName: 'memoria-progreso.json',
             types: [{
-                description: 'Archivo JSON de Memoria de Inducción',
+                description: 'Archivo JSON del Proyecto (Contenidos y Progreso)',
                 accept: { 'application/json': ['.json'] }
             }]
         });
-        await sincronizarMemoriaJSONPersistente();
-        const btn = document.getElementById('btnVincularJsonDisco');
-        if (btn) {
-            btn.classList.add('linked-active');
-            btn.innerHTML = '<i class="fas fa-check-circle"></i> .JSON Vinculado (Auto-Guardando)';
-        }
-        alert('✓ Archivo memoria-progreso.json vinculado correctamente. Cada vez que un colaborador ingrese o avance, este archivo se actualizará automáticamente.');
+        await guardarFileHandleEnIDB(jsonFileHandleDisco);
+        await sincronizarMemoriaJSONPersistente(true);
+        actualizarEstadoVisualBotonJsonVinculado(true);
+        alert('✓ Archivo memoria-progreso.json vinculado correctamente.\n\nA partir de ahora, cada vez que edites un tema o cambie el progreso, se guardará directamente en memoria-progreso.json dentro de tu proyecto listo para subir a GitHub y Vercel.');
     } catch (e) {}
 }
 
@@ -819,16 +1141,18 @@ function importarMemoriaProgresoJSON(event) {
     reader.onload = async (e) => {
         try {
             const json = JSON.parse(e.target.result);
-            if (!json || !json.colaboradores) {
-                alert('El archivo JSON no contiene la estructura de colaboradores esperada.');
+            if (!json || typeof json !== 'object') {
+                alert('El archivo JSON seleccionado no es válido.');
                 return;
             }
-            fusionarDatosMemoriaExterna(json);
-            await sincronizarMemoriaJSONPersistente();
+            await fusionarDatosMemoriaExterna(json, true);
+            await cargarTodosSubtemasCustomDeDB();
+            await sincronizarMemoriaJSONPersistente(false);
+            renderizarListaTemasSA();
             renderizarCategoriasLaterales();
             renderizarModulos(currentUser);
             renderizarTablaAdmin(document.getElementById('adminSearchInput') ? document.getElementById('adminSearchInput').value : '');
-            alert('✓ Memoria de progreso (.json) cargada y sincronizada correctamente.');
+            alert('✓ Archivo memoria-progreso.json cargado y sincronizado correctamente (contenidos y colaboradores).');
         } catch (err) {
             alert('Error al leer el archivo JSON de memoria.');
         }
@@ -877,11 +1201,14 @@ window.addEventListener('message', (event) => {
 
 async function inicializarAplicacion() {
     mostrarLoading(true);
-    actualizarSheetStatus('<i class="fas fa-sync fa-spin"></i> Sincronizando en vivo con Google Sheets...');
+    actualizarSheetStatus('<i class="fas fa-sync fa-spin"></i> Sincronizando contenidos (.json) y Google Sheets...');
 
-    await cargarTodosSubtemasCustomDeDB();
-    await cargarDatosGoogleSheets();
+    // 1. Primero cargar memoria-progreso.json del proyecto (incluye contenidosTemas y colaboradores)
     await inicializarMemoriaJSON();
+    // 2. Construir el catálogo de módulos aplicando los contenidos de memoria-progreso.json + navegador
+    await cargarTodosSubtemasCustomDeDB();
+    // 3. Cargar colaboradores y matriz de cargos desde Google Sheets
+    await cargarDatosGoogleSheets();
 
     mostrarLoading(false);
 
@@ -2356,15 +2683,24 @@ async function guardarContenidoTemaSA() {
     await guardarSubtemaCustomEnDB(saCurrentSubtemaColIndex, customRecord);
     await cargarTodosSubtemasCustomDeDB();
 
+    // Sincronizar y guardar automáticamente en memoria-progreso.json del proyecto
+    const syncRes = await sincronizarMemoriaJSONPersistente(true);
+
     renderizarListaTemasSA();
     renderizarCategoriasLaterales();
     renderizarModulos(currentUser, document.getElementById('busquedaInput').value);
 
     const feedback = document.getElementById('saSaveFeedback');
-    feedback.innerHTML = '<i class="fas fa-check-circle"></i> ¡Contenido guardado y publicado exitosamente en el tema!';
+    if (syncRes && syncRes.guardadoEnNube) {
+        feedback.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> ¡Contenido guardado automáticamente en la nube (GitHub y Vercel) sin reemplazar archivos!';
+    } else if (syncRes && syncRes.guardadoEnDisco) {
+        feedback.innerHTML = '<i class="fas fa-check-circle"></i> ¡Contenido guardado en el tema y escrito directamente en <strong>memoria-progreso.json</strong> del proyecto!';
+    } else {
+        feedback.innerHTML = '<i class="fas fa-check-circle"></i> ¡Contenido guardado en el tema!';
+    }
     setTimeout(() => {
         if (feedback) feedback.textContent = '';
-    }, 4500);
+    }, 6000);
 }
 
 async function restaurarTemaPorDefectoSA() {
@@ -2372,13 +2708,14 @@ async function restaurarTemaPorDefectoSA() {
 
     await eliminarSubtemaCustomDeDB(saCurrentSubtemaColIndex);
     await cargarTodosSubtemasCustomDeDB();
+    await sincronizarMemoriaJSONPersistente(true);
 
     renderizarListaTemasSA();
     renderizarCategoriasLaterales();
     renderizarModulos(currentUser, document.getElementById('busquedaInput').value);
 
     const feedback = document.getElementById('saSaveFeedback');
-    feedback.innerHTML = '<i class="fas fa-undo"></i> Tema restaurado al valor por defecto.';
+    feedback.innerHTML = '<i class="fas fa-undo"></i> Tema restaurado al valor por defecto y actualizado en memoria-progreso.json.';
 }
 
 function previsualizarTemaActualEnVisor() {
@@ -2402,38 +2739,14 @@ function previsualizarTemaActualEnVisor() {
     abrirModuloViewer(mod.id, Math.max(0, idx));
 }
 
-// EXPORTAR E IMPORTAR RESPALDO DE CONTENIDOS (JSON)
+// EXPORTAR E IMPORTAR ARCHIVO UNIFICADO DEL PROYECTO (memoria-progreso.json)
 async function exportarCatalogoContenidos() {
-    const db = await abrirIndexedDB();
-    let exportedCustom = {};
-    try {
-        exportedCustom = JSON.parse(localStorage.getItem('rb_custom_subtemas_v2') || '{}');
-    } catch (e) {}
-
-    if (db) {
-        await new Promise((resolve) => {
-            const tx = db.transaction(IDB_STORE, 'readonly');
-            const store = tx.objectStore(IDB_STORE);
-            const req = store.getAll();
-            req.onsuccess = () => {
-                if (Array.isArray(req.result)) {
-                    req.result.forEach(item => {
-                        exportedCustom[item.colIndex] = item;
-                    });
-                }
-                resolve();
-            };
-            req.onerror = () => resolve();
-        });
+    await cargarTodosSubtemasCustomDeDB();
+    if (window.showSaveFilePicker) {
+        await vincularArchivoMemoriaJSONEnDisco();
+    } else {
+        descargarMemoriaProgresoJSON();
     }
-
-    const blob = new Blob([JSON.stringify(exportedCustom, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `Respaldo_Contenidos_Induccion_RB_${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
 }
 
 function importarCatalogoContenidos(event) {
@@ -2444,18 +2757,31 @@ function importarCatalogoContenidos(event) {
     reader.onload = async (e) => {
         try {
             const imported = JSON.parse(e.target.result);
-            const keys = Object.keys(imported);
-            for (const k of keys) {
-                const colIdx = parseInt(k, 10);
-                if (colIdx) {
-                    await guardarSubtemaCustomEnDB(colIdx, imported[k]);
+            if (!imported || typeof imported !== 'object') {
+                alert('El archivo seleccionado no tiene un formato JSON válido.');
+                return;
+            }
+
+            // Soportar tanto memoria-progreso.json unificado (con contenidosTemas) como respaldos directos por colIndex
+            if (imported.contenidosTemas || imported.colaboradores) {
+                await fusionarDatosMemoriaExterna(imported, true);
+            } else {
+                const keys = Object.keys(imported);
+                for (const k of keys) {
+                    const colIdx = parseInt(k, 10);
+                    if (colIdx && imported[k]) {
+                        await guardarSubtemaCustomEnDB(colIdx, imported[k]);
+                    }
                 }
             }
+
             await cargarTodosSubtemasCustomDeDB();
+            await sincronizarMemoriaJSONPersistente(false);
             renderizarListaTemasSA();
             renderizarCategoriasLaterales();
             renderizarModulos(currentUser);
-            alert(`✓ Se importaron satisfactoriamente ${keys.length} temas configurados.`);
+            const totalCustom = Object.keys(customSubtemasCache).length;
+            alert(`✓ Se cargaron y sincronizaron satisfactoriamente ${totalCustom} temas configurados.`);
         } catch (err) {
             alert('El archivo seleccionado no tiene un formato de respaldo JSON válido.');
         }

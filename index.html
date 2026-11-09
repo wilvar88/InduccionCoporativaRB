@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Inducción Corporativa - Recaudo Bogotá</title>
 
     <!-- Font Awesome Icons -->
@@ -19,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
     <!-- Estilos de la aplicación -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261109v2">
 </head>
 
 <body>
@@ -217,13 +220,16 @@
                         </div>
 
                         <div class="sa-backup-box">
-                            <span class="sa-backup-label"><i class="fas fa-database"></i> Respaldo de Contenidos:</span>
-                            <div class="sa-backup-actions">
-                                <button type="button" class="btn-sa-outline" onclick="exportarCatalogoContenidos()" title="Descargar respaldo JSON con todos los contenidos">
-                                    <i class="fas fa-download"></i> Exportar
+                            <span class="sa-backup-label"><i class="fas fa-cloud"></i> Sincronización Automática GitHub / Vercel:</span>
+                            <div class="sa-backup-actions" style="flex-wrap: wrap;">
+                                <button type="button" class="btn-sa-outline" onclick="configurarTokenGitHubManual()" title="Configurar conexión directa para guardar automáticamente en GitHub y Vercel sin subir archivos manualmente">
+                                    <i class="fab fa-github"></i> Conectar GitHub / Vercel
                                 </button>
-                                <label class="btn-sa-outline" title="Cargar archivo de respaldo JSON">
-                                    <i class="fas fa-upload"></i> Importar
+                                <button type="button" class="btn-sa-outline" id="btnVincularJsonContenidos" onclick="exportarCatalogoContenidos()" title="Guardar todos los contenidos y progreso directamente en memoria-progreso.json del proyecto">
+                                    <i class="fas fa-save"></i> Guardar .JSON
+                                </button>
+                                <label class="btn-sa-outline" title="Cargar archivo memoria-progreso.json">
+                                    <i class="fas fa-upload"></i> Cargar .JSON
                                     <input type="file" id="saImportJsonInput" accept=".json" style="display: none;" onchange="importarCatalogoContenidos(event)">
                                 </label>
                             </div>
@@ -497,8 +503,8 @@
         </div>
     </div>
 
-    <!-- MEMORIA INICIAL DE PROGRESO (.JSON / .JS) -->
-    <script src="memoria-progreso.js" onerror="console.info('Memoria inicial se gestionará desde almacenamiento local / JSON.')"></script>
+    <!-- MEMORIA INICIAL DE PROGRESO Y CONTENIDOS (.JSON / .JS) -->
+    <script src="memoria-progreso.js?v=20261109v2" onerror="console.info('Memoria inicial se gestionará desde almacenamiento local / JSON.')"></script>
 
     <!-- MODAL POPUP COMPLEMENTARIO DE INFORMACIÓN ADICIONAL -->
     <div class="modal-info-popup" id="infoPopupModal">
@@ -522,7 +528,7 @@
     </div>
 
     <!-- JAVASCRIPT PRINCIPAL -->
-    <script src="script.js"></script>
+    <script src="script.js?v=20261109v2"></script>
 </body>
 
 </html>
