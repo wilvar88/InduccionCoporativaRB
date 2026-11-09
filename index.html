@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inducción Corporativa - Recaudo Bogotá</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- jsPDF & autoTable para Generación de Actas en PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <!-- SheetJS (XLSX) para Descarga de Reportes en Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <!-- Estilos de la aplicación -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER SUPERIOR -->
+    <header class="header-superior">
+        <div class="header-contenedor">
+            <div class="logo-header">
+                <img src="assets/logo.png" alt="Logo Recaudo Bogotá" class="logo" onerror="this.src='https://placehold.co/120x40/001e47/ffffff?text=RB'">
+                <span class="logo-texto">Inducción Corporativa RB</span>
+            </div>
+
+            <div class="header-acciones">
+                <div class="busqueda-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="busquedaInput" placeholder="Buscar módulos..." class="input-busqueda">
+                </div>
+
+                <!-- Perfil del usuario ingresado -->
+                <div class="user-profile-badge" id="userProfileBadge" style="display: none;">
+                    <img id="userAvatarHeader" src="assets/Foto predeterminada perfil.png" alt="Foto Perfil" class="header-avatar" onerror="this.src='assets/Foto predeterminada perfil.png'">
+                    <div class="user-info-text">
+                        <span id="userNameHeader" class="user-name">Nombre Colaborador</span>
+                        <span id="userCargoHeader" class="user-cargo">Cargo</span>
+                    </div>
+                    <button class="btn-header-org" onclick="abrirOrganigrama()" title="Ver mi organigrama">
+                        <i class="fas fa-sitemap"></i> Organigrama
+                    </button>
+                    <!-- BOTÓN SUPER ADMINISTRADOR / ADMINISTRADOR -->
+                    <button class="btn-header-superadmin" id="btnSuperAdminContent" onclick="abrirPanelAdmin('contenidos')" title="Módulo Super Administrador: Subir y Gestionar Contenidos" style="display: none;">
+                        <i class="fas fa-cloud-upload-alt"></i> Super Admin
+                    </button>
+                    <button class="btn-header-admin" id="btnAdminConfig" onclick="abrirPanelAdmin('avance')" title="Panel de Seguimiento y Avance" style="display: none;">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="btn-header-logout" onclick="cerrarSesion()" title="Cerrar sesión">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor-principal">
+        <!-- COLUMNA IZQUIERDA: CATEGORÍAS/MÓDULOS -->
+        <aside class="columna-categorias">
+            <h3 class="titulo-categorias"><i class="fas fa-layer-group"></i> Módulos Habilitados</h3>
+            <div class="carrusel-vertical" id="carruselTrack">
+                <div class="categoria-item-vertical active" data-categoria="todos">
+                    <i class="fas fa-th"></i>
+                    <span>Todos mis módulos</span>
+                </div>
+                <!-- Los 14 módulos se cargarán dinámicamente aquí -->
+            </div>
+        </aside>
+
+        <!-- COLUMNA CENTRAL: GALERÍA DE MÓDULOS Y CONTENIDOS -->
+        <main class="columna-videos">
+            <div class="welcome-user-banner" id="userWelcomeBanner">
+                <div class="welcome-banner-content">
+                    <h2 id="welcomeGreeting">¡Bienvenido(a) a la Inducción Corporativa!</h2>
+                    <p id="welcomeSubtext">Selecciona uno de los módulos habilitados para tu cargo para comenzar la capacitación.</p>
+                    <div class="welcome-pills-row">
+                        <div class="stat-pill">
+                            <i class="fas fa-book-open"></i>
+                            <span id="statModulosCount">0 Módulos · 0 Temas Habilitados</span>
+                        </div>
+                        <button type="button" id="btnToggleSuperAdminView" class="stat-pill btn-pill-toggle" onclick="toggleVistaSuperAdminModulos()" style="display: none; cursor: pointer;">
+                            <i class="fas fa-eye"></i>
+                            <span id="btnToggleSuperAdminText">Modo Super Admin: Ver todos (14)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GRÁFICA TIPO CÍRCULO (DONUT) CON % DE AVANCE, MÓDULOS Y TEMAS HABILITADOS -->
+                <div class="welcome-banner-progress-circle" id="bannerProgressCircleWidget">
+                    <div class="donut-chart-wrapper">
+                        <svg class="donut-svg" viewBox="0 0 140 140">
+                            <circle class="donut-bg" cx="70" cy="70" r="58"></circle>
+                            <circle class="donut-fill" id="donutProgressCircle" cx="70" cy="70" r="58" stroke-dasharray="364.42" stroke-dashoffset="364.42"></circle>
+                        </svg>
+                        <div class="donut-center-content">
+                            <span class="donut-percent" id="donutPercentText">0%</span>
+                            <span class="donut-subline" id="donutModulosText">0/0 módulos</span>
+                            <span class="donut-subline" id="donutTemasText">0/0 temas hab.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRILLA DE TARJETAS DE MÓDULOS -->
+            <div class="modulos-grid" id="modulosGrid">
+                <!-- Se poblará con las tarjetas de los módulos según el cargo -->
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL INDEX DE AUTENTICACIÓN / VALIDACIÓN DE CÉDULA -->
+    <div class="modal-auth" id="authModal">
+        <div class="modal-auth-overlay"></div>
+        <div class="modal-auth-card">
+            <div class="modal-auth-header">
+                <img src="assets/logo.png" alt="Recaudo Bogotá" class="auth-logo" onerror="this.src='https://placehold.co/150x50/001e47/ffffff?text=Recaudo+Bogotá'">
+                <h2>Ingreso a Inducción Corporativa</h2>
+                <p>Ingresa tu número de documento de identidad para validar tu perfil y consultar tus módulos asignados.</p>
+            </div>
+
+            <form id="authForm" onsubmit="validarUsuario(event)">
+                <div class="form-group">
+                    <label for="cedulaInput"><i class="fas fa-id-card"></i> Número de Cédula / Identificación</label>
+                    <input type="text" id="cedulaInput" placeholder="Ej: 1018492011" autocomplete="off" required>
+                </div>
+
+                <div class="auth-error-msg" id="authErrorMsg" style="display: none;">
+                    <i class="fas fa-exclamation-circle"></i> <span id="authErrorText">No se encontró el documento. Contacta a Gestión Humana (RB).</span>
+                </div>
+
+                <button type="submit" class="btn-auth-submit" id="btnAuthSubmit">
+                    <span id="btnAuthText">Validar e Ingresar</span> <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="auth-sheet-status" id="sheetStatus">
+                <i class="fas fa-sync fa-spin"></i> Sincronizando con base de datos de colaboradores...
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE ORGANIGRAMA Y LÍNEA JERÁRQUICA AMPLIADO CON ZOOM -->
+    <div class="modal-organigrama" id="orgModal">
+        <div class="modal-organigrama-contenido modal-org-expanded">
+            <div class="modal-org-header">
+                <div class="modal-org-title">
+                    <i class="fas fa-sitemap"></i>
+                    <h2>Línea Jerárquica y Organigrama de Área</h2>
+                </div>
+                <div class="org-zoom-controls">
+                    <button onclick="zoomOrganigrama(0.1)" title="Acercar"><i class="fas fa-search-plus"></i> Zoom +</button>
+                    <button onclick="zoomOrganigrama(-0.1)" title="Alejar"><i class="fas fa-search-minus"></i> Zoom -</button>
+                    <button onclick="resetZoomOrganigrama()" title="Restablecer Zoom"><i class="fas fa-sync-alt"></i> 100%</button>
+                    <button class="modal-cerrar" onclick="cerrarOrganigrama()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-org-body-zoomable">
+                <div class="modal-org-body" id="orgModalBody">
+                    <!-- Se renderizará la estructura jerárquica con fotos, gerencias, áreas y pares -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL SUPER ADMINISTRADOR: GESTIÓN DE CONTENIDOS Y AVANCE DE USUARIOS -->
+    <div class="modal-admin" id="adminModal">
+        <div class="modal-admin-contenido">
+            <div class="modal-admin-header">
+                <div class="modal-admin-title">
+                    <i class="fas fa-user-shield"></i>
+                    <div>
+                        <h2 id="adminModalMainTitle">Módulo Super Administrador</h2>
+                        <p id="adminModalSubTitle">Gestión de contenidos multimedia (Video, HTML, PDF) y seguimiento de avance de inducción.</p>
+                    </div>
+                </div>
+                <div class="admin-header-tabs">
+                    <button class="admin-tab-btn active" id="tabBtnContenidos" onclick="cambiarTabAdmin('contenidos')">
+                        <i class="fas fa-cloud-upload-alt"></i> Subir / Editar Contenidos
+                    </button>
+                    <button class="admin-tab-btn" id="tabBtnAvance" onclick="cambiarTabAdmin('avance')">
+                        <i class="fas fa-users-cog"></i> Status de Colaboradores y Reporte Excel
+                    </button>
+                    <button class="modal-cerrar" onclick="cerrarPanelAdmin()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- VISTA 1: GESTOR DE CONTENIDOS (SUPER ADMINISTRADOR) -->
+            <div class="modal-admin-body" id="adminTabContenidos">
+                <div class="superadmin-layout">
+                    <!-- Panel Izquierdo: Selección de Módulo y Tema -->
+                    <div class="superadmin-sidebar">
+                        <div class="sa-section-group">
+                            <label for="saSelectModulo"><i class="fas fa-layer-group"></i> 1. Selecciona el Módulo:</label>
+                            <select id="saSelectModulo" class="sa-select" onchange="onChangeSaModulo()"></select>
+                        </div>
+
+                        <div class="sa-section-group" style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
+                            <label><i class="fas fa-list-ul"></i> 2. Selecciona el Tema a configurar:</label>
+                            <div class="sa-temas-list" id="saTemasList">
+                                <!-- Lista dinámica de temas del módulo seleccionado -->
+                            </div>
+                        </div>
+
+                        <div class="sa-backup-box">
+                            <span class="sa-backup-label"><i class="fas fa-database"></i> Respaldo de Contenidos:</span>
+                            <div class="sa-backup-actions">
+                                <button type="button" class="btn-sa-outline" onclick="exportarCatalogoContenidos()" title="Descargar respaldo JSON con todos los contenidos">
+                                    <i class="fas fa-download"></i> Exportar
+                                </button>
+                                <label class="btn-sa-outline" title="Cargar archivo de respaldo JSON">
+                                    <i class="fas fa-upload"></i> Importar
+                                    <input type="file" id="saImportJsonInput" accept=".json" style="display: none;" onchange="importarCatalogoContenidos(event)">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel Derecho: Formulario de Carga / Edición de Material (Video, HTML, PDF) -->
+                    <div class="superadmin-editor">
+                        <div class="sa-editor-header">
+                            <div>
+                                <span class="sa-badge-modulo" id="saEditorModuloBadge">Módulo 1</span>
+                                <h3 id="saEditorTemaTitulo">Selecciona un tema</h3>
+                            </div>
+                            <div class="sa-editor-header-actions">
+                                <button type="button" class="btn-sa-preview" onclick="previsualizarTemaActualEnVisor()">
+                                    <i class="fas fa-eye"></i> Ver en el Visor
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="sa-editor-body">
+                            <!-- Selector de Tipo de Material -->
+                            <div class="sa-field-group">
+                                <label class="sa-label">3. ¿Qué tipo de material deseas subir o asignar a este tema?</label>
+                                <div class="sa-type-selector">
+                                    <button type="button" class="sa-type-card active" id="saTypeBtnVideo" onclick="seleccionarTipoMaterialSA('video')">
+                                        <i class="fas fa-video"></i>
+                                        <span>Link de Video</span>
+                                        <small>YouTube, Google Drive o MP4</small>
+                                    </button>
+                                    <button type="button" class="sa-type-card" id="saTypeBtnHtml" onclick="seleccionarTipoMaterialSA('html')">
+                                        <i class="fas fa-file-code"></i>
+                                        <span>Archivo HTML</span>
+                                        <small>Subir .html o editar contenido</small>
+                                    </button>
+                                    <button type="button" class="sa-type-card" id="saTypeBtnPdf" onclick="seleccionarTipoMaterialSA('pdf')">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>Archivo PDF</span>
+                                        <small>Subir .pdf o link de Drive</small>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- SECCIÓN A: LINK DE VIDEO -->
+                            <div class="sa-material-pane" id="saPaneVideo">
+                                <div class="sa-field-group">
+                                    <label class="sa-label"><i class="fas fa-link"></i> Enlace del Video (YouTube, Google Drive o ruta local .mp4):</label>
+                                    <input type="text" id="saVideoUrlInput" class="sa-input" placeholder="Ej: https://www.youtube.com/watch?v=... o https://drive.google.com/file/d/.../view" oninput="actualizarAyudaUrlVideo()">
+                                    <div class="sa-helper-text" id="saVideoUrlHelper">
+                                        💡 Puedes pegar cualquier enlace normal de <strong>YouTube</strong> o <strong>Google Drive</strong>; el sistema lo convierte automáticamente a formato integrable (<code>/embed/</code> o <code>/preview</code>).
+                                    </div>
+                                </div>
+                                <div class="sa-field-group">
+                                    <label class="sa-label"><i class="fas fa-upload"></i> O sube un archivo de video (.mp4 / .webm) desde tu computador:</label>
+                                    <div class="sa-upload-zone">
+                                        <input type="file" id="saVideoFileInput" accept="video/mp4,video/webm,video/ogg" onchange="procesarSubidaArchivoSA(event, 'video')">
+                                        <div class="sa-upload-zone-text">
+                                            <i class="fas fa-film"></i>
+                                            <span id="saVideoFileStatus">Haz clic aquí o arrastra un archivo de video (.mp4)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SECCIÓN B: ARCHIVO HTML -->
+                            <div class="sa-material-pane" id="saPaneHtml" style="display: none;">
+                                <div class="sa-field-group">
+                                    <label class="sa-label"><i class="fas fa-file-upload"></i> Opción 1: Subir archivo <code>.html</code> desde tu computador:</label>
+                                    <div class="sa-upload-zone">
+                                        <input type="file" id="saHtmlFileInput" accept=".html,.htm" onchange="procesarSubidaArchivoSA(event, 'html')">
+                                        <div class="sa-upload-zone-text">
+                                            <i class="fas fa-file-code"></i>
+                                            <span id="saHtmlFileStatus">Haz clic aquí para seleccionar tu archivo .HTML (se cargará su contenido completo)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sa-field-group">
+                                    <label class="sa-label"><i class="fas fa-folder-open"></i> Opción 2: Ruta o URL de un archivo HTML externo/local (opcional):</label>
+                                    <input type="text" id="saHtmlUrlInput" class="sa-input" placeholder="Ej: assets/html/presentacion.html (déjalo vacío si subiste archivo o usas el editor de abajo)">
+                                </div>
+
+                                <div class="sa-field-group">
+                                    <label class="sa-label"><i class="fas fa-code"></i> Opción 3: Código / Contenido HTML del tema (se rellena automáticamente al subir un archivo .html):</label>
+                                    <textarea id="saHtmlContentInput" class="sa-textarea" rows="7" placeholder="<h3>Título del tema</h3><p>Contenido explicativo...</p> o pega aquí el código completo de tu archivo HTML"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- SECCIÓN C: ARCHIVO PDF -->
+                            <div class="sa-material-pane" id="saPanePdf" style="display: none;">
+                                <div class="sa-field-group">
+                                    <label class="sa-label"><i class="fas fa-file-pdf"></i> Opción 1: Subir archivo <code>.pdf</code> desde tu computador:</label>
+                                    <div class="sa-upload-zone">
+                                        <input type="file" id="saPdfFileInput" accept=".pdf,application/pdf" onchange="procesarSubidaArchivoSA(event, 'pdf')">
+                                        <div class="sa-upload-zone-text">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span id="saPdfFileStatus">Haz clic aquí para seleccionar y cargar un documento .PDF desde tu equipo</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sa-field-group">
+                                    <label class="sa-label"><i class="fas fa-link"></i> Opción 2: Enlace de PDF en Google Drive o ruta local en carpeta <code>assets/</code>:</label>
+                                    <input type="text" id="saPdfUrlInput" class="sa-input" placeholder="Ej: https://drive.google.com/file/d/ID_DEL_PDF/view o assets/documentos/manual.pdf">
+                                    <div class="sa-helper-text">
+                                        💡 Si pegas un enlace de Google Drive, asegúrate de que tenga permiso "Cualquier persona con el enlace" y el sistema lo mostrará incrustado automáticamente.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- COMPLEMENTOS OPCIONALES: AUDIO Y POPUP -->
+                            <details class="sa-extras-details">
+                                <summary><i class="fas fa-sliders-h"></i> Complementos Opcionales del Tema (Audio narrado MP3 y Popup informativo)</summary>
+                                <div class="sa-extras-grid">
+                                    <div class="sa-field-group">
+                                        <label class="sa-label"><i class="fas fa-volume-up"></i> Ruta o Subida de Audio Explicativo (.mp3):</label>
+                                        <div style="display: flex; gap: 0.5rem;">
+                                            <input type="text" id="saAudioUrlInput" class="sa-input" placeholder="Ej: assets/audios/tema.mp3">
+                                            <label class="btn-sa-outline" style="white-space: nowrap; cursor: pointer;">
+                                                <i class="fas fa-upload"></i> Subir MP3
+                                                <input type="file" accept="audio/*" style="display: none;" onchange="procesarSubidaAudioSA(event)">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="sa-field-group">
+                                        <label class="sa-label"><i class="fas fa-comment-dots"></i> Título del Popup Informativo (opcional):</label>
+                                        <input type="text" id="saPopupTitleInput" class="sa-input" placeholder="Ej: Nota Importante / Mensaje de Presidencia">
+                                    </div>
+                                    <div class="sa-field-group" style="grid-column: 1 / -1;">
+                                        <label class="sa-label"><i class="fas fa-align-left"></i> Contenido del Popup Informativo (HTML o texto):</label>
+                                        <textarea id="saPopupContentInput" class="sa-textarea" rows="2" placeholder="Ej: <p>Recuerda cumplir con este lineamiento...</p>"></textarea>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="sa-editor-footer">
+                            <span id="saSaveFeedback" class="sa-save-feedback"></span>
+                            <div class="sa-footer-btns">
+                                <button type="button" class="btn-sa-restore" onclick="restaurarTemaPorDefectoSA()" title="Restaurar este tema a su contenido original">
+                                    <i class="fas fa-undo"></i> Restaurar Original
+                                </button>
+                                <button type="button" class="btn-sa-save" onclick="guardarContenidoTemaSA()">
+                                    <i class="fas fa-save"></i> Guardar Contenido en este Tema
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISTA 2: STATUS DETALLADO DE COLABORADORES, MEMORIA JSON Y DESCARGA DE EXCEL / ACTAS -->
+            <div class="modal-admin-body" id="adminTabAvance" style="display: none;">
+                <div class="admin-toolbar admin-toolbar-wrap">
+                    <div class="busqueda-admin-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="adminSearchInput" oninput="filtrarTablaAdmin()" placeholder="Buscar por Nombre, Cédula, Cargo, Área o Gerencia...">
+                    </div>
+                    <div class="admin-stats-summary" id="adminStatsSummary">
+                        <!-- Conteo rápido de colaboradores y completados -->
+                    </div>
+                    <div class="admin-export-actions">
+                        <button type="button" class="btn-export-excel" onclick="descargarReporteExcelColaboradores()" title="Descargar reporte completo en Excel (.xlsx) con datos personales y avance">
+                            <i class="fas fa-file-excel"></i> Descargar Reporte Excel (.xlsx)
+                        </button>
+                        <button type="button" class="btn-json-memory" id="btnVincularJsonDisco" onclick="vincularArchivoMemoriaJSONEnDisco()" title="Vincular archivo memoria-progreso.json en disco para guardado automático continuo">
+                            <i class="fas fa-sync-alt"></i> Auto-Guardar en .JSON
+                        </button>
+                        <button type="button" class="btn-json-memory" onclick="descargarMemoriaProgresoJSON()" title="Descargar archivo memoria-progreso.json con el historial y avance de todos los colaboradores">
+                            <i class="fas fa-file-code"></i> Descargar .JSON
+                        </button>
+                        <label class="btn-json-memory" style="cursor: pointer;" title="Cargar archivo memoria-progreso.json para consultar o restaurar datos históricos">
+                            <i class="fas fa-folder-open"></i> Cargar .JSON
+                            <input type="file" accept=".json" style="display: none;" onchange="importarMemoriaProgresoJSON(event)">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="tabla-admin-container">
+                    <table class="tabla-admin" id="tablaAdminAvance">
+                        <thead>
+                            <tr>
+                                <th>Cédula</th>
+                                <th>Nombre</th>
+                                <th>Cargo</th>
+                                <th>Área</th>
+                                <th>Gerencia</th>
+                                <th>Primer Ingreso</th>
+                                <th>Último Ingreso</th>
+                                <th>Cant. Ingresos</th>
+                                <th>En qué Módulo va</th>
+                                <th>En qué Tema va</th>
+                                <th>Módulos</th>
+                                <th>Temas</th>
+                                <th>% Avance</th>
+                                <th>M1</th>
+                                <th>M2</th>
+                                <th>M3</th>
+                                <th>M4</th>
+                                <th>M5</th>
+                                <th>M6</th>
+                                <th>M7</th>
+                                <th>M8</th>
+                                <th>M9</th>
+                                <th>M10</th>
+                                <th>M11</th>
+                                <th>M12</th>
+                                <th>M13</th>
+                                <th>M14</th>
+                                <th>Acta PDF</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaAdminBody">
+                            <!-- Filas dinámicas de colaboradores -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE VISUALIZACIÓN DE MÓDULO Y REPRODUCCIÓN (HTML, PDF, VIDEO, AUDIOS, POPUPS) -->
+    <div class="modal-modulo-viewer" id="moduloViewerModal">
+        <div class="modal-viewer-contenido">
+            <div class="modal-viewer-header">
+                <div class="modal-viewer-info">
+                    <span class="modulo-badge-tag" id="viewerModuloTag">Módulo 1</span>
+                    <h3 id="viewerModuloTitulo">Título del Módulo</h3>
+                </div>
+                <button class="modal-cerrar" onclick="cerrarModuloViewer()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- CONTENEDOR DEL VISOR INTEGRADO -->
+            <div class="modal-viewer-body">
+                <!-- Tabs para subtemas del módulo -->
+                <div class="subtemas-tabs" id="subtemasTabs"></div>
+
+                <!-- BARRA DE CONTROLES MULTIMEDIA DEL TEMA (AUDIO / POPUP INFORMATIVO) -->
+                <div class="tema-multimedia-bar" id="temaMultimediaBar">
+                    <!-- Botón de Audio y Botón Popup complementario se inyectan dinámicamente -->
+                </div>
+
+                <div class="visor-container" id="visorContainer">
+                    <iframe id="moduloIframe" src="" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+
+            <!-- FOOTER CON INDICADOR DE 50% AUTOMÁTICO, BOTÓN DE MARCAR VISTO Y EVALUACIÓN EN MOODLE -->
+            <div class="modal-viewer-footer">
+                <div class="viewer-progress-status" id="viewerFooterStatus">
+                    <div class="viewer-progress-label-row">
+                        <i class="fas fa-clock" id="viewerProgressIcon"></i>
+                        <span id="viewerProgressText">Visualizando contenido (0%) — Se marcará visto automáticamente al 50%</span>
+                    </div>
+                    <div class="viewer-progress-bar-track">
+                        <div class="viewer-progress-bar-fill" id="viewerProgressBarFill" style="width: 0%;"></div>
+                        <div class="viewer-progress-marker-50" title="Meta 50% para check automático"></div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <button class="btn-completar-tema" id="btnCompletarTema" onclick="marcarSubtemaComoVisto()">
+                        <i class="fas fa-check-circle"></i> Marcar Tema como Visto
+                    </button>
+                    <a href="https://moodle.rbsas.co/login/" target="_blank" class="btn-evaluacion-moodle" id="btnEvaluacionMoodle">
+                        <i class="fas fa-graduation-cap"></i> Ir a Evaluación en Moodle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMORIA INICIAL DE PROGRESO (.JSON / .JS) -->
+    <script src="memoria-progreso.js" onerror="console.info('Memoria inicial se gestionará desde almacenamiento local / JSON.')"></script>
+
+    <!-- MODAL POPUP COMPLEMENTARIO DE INFORMACIÓN ADICIONAL -->
+    <div class="modal-info-popup" id="infoPopupModal">
+        <div class="modal-info-card">
+            <div class="modal-info-header">
+                <h3 id="infoPopupTitle"><i class="fas fa-info-circle"></i> Información Complementaria</h3>
+                <button class="modal-cerrar" onclick="cerrarInfoPopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-info-body" id="infoPopupBody">
+                <!-- Contenido detallado del popup -->
+            </div>
+        </div>
+    </div>
+
+    <!-- INDICADOR DE CARGA -->
+    <div class="loading" id="loading" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Cargando información...</p>
+    </div>
+
+    <!-- JAVASCRIPT PRINCIPAL -->
+    <script src="script.js"></script>
+</body>
+
+</html>
