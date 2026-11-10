@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-10T19:31:02.970Z",
+  "ultimaActualizacion": "2026-11-10T19:31:06.482Z",
   "version": "2.1",
   "totalTemasPersonalizados": 19,
   "contenidosTemas": {
@@ -5373,7 +5373,7 @@
       "temaActual": "Bienvenida",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "BCA, DCA, TCS",
+      "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 11,
