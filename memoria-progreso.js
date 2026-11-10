@@ -5375,7 +5375,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "temaActual": "Bienvenida",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
+      "ultimoTemaTitulo": "Control de flota",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
       "temasVistos": 14,
