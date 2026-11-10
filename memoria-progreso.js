@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T20:17:03.871Z",
+  "ultimaActualizacion": "2026-11-10T20:17:07.924Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -5380,7 +5380,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "temaActual": "Bienvenida",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Control de flota",
+      "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
       "temasVistos": 11,
