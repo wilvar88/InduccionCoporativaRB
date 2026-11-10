@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-10T20:54:26.958Z",
+  "ultimaActualizacion": "2026-11-10T20:54:37.299Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -5470,12 +5470,12 @@
       "temaActual": "Bienvenida",
       "ultimoModuloId": 4,
       "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
-      "ultimoTemaTitulo": "Tarjeta básica",
+      "ultimoTemaTitulo": "Discapacidad",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
-      "temasVistos": 16,
+      "temasVistos": 17,
       "totalTemasHabilitados": 63,
-      "porcentajeAvance": 25,
+      "porcentajeAvance": 27,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5514,10 +5514,12 @@
         "4": {
           "0": true,
           "1": true,
+          "2": true,
           "5": true,
           "col_29": true,
           "col_24": true,
-          "col_25": true
+          "col_25": true,
+          "col_26": true
         }
       }
     },
