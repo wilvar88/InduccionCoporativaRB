@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T19:37:19.866Z",
+  "ultimaActualizacion": "2026-11-10T19:37:26.409Z",
   "version": "2.1",
   "totalTemasPersonalizados": 19,
   "contenidosTemas": {
@@ -5375,11 +5375,11 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
       "ultimoTemaTitulo": "Principales equipos y dispositivos",
-      "modulosCompletados": 0,
+      "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
-      "temasVistos": 13,
+      "temasVistos": 14,
       "totalTemasHabilitados": 64,
-      "porcentajeAvance": 20,
+      "porcentajeAvance": 22,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5405,13 +5405,15 @@ window.RB_MEMORIA_INICIAL_JSON = {
           "4": true,
           "5": true,
           "6": true,
+          "7": true,
           "col_16": true,
           "col_17": true,
           "col_18": true,
           "col_19": true,
           "col_20": true,
           "col_21": true,
-          "col_22": true
+          "col_22": true,
+          "col_23": true
         }
       }
     },
