@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T17:38:55.417Z",
+  "ultimaActualizacion": "2026-11-10T17:39:01.928Z",
   "version": "2.1",
   "totalTemasPersonalizados": 17,
   "contenidosTemas": {
@@ -189,7 +189,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "fileName": "Equipos_Bordo.html.html",
       "audio": "",
       "popup": null,
-      "updatedAt": "2026-11-10T17:38:55.196Z"
+      "updatedAt": "2026-11-10T17:39:01.612Z"
     }
   },
   "totalColaboradores": 246,
