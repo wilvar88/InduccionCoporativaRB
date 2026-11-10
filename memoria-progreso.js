@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T03:48:51.382Z",
+  "ultimaActualizacion": "2026-11-10T17:14:02.269Z",
   "version": "2.1",
   "totalTemasPersonalizados": 16,
   "contenidosTemas": {
@@ -5335,13 +5335,13 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "jefe": "",
       "rol": "Super Administrador",
       "primerIngreso": "5/11/26, 10:33:56 p. m.",
-      "ultimoIngreso": "9/11/26, 7:19:00 p. m.",
-      "cantidadIngresos": 11,
+      "ultimoIngreso": "10/11/26, 12:14:02 p. m.",
+      "cantidadIngresos": 12,
       "moduloActual": "Módulo 1: Bienvenida e introducción corporativa",
       "temaActual": "Bienvenida",
       "ultimoModuloId": 4,
       "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
-      "ultimoTemaTitulo": "Discapacidad",
+      "ultimoTemaTitulo": "Adulto Mayor",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 8,
