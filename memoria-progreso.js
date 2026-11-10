@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T20:34:36.188Z",
+  "ultimaActualizacion": "2026-11-10T20:34:50.470Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -26,7 +26,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
     {
       "colIndex": 1002,
       "moduloId": 3,
-      "titulo": "Canales de Comuniación",
+      "titulo": "Canales de Comunicación",
       "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 3: Tecnología y sistemas de recaudo.",
       "tipo": "html",
       "url": "",
@@ -36,7 +36,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "audio": "",
       "popup": null,
       "isAddedByAdmin": true,
-      "updatedAt": "2026-11-10T20:34:23.829Z"
+      "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
   "totalTemasPersonalizados": 21,
@@ -268,7 +268,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
     "1002": {
       "colIndex": 1002,
       "moduloId": 3,
-      "titulo": "Canales de Comuniación",
+      "titulo": "Canales de Comunicación",
       "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 3: Tecnología y sistemas de recaudo.",
       "tipo": "html",
       "url": "",
@@ -278,7 +278,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "audio": "",
       "popup": null,
       "isAddedByAdmin": true,
-      "updatedAt": "2026-11-10T20:34:23.829Z"
+      "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   },
   "totalColaboradores": 246,
