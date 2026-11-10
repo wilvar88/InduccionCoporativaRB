@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T20:25:11.933Z",
+  "ultimaActualizacion": "2026-11-10T20:25:20.479Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -5411,12 +5411,12 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "temaActual": "Bienvenida",
       "ultimoModuloId": 4,
       "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
-      "ultimoTemaTitulo": "Adulto Mayor",
+      "ultimoTemaTitulo": "Tarjetas híbridas",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
-      "temasVistos": 12,
+      "temasVistos": 13,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 19,
+      "porcentajeAvance": 21,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5451,6 +5451,10 @@ window.RB_MEMORIA_INICIAL_JSON = {
           "col_21": true,
           "col_22": true,
           "col_23": true
+        },
+        "4": {
+          "5": true,
+          "col_29": true
         }
       }
     },
