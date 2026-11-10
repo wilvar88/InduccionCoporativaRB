@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T19:06:00.646Z",
+  "ultimaActualizacion": "2026-11-10T19:07:12.429Z",
   "version": "2.1",
   "totalTemasPersonalizados": 18,
   "contenidosTemas": {
@@ -5363,7 +5363,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "temaActual": "Bienvenida",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Validadores y Torniquetes",
+      "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 10,
