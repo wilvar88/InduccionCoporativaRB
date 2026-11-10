@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-10T19:47:35.743Z",
+  "ultimaActualizacion": "2026-11-10T19:47:37.429Z",
   "version": "2.1",
   "totalTemasPersonalizados": 19,
   "contenidosTemas": {
@@ -5373,7 +5373,7 @@
       "temaActual": "Bienvenida",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
-      "ultimoTemaTitulo": "Transmilenio",
+      "ultimoTemaTitulo": "Estructura general del sistema",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
       "temasVistos": 14,
