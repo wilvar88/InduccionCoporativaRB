@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T19:35:36.285Z",
+  "ultimaActualizacion": "2026-11-10T19:36:00.099Z",
   "version": "2.1",
   "totalTemasPersonalizados": 19,
   "contenidosTemas": {
@@ -211,7 +211,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "fileName": "Equipos_Troncales_Adicionales. 2.html",
       "audio": "",
       "popup": null,
-      "updatedAt": "2026-11-10T19:35:36.034Z"
+      "updatedAt": "2026-11-10T19:35:59.772Z"
     }
   },
   "totalColaboradores": 246,
