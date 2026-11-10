@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-10T20:25:13.969Z",
+  "ultimaActualizacion": "2026-11-10T20:25:20.479Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -5413,9 +5413,9 @@
       "ultimoTemaTitulo": "Tarjetas híbridas",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
-      "temasVistos": 12,
+      "temasVistos": 13,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 19,
+      "porcentajeAvance": 21,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5450,6 +5450,10 @@
           "col_21": true,
           "col_22": true,
           "col_23": true
+        },
+        "4": {
+          "5": true,
+          "col_29": true
         }
       }
     },
