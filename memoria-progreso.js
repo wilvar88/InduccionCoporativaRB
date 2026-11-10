@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T17:14:15.608Z",
+  "ultimaActualizacion": "2026-11-10T17:14:22.911Z",
   "version": "2.1",
   "totalTemasPersonalizados": 16,
   "contenidosTemas": {
@@ -5341,12 +5341,12 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "temaActual": "Bienvenida",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Dispositivos de recarga",
+      "ultimoTemaTitulo": "Tecnología zonal y troncal",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
-      "temasVistos": 8,
+      "temasVistos": 9,
       "totalTemasHabilitados": 64,
-      "porcentajeAvance": 13,
+      "porcentajeAvance": 14,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5367,8 +5367,10 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "3": {
           "0": true,
           "1": true,
+          "2": true,
           "col_16": true,
-          "col_17": true
+          "col_17": true,
+          "col_18": true
         }
       }
     },
