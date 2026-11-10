@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T19:36:44.766Z",
+  "ultimaActualizacion": "2026-11-10T19:36:51.298Z",
   "version": "2.1",
   "totalTemasPersonalizados": 19,
   "contenidosTemas": {
@@ -5377,9 +5377,9 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoTemaTitulo": "Dispositivos de recarga",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
-      "temasVistos": 11,
+      "temasVistos": 12,
       "totalTemasHabilitados": 64,
-      "porcentajeAvance": 17,
+      "porcentajeAvance": 19,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5403,11 +5403,13 @@ window.RB_MEMORIA_INICIAL_JSON = {
           "2": true,
           "3": true,
           "4": true,
+          "5": true,
           "col_16": true,
           "col_17": true,
           "col_18": true,
           "col_19": true,
-          "col_20": true
+          "col_20": true,
+          "col_21": true
         }
       }
     },
