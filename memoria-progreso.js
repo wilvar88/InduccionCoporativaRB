@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T20:54:37.299Z",
+  "ultimaActualizacion": "2026-11-10T20:54:30.609Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -5474,9 +5474,9 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoTemaTitulo": "Discapacidad",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
-      "temasVistos": 17,
+      "temasVistos": 16,
       "totalTemasHabilitados": 63,
-      "porcentajeAvance": 27,
+      "porcentajeAvance": 25,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5515,12 +5515,10 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "4": {
           "0": true,
           "1": true,
-          "2": true,
           "5": true,
           "col_29": true,
           "col_24": true,
-          "col_25": true,
-          "col_26": true
+          "col_25": true
         }
       }
     },
