@@ -749,6 +749,13 @@ const GITHUB_REPO_NAME = 'InduccionCoporativaRB';
 const GITHUB_REPO_BRANCH = 'main';
 const GITHUB_API_MEMORIA_URL = `https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/contents/memoria-progreso.json`;
 
+let syncVaultCifradoCache = null;
+let hayAvanceLocalPendientePorSubir = false;
+let syncEnCursoPromise = null;
+let syncPendienteEnCola = false;
+let syncPendienteOpciones = { solicitarPermiso: false, syncJsFile: false };
+let debounceSyncTimer = null;
+
 function utf8ToBase64(str) {
     return window.btoa(unescape(encodeURIComponent(str)));
 }
@@ -757,13 +764,41 @@ function base64ToUtf8(b64) {
     return decodeURIComponent(escape(window.atob(String(b64 || '').replace(/\s/g, ''))));
 }
 
-async function inicializarMemoriaJSON() {
-    // 1. Si existe window.RB_MEMORIA_INICIAL_JSON (de memoria-progreso.js), cargar sus contenidos y colaboradores
-    if (window.RB_MEMORIA_INICIAL_JSON) {
-        await fusionarDatosMemoriaExterna(window.RB_MEMORIA_INICIAL_JSON);
+function contarClavesProgreso(progresoModulos) {
+    if (!progresoModulos || typeof progresoModulos !== 'object') return 0;
+    let count = 0;
+    Object.keys(progresoModulos).forEach(mId => {
+        const modObj = progresoModulos[mId];
+        if (modObj && typeof modObj === 'object') {
+            Object.keys(modObj).forEach(k => {
+                if (modObj[k] === true) count++;
+            });
+        }
+    });
+    return count;
+}
+
+async function obtenerJsonRemotoMasReciente() {
+    // 1. Si estamos en HTTP/HTTPS (Vercel), consultar primero /api/memoria (que lee de GitHub con token de servidor)
+    if (window.location.protocol.startsWith('http')) {
+        try {
+            const ghToken = localStorage.getItem('rb_github_sync_token') || '';
+            const headers = {};
+            if (ghToken) headers['X-GitHub-Token'] = ghToken;
+            const resApi = await fetch(`/api/memoria?_ts=${Date.now()}`, {
+                headers,
+                cache: 'no-store'
+            });
+            if (resApi.ok) {
+                const jsonApi = await resApi.json();
+                if (jsonApi && (jsonApi.contenidosTemas || jsonApi.colaboradores)) {
+                    return jsonApi;
+                }
+            }
+        } catch (e) {}
     }
 
-    // 2. Consultar en vivo el archivo memoria-progreso.json directamente desde la API de GitHub (funciona tanto en Vercel como en file:// sin caché)
+    // 2. Consultar directamente la API de GitHub (funciona en Vercel y en file://)
     try {
         const ghToken = localStorage.getItem('rb_github_sync_token') || '';
         const ghHeaders = { 'Accept': 'application/vnd.github+json' };
@@ -776,24 +811,13 @@ async function inicializarMemoriaJSON() {
         if (resGh.ok) {
             const ghData = await resGh.json();
             if (ghData && ghData.content) {
-                const decodedJson = JSON.parse(base64ToUtf8(ghData.content));
-                await fusionarDatosMemoriaExterna(decodedJson, true);
+                return JSON.parse(base64ToUtf8(ghData.content));
             }
         }
     } catch (e) {}
 
-    // 3. Si estamos en servidor HTTP/HTTPS (Vercel), consultar también /api/memoria y memoria-progreso.json local
+    // 3. Fallback al archivo memoria-progreso.json servido en la misma ruta
     if (window.location.protocol.startsWith('http')) {
-        try {
-            const resApi = await fetch(`/api/memoria?_ts=${Date.now()}`, { cache: 'no-store' });
-            if (resApi.ok) {
-                const jsonApi = await resApi.json();
-                if (jsonApi && (jsonApi.contenidosTemas || jsonApi.colaboradores)) {
-                    await fusionarDatosMemoriaExterna(jsonApi, true);
-                }
-            }
-        } catch (e) {}
-
         try {
             const res = await fetch(`memoria-progreso.json?_ts=${Date.now()}`, {
                 cache: 'no-store',
@@ -803,15 +827,31 @@ async function inicializarMemoriaJSON() {
                 }
             });
             if (res.ok) {
-                const json = await res.json();
-                if (json) {
-                    await fusionarDatosMemoriaExterna(json, true);
-                }
+                return await res.json();
             }
         } catch (e) {}
     }
 
-    // 4. Intentar leer de IndexedDB por si hay cambios locales más recientes en el navegador
+    return null;
+}
+
+async function inicializarMemoriaJSON() {
+    // 1. Si existe window.RB_MEMORIA_INICIAL_JSON (de memoria-progreso.js), cargar sus contenidos y colaboradores base
+    if (window.RB_MEMORIA_INICIAL_JSON) {
+        await fusionarDatosMemoriaExterna(window.RB_MEMORIA_INICIAL_JSON, true);
+    }
+
+    // 2. Consultar en vivo el archivo memoria-progreso.json más reciente desde la nube (/api/memoria + GitHub API)
+    const remoteJson = await obtenerJsonRemotoMasReciente();
+    if (remoteJson) {
+        await fusionarDatosMemoriaExterna(remoteJson, true);
+        // Si este navegador tiene el token de GitHub pero el archivo en la nube aún no tiene _syncVault, marcar para sincronizar
+        if (localStorage.getItem('rb_github_sync_token') && !remoteJson._syncVault) {
+            hayAvanceLocalPendientePorSubir = true;
+        }
+    }
+
+    // 3. Intentar leer de IndexedDB por si hay cambios locales en este navegador aún no subidos
     const db = await abrirIndexedDB();
     if (db && db.objectStoreNames.contains(IDB_STORE_MEMORIA)) {
         await new Promise((resolve) => {
@@ -828,7 +868,7 @@ async function inicializarMemoriaJSON() {
         });
     }
 
-    // 5. Recuperar handle de archivo físico si ya había sido vinculado antes
+    // 4. Recuperar handle de archivo físico si ya había sido vinculado antes
     if (!jsonFileHandleDisco) {
         const savedHandle = await obtenerFileHandleDeIDB();
         if (savedHandle) {
@@ -838,8 +878,49 @@ async function inicializarMemoriaJSON() {
     }
 }
 
+async function refrescarProgresoDesdeNube(reRenderizarUI = true) {
+    const remoteJson = await obtenerJsonRemotoMasReciente();
+    if (!remoteJson) return false;
+
+    const prevProgressStr = localStorage.getItem('rb_user_progress') || '{}';
+    const prevLogsStr = localStorage.getItem('rb_user_logs') || '{}';
+
+    await fusionarDatosMemoriaExterna(remoteJson, true);
+    await cargarTodosSubtemasCustomDeDB();
+
+    const newProgressStr = localStorage.getItem('rb_user_progress') || '{}';
+    const newLogsStr = localStorage.getItem('rb_user_logs') || '{}';
+
+    if (reRenderizarUI && (prevProgressStr !== newProgressStr || prevLogsStr !== newLogsStr)) {
+        if (currentUser) {
+            renderizarCategoriasLaterales();
+            renderizarModulos(currentUser, document.getElementById('busquedaInput') ? document.getElementById('busquedaInput').value : '');
+            actualizarGraficaCircularBanner(currentUser);
+            if (currentModuloIdViewer) {
+                renderizarTabsSubtemas(currentModuloIdViewer);
+            }
+        }
+        const adminModal = document.getElementById('adminModal');
+        if (adminModal && adminModal.classList.contains('active')) {
+            renderizarTablaAdmin(document.getElementById('adminSearchInput') ? document.getElementById('adminSearchInput').value : '');
+        }
+    }
+
+    // Si este navegador tenía más avance en localStorage que el que venía en el JSON remoto, subirlo inmediatamente al .json del proyecto
+    if (hayAvanceLocalPendientePorSubir) {
+        hayAvanceLocalPendientePorSubir = false;
+        sincronizarMemoriaJSONPersistente(false, false);
+    }
+
+    return true;
+}
+
 async function fusionarDatosMemoriaExterna(jsonObj, esDesdeArchivoProyecto = true) {
     if (!jsonObj || typeof jsonObj !== 'object') return;
+
+    if (jsonObj._syncVault) {
+        syncVaultCifradoCache = jsonObj._syncVault;
+    }
 
     // A.0) Fusionar lista de temas eliminados y temas agregados
     if (Array.isArray(jsonObj.temasEliminados)) {
@@ -887,7 +968,7 @@ async function fusionarDatosMemoriaExterna(jsonObj, esDesdeArchivoProyecto = tru
         }
     }
 
-    // B) Fusionar historial y avance de colaboradores
+    // B) Fusionar historial y avance de colaboradores (UNIÓN ADITIVA ENTRE NAVEGADOR Y ARCHIVO .JSON)
     if (!jsonObj.colaboradores || typeof jsonObj.colaboradores !== 'object') return;
 
     const logs = JSON.parse(localStorage.getItem('rb_user_logs') || '{}');
@@ -909,27 +990,37 @@ async function fusionarDatosMemoriaExterna(jsonObj, esDesdeArchivoProyecto = tru
                 ultimoTemaTitulo: entry.ultimoTemaTitulo || ''
             };
         } else {
-            if ((entry.cantidadIngresos || 0) > (logs[cCedula].cantidadIngresos || 0)) {
+            if ((entry.cantidadIngresos || 0) >= (logs[cCedula].cantidadIngresos || 0)) {
                 logs[cCedula].cantidadIngresos = entry.cantidadIngresos;
-                logs[cCedula].ultimoIngreso = entry.ultimoIngreso || logs[cCedula].ultimoIngreso;
+                if (entry.ultimoIngreso && entry.ultimoIngreso !== 'Sin registro') {
+                    logs[cCedula].ultimoIngreso = entry.ultimoIngreso;
+                }
             }
             if (logs[cCedula].primerIngreso === 'Sin registro' && entry.primerIngreso && entry.primerIngreso !== 'Sin registro') {
                 logs[cCedula].primerIngreso = entry.primerIngreso;
             }
-            if (!logs[cCedula].ultimoModuloNombre && entry.ultimoModuloNombre) {
-                logs[cCedula].ultimoModuloId = entry.ultimoModuloId;
+            if (entry.ultimoModuloNombre) {
+                logs[cCedula].ultimoModuloId = entry.ultimoModuloId || logs[cCedula].ultimoModuloId;
                 logs[cCedula].ultimoModuloNombre = entry.ultimoModuloNombre;
-                logs[cCedula].ultimoTemaTitulo = entry.ultimoTemaTitulo;
+                logs[cCedula].ultimoTemaTitulo = entry.ultimoTemaTitulo || logs[cCedula].ultimoTemaTitulo;
             }
         }
 
-        // Fusionar progreso de temas vistos
-        if (entry.progresoModulos && typeof entry.progresoModulos === 'object') {
-            if (!progressData[cCedula]) progressData[cCedula] = {};
-            Object.keys(entry.progresoModulos).forEach(modId => {
-                if (!progressData[cCedula][modId]) progressData[cCedula][modId] = {};
-                Object.assign(progressData[cCedula][modId], entry.progresoModulos[modId]);
-            });
+        // Fusionar progreso de temas vistos y detectar si este navegador tenía avances locales que no estaban en el .json
+        const remoteProg = (entry.progresoModulos && typeof entry.progresoModulos === 'object') ? entry.progresoModulos : {};
+        const localProgBefore = progressData[cCedula] || {};
+        const countRemote = contarClavesProgreso(remoteProg);
+
+        if (!progressData[cCedula]) progressData[cCedula] = {};
+        Object.keys(remoteProg).forEach(modId => {
+            if (!progressData[cCedula][modId]) progressData[cCedula][modId] = {};
+            Object.assign(progressData[cCedula][modId], remoteProg[modId]);
+        });
+
+        const countMerged = contarClavesProgreso(progressData[cCedula]);
+        if (esDesdeArchivoProyecto && countMerged > countRemote && contarClavesProgreso(localProgBefore) > 0) {
+            // Este navegador tenía temas vistos en memoria local que aún no estaban en memoria-progreso.json
+            hayAvanceLocalPendientePorSubir = true;
         }
     });
 
@@ -937,7 +1028,7 @@ async function fusionarDatosMemoriaExterna(jsonObj, esDesdeArchivoProyecto = tru
     localStorage.setItem('rb_user_progress', JSON.stringify(progressData));
 }
 
-function construirObjetoMemoriaJSON() {
+function construirObjetoMemoriaJSON(syncJsFile = false) {
     const logs = JSON.parse(localStorage.getItem('rb_user_logs') || '{}');
     const progressData = JSON.parse(localStorage.getItem('rb_user_progress') || '{}');
     const colaboradoresMap = {};
@@ -999,9 +1090,9 @@ function construirObjetoMemoriaJSON() {
         delete temasExport[colElim];
     });
 
-    return {
+    const payloadObj = {
         ultimaActualizacion: new Date().toISOString(),
-        version: '2.2',
+        version: '2.3',
         temasEliminados: temasEliminadosCache,
         temasAgregados: temasAgregadosCache,
         totalTemasPersonalizados: Object.keys(temasExport).length,
@@ -1009,6 +1100,15 @@ function construirObjetoMemoriaJSON() {
         totalColaboradores: Object.keys(colaboradoresMap).length,
         colaboradores: colaboradoresMap
     };
+
+    if (syncVaultCifradoCache) {
+        payloadObj._syncVault = syncVaultCifradoCache;
+    }
+    if (syncJsFile) {
+        payloadObj._syncJsFile = true;
+    }
+
+    return payloadObj;
 }
 
 function actualizarEstadoVisualBotonJsonVinculado(vinculado) {
@@ -1028,7 +1128,7 @@ function actualizarEstadoVisualBotonJsonVinculado(vinculado) {
 async function guardarMemoriaEnNubeGitHubOVercel(payload, permitirPedirToken = false) {
     let savedToken = localStorage.getItem('rb_github_sync_token') || '';
 
-    // 1. Si estamos en Vercel (http/https), intentar primero la función serverless /api/memoria
+    // 1. Si estamos en Vercel (http/https), usar la función serverless /api/memoria (hace merge atómico por usuario en el servidor)
     if (window.location.protocol.startsWith('http')) {
         try {
             const headers = { 'Content-Type': 'application/json' };
@@ -1043,6 +1143,9 @@ async function guardarMemoriaEnNubeGitHubOVercel(payload, permitirPedirToken = f
             if (apiRes.ok) {
                 const data = await apiRes.json();
                 if (data && data.ok) {
+                    if (data.colaboradores) {
+                        await fusionarDatosMemoriaExterna({ colaboradores: data.colaboradores }, true);
+                    }
                     return { ok: true, via: 'vercel-api' };
                 }
             } else if (apiRes.status === 401 && permitirPedirToken && !savedToken) {
@@ -1054,51 +1157,79 @@ async function guardarMemoriaEnNubeGitHubOVercel(payload, permitirPedirToken = f
                 if (inputToken && inputToken.trim()) {
                     savedToken = inputToken.trim();
                     localStorage.setItem('rb_github_sync_token', savedToken);
+                    // Reintentar con el nuevo token para que el servidor guarde también el _syncVault
+                    const retryRes = await fetch('/api/memoria', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'X-GitHub-Token': savedToken },
+                        body: JSON.stringify(payload)
+                    });
+                    if (retryRes.ok) {
+                        const retryData = await retryRes.json();
+                        if (retryData && retryData.ok) {
+                            return { ok: true, via: 'vercel-api' };
+                        }
+                    }
                 }
             }
         } catch (e) {}
     }
 
-    // 2. Si tenemos token de GitHub configurado, guardar directamente contra la API de GitHub (funciona en Vercel y también en file://)
+    // 2. Si tenemos token de GitHub configurado, guardar directamente contra la API de GitHub (con reintento ante conflicto 409)
     if (savedToken) {
-        try {
-            const ghHeaders = {
-                'Accept': 'application/vnd.github+json',
-                'Authorization': `Bearer ${savedToken}`,
-                'Content-Type': 'application/json'
-            };
+        const ghHeaders = {
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${savedToken}`,
+            'Content-Type': 'application/json'
+        };
 
-            let currentSha = undefined;
-            const getRes = await fetch(`${GITHUB_API_MEMORIA_URL}?ref=${GITHUB_REPO_BRANCH}&_ts=${Date.now()}`, {
-                headers: ghHeaders,
-                cache: 'no-store'
-            });
-            if (getRes.ok) {
-                const meta = await getRes.json();
-                currentSha = meta.sha;
-            }
-
-            const jsonString = JSON.stringify(payload, null, 2);
-            const putRes = await fetch(GITHUB_API_MEMORIA_URL, {
-                method: 'PUT',
-                headers: ghHeaders,
-                body: JSON.stringify({
-                    message: `Actualización automática desde plataforma (${new Date().toISOString()})`,
-                    content: utf8ToBase64(jsonString),
-                    sha: currentSha,
-                    branch: GITHUB_REPO_BRANCH
-                })
-            });
-
-            if (putRes.ok) {
-                return { ok: true, via: 'github-api' };
-            } else if (putRes.status === 401 || putRes.status === 403) {
-                if (permitirPedirToken) {
-                    localStorage.removeItem('rb_github_sync_token');
+        for (let attempt = 1; attempt <= 3; attempt++) {
+            try {
+                let currentSha = undefined;
+                const getRes = await fetch(`${GITHUB_API_MEMORIA_URL}?ref=${GITHUB_REPO_BRANCH}&_ts=${Date.now()}`, {
+                    headers: ghHeaders,
+                    cache: 'no-store'
+                });
+                if (getRes.ok) {
+                    const meta = await getRes.json();
+                    currentSha = meta.sha;
+                    if (meta.content) {
+                        const remoteJson = JSON.parse(base64ToUtf8(meta.content));
+                        await fusionarDatosMemoriaExterna(remoteJson, true);
+                        payload = construirObjetoMemoriaJSON(payload._syncJsFile);
+                    }
                 }
+
+                const cleanPayload = { ...payload };
+                delete cleanPayload._syncJsFile;
+                const jsonString = JSON.stringify(cleanPayload, null, 2);
+
+                const putRes = await fetch(GITHUB_API_MEMORIA_URL, {
+                    method: 'PUT',
+                    headers: ghHeaders,
+                    body: JSON.stringify({
+                        message: `Actualización automática desde plataforma (${new Date().toISOString()})`,
+                        content: utf8ToBase64(jsonString),
+                        sha: currentSha,
+                        branch: GITHUB_REPO_BRANCH
+                    })
+                });
+
+                if (putRes.ok) {
+                    return { ok: true, via: 'github-api' };
+                }
+                if ((putRes.status === 409 || putRes.status === 422) && attempt < 3) {
+                    await new Promise(r => setTimeout(r, 250 * attempt));
+                    continue;
+                }
+                if (putRes.status === 401 || putRes.status === 403) {
+                    if (permitirPedirToken) {
+                        localStorage.removeItem('rb_github_sync_token');
+                    }
+                    break;
+                }
+            } catch (err) {
+                console.warn('Error guardando directamente en GitHub API:', err);
             }
-        } catch (err) {
-            console.warn('Error guardando directamente en GitHub API:', err);
         }
     }
 
@@ -1109,15 +1240,15 @@ function configurarTokenGitHubManual() {
     const actual = localStorage.getItem('rb_github_sync_token') || '';
     const nuevo = prompt(
         '☁️ Configurar guardado automático en GitHub / Vercel:\n\n' +
-        'Ingresa tu GitHub Personal Access Token (con permiso de escritura en wilvar88/InduccionCoporativaRB) para que cualquier cambio se guarde automáticamente en la nube sin subir archivos manualmente:',
+        'Ingresa tu GitHub Personal Access Token (con permiso de escritura en wilvar88/InduccionCoporativaRB) para que cualquier cambio y avance de todos los navegadores se guarde automáticamente en memoria-progreso.json:',
         actual
     );
     if (nuevo !== null) {
         if (nuevo.trim()) {
             localStorage.setItem('rb_github_sync_token', nuevo.trim());
-            sincronizarMemoriaJSONPersistente(true).then(res => {
+            sincronizarMemoriaJSONPersistente(true, true).then(res => {
                 if (res && res.guardadoEnNube) {
-                    alert('✓ ¡Conectado y sincronizado con GitHub y Vercel exitosamente! Todos tus contenidos ya quedaron guardados en el repositorio.');
+                    alert('✓ ¡Conectado y sincronizado con GitHub y Vercel exitosamente! Ahora el progreso de cualquier navegador quedará sincronizado en memoria-progreso.json.');
                 } else {
                     alert('Token guardado. Verifica que tenga permisos de escritura ("repo" o "Contents: Read and write") en wilvar88/InduccionCoporativaRB.');
                 }
@@ -1129,8 +1260,8 @@ function configurarTokenGitHubManual() {
     }
 }
 
-async function sincronizarMemoriaJSONPersistente(solicitarPermisoOArchivo = false) {
-    const payload = construirObjetoMemoriaJSON();
+async function ejecutarSincronizacionMemoriaInterna(solicitarPermisoOArchivo = false, syncJsFile = false) {
+    const payload = construirObjetoMemoriaJSON(syncJsFile);
 
     // 1. Guardar en localStorage
     try {
@@ -1146,7 +1277,7 @@ async function sincronizarMemoriaJSONPersistente(solicitarPermisoOArchivo = fals
         } catch (e) {}
     }
 
-    // 3. Intentar guardado automático en la nube (GitHub / Vercel Serverless API) sin intervención manual
+    // 3. Intentar guardado automático en la nube (GitHub / Vercel Serverless API) con fusión por usuario
     const cloudRes = await guardarMemoriaEnNubeGitHubOVercel(payload, solicitarPermisoOArchivo);
     if (cloudRes && cloudRes.ok) {
         actualizarEstadoVisualBotonJsonVinculado(true);
@@ -1197,6 +1328,30 @@ async function sincronizarMemoriaJSONPersistente(solicitarPermisoOArchivo = fals
     }
 
     return { guardadoEnDisco: false, guardadoEnNube: cloudRes.ok, payload };
+}
+
+// Cola serializada para evitar que dos guardados seguidos choquen en GitHub (409 Conflict)
+async function sincronizarMemoriaJSONPersistente(solicitarPermisoOArchivo = false, syncJsFile = false) {
+    if (syncEnCursoPromise) {
+        syncPendienteEnCola = true;
+        if (solicitarPermisoOArchivo) syncPendienteOpciones.solicitarPermiso = true;
+        if (syncJsFile) syncPendienteOpciones.syncJsFile = true;
+        return syncEnCursoPromise;
+    }
+
+    syncEnCursoPromise = (async () => {
+        let ultimoResultado = await ejecutarSincronizacionMemoriaInterna(solicitarPermisoOArchivo, syncJsFile);
+        while (syncPendienteEnCola) {
+            const opts = { ...syncPendienteOpciones };
+            syncPendienteEnCola = false;
+            syncPendienteOpciones = { solicitarPermiso: false, syncJsFile: false };
+            ultimoResultado = await ejecutarSincronizacionMemoriaInterna(opts.solicitarPermiso, opts.syncJsFile);
+        }
+        syncEnCursoPromise = null;
+        return ultimoResultado;
+    })();
+
+    return syncEnCursoPromise;
 }
 
 async function vincularArchivoMemoriaJSONEnDisco() {
@@ -1263,6 +1418,22 @@ function importarMemoriaProgresoJSON(event) {
 // =============================================================================
 document.addEventListener('DOMContentLoaded', () => {
     inicializarAplicacion();
+
+    // Sincronizar automáticamente cuando el usuario vuelve a la pestaña o cambia de navegador
+    window.addEventListener('focus', () => {
+        refrescarProgresoDesdeNube(true);
+    });
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            refrescarProgresoDesdeNube(true);
+        }
+    });
+    // Refresco periódico en segundo plano cada 20 segundos para reflejar avances hechos desde otros dispositivos
+    setInterval(() => {
+        if (document.visibilityState === 'visible') {
+            refrescarProgresoDesdeNube(true);
+        }
+    }, 20000);
 });
 
 // Escuchar mensajes postMessage desde el iframe del visor (para detección exacta del 50% en HTML, Videos locales y YouTube)
@@ -1307,6 +1478,12 @@ async function inicializarAplicacion() {
     await cargarTodosSubtemasCustomDeDB();
     // 3. Cargar colaboradores y matriz de cargos desde Google Sheets
     await cargarDatosGoogleSheets();
+
+    // 4. Si este navegador tenía avances en memoria local aún no guardados en memoria-progreso.json (o token para _syncVault), sincronizar ahora
+    if (hayAvanceLocalPendientePorSubir) {
+        hayAvanceLocalPendientePorSubir = false;
+        sincronizarMemoriaJSONPersistente(false, false);
+    }
 
     mostrarLoading(false);
 
@@ -1712,6 +1889,9 @@ function iniciarSesionUsuario(user, isNewLogin = true) {
     renderizarCategoriasLaterales();
     renderizarModulos(user);
     actualizarGraficaCircularBanner(user);
+
+    // Refrescar progreso desde memoria-progreso.json en segundo plano al iniciar sesión
+    refrescarProgresoDesdeNube(true);
 }
 
 function toggleVistaSuperAdminModulos() {
@@ -2533,6 +2713,8 @@ function cambiarTabAdmin(tab) {
         btnContenidos.classList.remove('active');
         btnAvance.classList.add('active');
         renderizarTablaAdmin(document.getElementById('adminSearchInput') ? document.getElementById('adminSearchInput').value : '');
+        // Consultar memoria-progreso.json en tiempo real al abrir la tabla de Status de Colaboradores
+        refrescarProgresoDesdeNube(true);
     }
 }
 
@@ -3025,7 +3207,7 @@ async function guardarContenidoTemaSA() {
     await cargarTodosSubtemasCustomDeDB();
 
     // Sincronizar y guardar automáticamente en memoria-progreso.json del proyecto
-    const syncRes = await sincronizarMemoriaJSONPersistente(true);
+    const syncRes = await sincronizarMemoriaJSONPersistente(true, true);
 
     renderizarListaTemasSA();
     renderizarCategoriasLaterales();
