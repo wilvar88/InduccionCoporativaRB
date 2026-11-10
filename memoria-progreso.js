@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T20:18:10.798Z",
+  "ultimaActualizacion": "2026-11-10T20:18:21.782Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -5411,7 +5411,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "temaActual": "Bienvenida",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "BCA, DCA, TCS",
+      "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
       "temasVistos": 12,
