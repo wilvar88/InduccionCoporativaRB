@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T18:29:15.408Z",
+  "ultimaActualizacion": "2026-11-10T18:29:22.035Z",
   "version": "2.1",
   "totalTemasPersonalizados": 17,
   "contenidosTemas": {
@@ -5355,9 +5355,9 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoTemaTitulo": "Validadores y Torniquetes",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
-      "temasVistos": 9,
+      "temasVistos": 10,
       "totalTemasHabilitados": 64,
-      "porcentajeAvance": 14,
+      "porcentajeAvance": 16,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5379,9 +5379,11 @@ window.RB_MEMORIA_INICIAL_JSON = {
           "0": true,
           "1": true,
           "2": true,
+          "3": true,
           "col_16": true,
           "col_17": true,
-          "col_18": true
+          "col_18": true,
+          "col_19": true
         }
       }
     },
