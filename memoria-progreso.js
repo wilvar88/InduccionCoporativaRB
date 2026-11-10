@@ -1,8 +1,8 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-09T23:14:55.789Z",
+  "ultimaActualizacion": "2026-11-10T03:21:56.540Z",
   "version": "2.1",
-  "totalTemasPersonalizados": 14,
+  "totalTemasPersonalizados": 15,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -157,6 +157,17 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "audio": "",
       "popup": null,
       "updatedAt": "2026-11-06T16:59:45.836Z"
+    },
+    "16": {
+      "colIndex": 16,
+      "tipo": "html",
+      "url": "",
+      "content": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta name=\"theme-color\" content=\"#ffffff\">\n<title>Estructura Tecnológica (Texto) | Recaudo Bogotá</title>\n<style>\n:root{\n  --navy:#001e47;--navy-2:#082c5b;--lime:#CDD400;--ink:#102746;\n  --muted:#65758a;--glass:rgba(255,255,255,.72);\n}\n*{box-sizing:border-box}\nhtml,body{margin:0;height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}\n\n/* Fondo corporativo */\n.page{\n  min-height:100vh;position:relative;isolation:isolate;\n  display:flex;flex-direction:column;justify-content:space-between;\n  padding:clamp(15px,3vh,30px) clamp(20px,5vw,60px);\n  background:\n    radial-gradient(ellipse at 8% 5%,rgba(205,212,0,.15),transparent 24%),\n    radial-gradient(ellipse at 92% 88%,rgba(0,30,71,.07),transparent 28%),\n    linear-gradient(135deg,#fff 0%,#f8fafc 56%,#f2f5f8 100%);\n}\n.page:before,.page:after{content:\"\";position:absolute;z-index:-1;pointer-events:none;border-radius:50%;filter:blur(1px)}\n.page:before{width:370px;height:370px;top:-250px;left:-170px;border:1px solid rgba(205,212,0,.4);box-shadow:0 0 0 28px rgba(205,212,0,.035),0 0 0 58px rgba(205,212,0,.025)}\n.page:after{width:420px;height:420px;right:-270px;bottom:-270px;border:1px solid rgba(0,30,71,.13);box-shadow:0 0 0 30px rgba(0,30,71,.025),0 0 0 65px rgba(0,30,71,.018)}\n\n/* Cabecera */\nheader{max-width:1200px;width:100%;margin:0 auto;text-align:center;flex-shrink:0}\n.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--navy);font-size:.65rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}\n.eyebrow:before,.eyebrow:after{content:\"\";height:1px;width:28px;background:var(--lime)}\nh1{font-size:clamp(1.8rem,3.5vw,3rem);line-height:1.05;letter-spacing:-.04em;margin:0;color:var(--navy);font-weight:850}\nh1 span{color:#aeb600}\n.subtitle{font-size:clamp(.85rem,1.1vw,1rem);color:#68788c;margin:12px auto 0;max-width:850px;line-height:1.5}\n\n/* Grid de Explicación Textual (2x2) */\n.text-grid {\n  flex: 1;\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: clamp(20px, 3vw, 40px);\n  max-width: 1000px;\n  width: 100%;\n  margin: clamp(20px, 4vh, 40px) auto;\n  align-items: stretch;\n}\n\n/* Tarjetas de Contenido (Glassmorphism) */\n.text-card {\n  position: relative;\n  background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(247,250,252,.75));\n  backdrop-filter: blur(16px);\n  -webkit-backdrop-filter: blur(16px);\n  border: 1px solid rgba(0,30,71,.08);\n  border-radius: 20px;\n  padding: clamp(20px, 3.5vh, 35px) 30px;\n  box-shadow: 0 12px 30px rgba(0,30,71,.06), inset 0 1px 0 rgba(255,255,255,.9);\n  display: flex;\n  flex-direction: column;\n  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;\n  overflow: hidden;\n}\n.text-card:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 20px 40px rgba(0,30,71,.10), 0 0 0 3px rgba(205,212,0,.15);\n  border-color: rgba(205,212,0,.8);\n}\n\n/* Tipografía de las Tarjetas */\n.step-header {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n  margin-bottom: 12px;\n  position: relative;\n  z-index: 1;\n}\n.step-icon {\n  width: 45px;\n  height: 45px;\n  background: rgba(205,212,0,.2);\n  border-radius: 12px;\n  display: grid;\n  place-items: center;\n  font-size: 1.3rem;\n  color: var(--navy);\n  flex-shrink: 0;\n}\n.step-title {\n  font-size: clamp(1.05rem, 1.4vw, 1.25rem);\n  color: var(--navy);\n  font-weight: 850;\n  margin: 0;\n  letter-spacing: -0.01em;\n  line-height: 1.2;\n}\n.step-desc {\n  font-size: clamp(.85rem, 1vw, .95rem);\n  color: var(--ink);\n  line-height: 1.6;\n  margin: 0;\n  position: relative;\n  z-index: 1;\n}\n.step-desc b {\n  color: var(--navy-2);\n}\n\n/* Marca de agua numérica en el fondo */\n.watermark {\n  position: absolute;\n  top: -15px;\n  right: 5px;\n  font-size: 7rem;\n  font-weight: 900;\n  color: rgba(0,30,71,.04);\n  line-height: 1;\n  pointer-events: none;\n  z-index: 0;\n  transition: color .3s ease;\n}\n.text-card:hover .watermark {\n  color: rgba(205,212,0,.15);\n}\n\n/* Footer */\n.footer{max-width:1200px;width:100%;margin:0 auto;padding-top:12px;border-top:1px solid rgba(0,30,71,.10);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-shrink:0}\n.brand-svg{width:min(100%,240px);max-height:40px;}\n.footer-copy{font-size:.65rem;color:#7b8796;text-align:right;line-height:1.4}\n\n/* Responsive */\n@media(max-width: 850px){\n  .text-grid { grid-template-columns: 1fr; gap: 20px; }\n  .page { height: auto; overflow-y: auto; }\n}\n@media(max-width: 600px){\n  .footer { flex-direction: column; align-items: flex-start; margin-top: 25px; }\n  .footer-copy { text-align: left; }\n}\n</style>\n</head>\n<body>\n\n<main class=\"page\">\n  \n  <header>\n    <div class=\"eyebrow\">Recaudo Bogotá · Ecosistema SIRCI</div>\n    <h1>Estructura Tecnológica de <span>Recaudo</span></h1>\n    <p class=\"subtitle\">El proceso de recaudo opera como un ciclo cerrado y seguro. A continuación, se detalla cómo fluye la información y el dinero desde el usuario hasta la cámara de compensación central.</p>\n  </header>\n\n  <section class=\"text-grid\">\n    \n    <!-- PASO 1 -->\n    <article class=\"text-card\">\n      <div class=\"watermark\">1</div>\n      <div class=\"step-header\">\n        <div class=\"step-icon\">💳</div>\n        <h2 class=\"step-title\">El Medio de Pago<br>(Tarjeta Inteligente)</h2>\n      </div>\n      <p class=\"step-desc\">El ciclo inicia con el usuario portando su tarjeta <b>TuLlave</b>. Este dispositivo actúa como una bóveda electrónica que almacena de manera encriptada el saldo disponible y el perfil tarifario del pasajero, listo para interactuar con la red.</p>\n    </article>\n\n    <!-- PASO 2 -->\n    <article class=\"text-card\">\n      <div class=\"watermark\">2</div>\n      <div class=\"step-header\">\n        <div class=\"step-icon\">📠</div>\n        <h2 class=\"step-title\">Inyección de Saldo<br>(Recargador TCA)</h2>\n      </div>\n      <p class=\"step-desc\">A través de las terminales operadas en taquillas y comercios, el efectivo del usuario ingresa al sistema. La terminal se comunica con el servidor central para autorizar la transacción y convertir el dinero físico en <b>unidades de transporte (saldo electrónico)</b> dentro de la tarjeta.</p>\n    </article>\n\n    <!-- PASO 3 -->\n    <article class=\"text-card\">\n      <div class=\"watermark\">3</div>\n      <div class=\"step-header\">\n        <div class=\"step-icon\">⛩️</div>\n        <h2 class=\"step-title\">Acceso y Validación<br>(Estaciones y Buses)</h2>\n      </div>\n      <p class=\"step-desc\">Al acercar la tarjeta a los validadores ubicados en los torniquetes troncales o en los buses zonales, se efectúa el <b>Pago de Pasaje</b>. El equipo verifica el saldo, aplica las reglas de transbordo y debita el valor en milisegundos, permitiendo el ingreso al sistema.</p>\n    </article>\n\n    <!-- PASO 4 -->\n    <article class=\"text-card\">\n      <div class=\"watermark\">4</div>\n      <div class=\"step-header\">\n        <div class=\"step-icon\">🖥️</div>\n        <h2 class=\"step-title\">Consolidación Financiera<br>(Data Center FCS)</h2>\n      </div>\n      <p class=\"step-desc\">Todos los equipos de validación y recarga transmiten los paquetes de datos (<b>Recaudo</b>) hacia el cerebro central. El Data Center recibe, desencripta y procesa millones de transacciones diarias para realizar la conciliación, cerrando el ciclo financiero exacto de la ciudad.</p>\n    </article>\n\n  </section>\n\n  <footer class=\"footer\">\n    <!-- LOGO CORPORATIVO EN SVG PURO -->\n    <svg class=\"brand-svg\" viewBox=\"0 0 350 50\" xmlns=\"http://www.w3.org/2000/svg\">\n      <text x=\"0\" y=\"35\" fill=\"#001e47\" font-family=\"Arial, sans-serif\" font-size=\"28\" font-weight=\"normal\">Recaudo Bogotá</text>\n      <text x=\"215\" y=\"35\" fill=\"#001e47\" font-family=\"Arial, sans-serif\" font-size=\"14\" font-weight=\"bold\">S.A.S.</text>\n      <line x1=\"265\" y1=\"10\" x2=\"265\" y2=\"40\" stroke=\"#001e47\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n      <text x=\"280\" y=\"38\" fill=\"#001e47\" font-family=\"Arial, sans-serif\" font-size=\"34\" font-weight=\"900\">RB</text>\n    </svg>\n    <div class=\"footer-copy\">Arquitectura Tecnológica e Infraestructura<br>Sistema Integrado de Recaudo, Control e Información (SIRCI)</div>\n  </footer>\n</main>\n\n</body>\n</html>",
+      "fileDataUrl": null,
+      "fileName": "Estructura_Explicacion.html.html",
+      "audio": "",
+      "popup": null,
+      "updatedAt": "2026-11-10T03:21:35.483Z"
     }
   },
   "totalColaboradores": 246,
@@ -5313,30 +5324,40 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "jefe": "",
       "rol": "Super Administrador",
       "primerIngreso": "5/11/26, 10:33:56 p. m.",
-      "ultimoIngreso": "9/11/26, 5:39:33 p. m.",
-      "cantidadIngresos": 10,
+      "ultimoIngreso": "9/11/26, 7:19:00 p. m.",
+      "cantidadIngresos": 11,
       "moduloActual": "Módulo 1: Bienvenida e introducción corporativa",
       "temaActual": "Bienvenida",
-      "ultimoModuloId": 1,
-      "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
-      "ultimoTemaTitulo": "¿Quiénes somos?",
+      "ultimoModuloId": 3,
+      "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
+      "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
-      "temasVistos": 4,
+      "temasVistos": 8,
       "totalTemasHabilitados": 64,
-      "porcentajeAvance": 6,
+      "porcentajeAvance": 13,
       "progresoModulos": {
         "1": {
           "2": true,
           "3": true,
           "5": true,
+          "6": true,
           "col_3": true,
           "col_4": true,
-          "col_6": true
+          "col_6": true,
+          "col_7": true
         },
         "2": {
           "4": true,
-          "col_12": true
+          "7": true,
+          "col_12": true,
+          "col_15": true
+        },
+        "3": {
+          "0": true,
+          "1": true,
+          "col_16": true,
+          "col_17": true
         }
       }
     },
