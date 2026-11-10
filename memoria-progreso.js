@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T03:26:48.768Z",
+  "ultimaActualizacion": "2026-11-10T03:29:03.299Z",
   "version": "2.1",
   "totalTemasPersonalizados": 16,
   "contenidosTemas": {
@@ -178,7 +178,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "fileName": "Flujo_Transaccional.html",
       "audio": "",
       "popup": null,
-      "updatedAt": "2026-11-10T03:26:48.403Z"
+      "updatedAt": "2026-11-10T03:29:03.081Z"
     }
   },
   "totalColaboradores": 246,
