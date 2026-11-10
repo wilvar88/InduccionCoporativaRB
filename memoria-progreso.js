@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T18:30:40.808Z",
+  "ultimaActualizacion": "2026-11-10T18:30:53.357Z",
   "version": "2.1",
   "totalTemasPersonalizados": 18,
   "contenidosTemas": {
@@ -189,7 +189,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "fileName": "Tecnología Zonal y Troncal.html",
       "audio": "",
       "popup": null,
-      "updatedAt": "2026-11-10T18:30:40.421Z"
+      "updatedAt": "2026-11-10T18:30:53.042Z"
     },
     "19": {
       "colIndex": 19,
