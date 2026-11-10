@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T20:33:45.946Z",
+  "ultimaActualizacion": "2026-11-10T20:33:56.297Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -22,9 +22,24 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": true,
       "updatedAt": "2026-11-10T20:18:10.500Z"
+    },
+    {
+      "colIndex": 1002,
+      "moduloId": 3,
+      "titulo": "Nuevo Tema (Módulo 3)",
+      "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 3: Tecnología y sistemas de recaudo.",
+      "tipo": "html",
+      "url": "",
+      "content": "<h3>Nuevo Tema (Módulo 3)</h3><p>Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 3: Tecnología y sistemas de recaudo.</p>",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": true,
+      "updatedAt": "2026-11-10T20:33:56.065Z"
     }
   ],
-  "totalTemasPersonalizados": 20,
+  "totalTemasPersonalizados": 21,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -249,6 +264,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": true,
       "updatedAt": "2026-11-10T20:18:10.500Z"
+    },
+    "1002": {
+      "colIndex": 1002,
+      "moduloId": 3,
+      "titulo": "Nuevo Tema (Módulo 3)",
+      "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 3: Tecnología y sistemas de recaudo.",
+      "tipo": "html",
+      "url": "",
+      "content": "<h3>Nuevo Tema (Módulo 3)</h3><p>Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 3: Tecnología y sistemas de recaudo.</p>",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": true,
+      "updatedAt": "2026-11-10T20:33:56.065Z"
     }
   },
   "totalColaboradores": 246,
@@ -295,7 +325,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 6,
       "temasVistos": 0,
-      "totalTemasHabilitados": 35,
+      "totalTemasHabilitados": 36,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -318,7 +348,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -341,7 +371,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -364,7 +394,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -387,7 +417,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -410,7 +440,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -433,7 +463,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -456,7 +486,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -479,7 +509,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -502,7 +532,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -525,7 +555,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -548,7 +578,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -571,7 +601,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -594,7 +624,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -617,7 +647,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -640,7 +670,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -663,7 +693,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -686,7 +716,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -709,7 +739,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -732,7 +762,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -755,7 +785,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -778,7 +808,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -801,7 +831,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -824,7 +854,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -847,7 +877,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -870,7 +900,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -893,7 +923,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -916,7 +946,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -939,7 +969,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -962,7 +992,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -985,7 +1015,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1008,7 +1038,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1031,7 +1061,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1054,7 +1084,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1077,7 +1107,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1100,7 +1130,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1123,7 +1153,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1146,7 +1176,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1169,7 +1199,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1192,7 +1222,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1215,7 +1245,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1238,7 +1268,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 2,
       "totalModulosHabilitados": 11,
       "temasVistos": 18,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 29,
       "progresoModulos": {
         "1": {
@@ -1304,7 +1334,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1327,7 +1357,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1350,7 +1380,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1373,7 +1403,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1396,7 +1426,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1419,7 +1449,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1442,7 +1472,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1465,7 +1495,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1488,7 +1518,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1511,7 +1541,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1534,7 +1564,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1557,7 +1587,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1580,7 +1610,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1603,7 +1633,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 6,
       "temasVistos": 0,
-      "totalTemasHabilitados": 35,
+      "totalTemasHabilitados": 36,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1626,7 +1656,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1649,7 +1679,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1672,7 +1702,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1695,7 +1725,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1718,7 +1748,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1741,7 +1771,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1764,7 +1794,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1787,7 +1817,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1810,7 +1840,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1833,7 +1863,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1856,7 +1886,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1879,7 +1909,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1902,7 +1932,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1925,7 +1955,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1948,7 +1978,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1971,7 +2001,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -1994,7 +2024,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2017,7 +2047,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2040,7 +2070,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2063,7 +2093,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2086,7 +2116,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2109,7 +2139,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2132,7 +2162,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2155,7 +2185,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2178,7 +2208,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2201,7 +2231,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2224,7 +2254,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2247,7 +2277,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2270,7 +2300,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2293,7 +2323,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2316,7 +2346,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2339,7 +2369,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2362,7 +2392,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2385,7 +2415,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2408,7 +2438,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 6,
       "temasVistos": 0,
-      "totalTemasHabilitados": 35,
+      "totalTemasHabilitados": 36,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2431,7 +2461,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2454,7 +2484,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2477,7 +2507,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2500,7 +2530,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2523,7 +2553,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2546,7 +2576,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2569,7 +2599,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2592,7 +2622,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2615,7 +2645,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2638,7 +2668,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 72,
+      "totalTemasHabilitados": 73,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2661,7 +2691,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2684,7 +2714,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2707,7 +2737,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2730,7 +2760,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2753,7 +2783,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2776,7 +2806,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2799,7 +2829,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2822,7 +2852,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2845,7 +2875,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2868,7 +2898,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2891,7 +2921,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2924,7 +2954,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2947,7 +2977,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -2993,7 +3023,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3016,7 +3046,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3039,7 +3069,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3062,7 +3092,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3085,7 +3115,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3108,7 +3138,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3141,7 +3171,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3164,7 +3194,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3187,7 +3217,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3210,7 +3240,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3233,7 +3263,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3256,7 +3286,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3279,7 +3309,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3302,7 +3332,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3335,7 +3365,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3358,7 +3388,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3381,7 +3411,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3404,7 +3434,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3427,7 +3457,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3450,7 +3480,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3473,7 +3503,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3496,7 +3526,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3519,7 +3549,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3542,7 +3572,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3565,7 +3595,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3588,7 +3618,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3611,7 +3641,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3634,7 +3664,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3657,7 +3687,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3680,7 +3710,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3703,7 +3733,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3726,7 +3756,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3749,7 +3779,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3772,7 +3802,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3795,7 +3825,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3818,7 +3848,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3841,7 +3871,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3864,7 +3894,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3887,7 +3917,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3910,7 +3940,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3933,7 +3963,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3956,7 +3986,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -3979,7 +4009,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4002,7 +4032,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4025,7 +4055,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4048,7 +4078,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4071,7 +4101,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4094,7 +4124,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4117,7 +4147,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
-      "totalTemasHabilitados": 70,
+      "totalTemasHabilitados": 71,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4140,7 +4170,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4163,7 +4193,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4186,7 +4216,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4209,7 +4239,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4232,7 +4262,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4255,7 +4285,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4278,7 +4308,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4301,7 +4331,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4324,7 +4354,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4347,7 +4377,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4370,7 +4400,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4393,7 +4423,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4416,7 +4446,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4439,7 +4469,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4462,7 +4492,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4485,7 +4515,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4508,7 +4538,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4531,7 +4561,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4554,7 +4584,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4577,7 +4607,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4600,7 +4630,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4623,7 +4653,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4646,7 +4676,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4669,7 +4699,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4692,7 +4722,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4715,7 +4745,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4738,7 +4768,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4761,7 +4791,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4784,7 +4814,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4807,7 +4837,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4830,7 +4860,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4853,7 +4883,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4876,7 +4906,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4899,7 +4929,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4922,7 +4952,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4945,7 +4975,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4968,7 +4998,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -4991,7 +5021,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5014,7 +5044,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5037,7 +5067,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5060,7 +5090,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5083,7 +5113,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5106,7 +5136,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5129,7 +5159,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5152,7 +5182,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5175,7 +5205,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5198,7 +5228,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5221,7 +5251,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5244,7 +5274,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5267,7 +5297,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5290,7 +5320,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5313,7 +5343,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5336,7 +5366,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5369,7 +5399,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5392,7 +5422,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5414,9 +5444,9 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 11,
-      "temasVistos": 14,
-      "totalTemasHabilitados": 62,
-      "porcentajeAvance": 23,
+      "temasVistos": 15,
+      "totalTemasHabilitados": 63,
+      "porcentajeAvance": 24,
       "progresoModulos": {
         "1": {
           "2": true,
@@ -5479,7 +5509,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5502,7 +5532,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5525,7 +5555,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 6,
       "temasVistos": 0,
-      "totalTemasHabilitados": 35,
+      "totalTemasHabilitados": 36,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5548,7 +5578,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5571,7 +5601,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5594,7 +5624,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5617,7 +5647,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5640,7 +5670,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5663,7 +5693,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5686,7 +5716,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5732,7 +5762,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5755,7 +5785,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5778,7 +5808,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 64,
+      "totalTemasHabilitados": 65,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5801,7 +5831,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5824,7 +5854,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5847,7 +5877,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5870,7 +5900,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5893,7 +5923,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5916,7 +5946,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     },
@@ -5939,7 +5969,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 0,
-      "totalTemasHabilitados": 62,
+      "totalTemasHabilitados": 63,
       "porcentajeAvance": 0,
       "progresoModulos": {}
     }
