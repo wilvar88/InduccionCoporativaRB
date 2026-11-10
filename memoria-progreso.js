@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T22:03:13.006Z",
+  "ultimaActualizacion": "2026-11-10T22:03:25.355Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -353,7 +353,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "audio": "",
       "popup": null,
       "isAddedByAdmin": false,
-      "updatedAt": "2026-11-10T22:03:12.722Z"
+      "updatedAt": "2026-11-10T22:03:25.103Z"
     },
     "1001": {
       "colIndex": 1001,
