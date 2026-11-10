@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-10T17:14:07.498Z",
+  "ultimaActualizacion": "2026-11-10T17:14:09.883Z",
   "version": "2.1",
   "totalTemasPersonalizados": 16,
   "contenidosTemas": {
@@ -5340,7 +5340,7 @@
       "temaActual": "Bienvenida",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
+      "ultimoTemaTitulo": "Pago de pasaje",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 11,
       "temasVistos": 8,
