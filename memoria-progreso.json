@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-10T20:17:53.329Z",
+  "ultimaActualizacion": "2026-11-10T20:18:10.798Z",
   "version": "2.2",
   "temasEliminados": [
     21,
@@ -20,7 +20,7 @@
       "audio": "",
       "popup": null,
       "isAddedByAdmin": true,
-      "updatedAt": "2026-11-10T20:17:53.068Z"
+      "updatedAt": "2026-11-10T20:18:10.500Z"
     }
   ],
   "totalTemasPersonalizados": 20,
@@ -247,7 +247,7 @@
       "audio": "",
       "popup": null,
       "isAddedByAdmin": true,
-      "updatedAt": "2026-11-10T20:17:53.068Z"
+      "updatedAt": "2026-11-10T20:18:10.500Z"
     }
   },
   "totalColaboradores": 246,
