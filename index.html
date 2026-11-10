@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
     <!-- Estilos de la aplicación -->
-    <link rel="stylesheet" href="style.css?v=20261109v2">
+    <link rel="stylesheet" href="style.css?v=20261110v1">
 </head>
 
 <body>
@@ -213,7 +213,12 @@
                         </div>
 
                         <div class="sa-section-group" style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
-                            <label><i class="fas fa-list-ul"></i> 2. Selecciona el Tema a configurar:</label>
+                            <div class="sa-temas-header-row">
+                                <label style="margin: 0;"><i class="fas fa-list-ul"></i> 2. Temas del Módulo:</label>
+                                <button type="button" class="btn-sa-add-tema" onclick="agregarNuevoTemaConPlantillaSA()" title="Añadir un nuevo tema a este módulo con información de plantilla">
+                                    <i class="fas fa-plus-circle"></i> Añadir Tema
+                                </button>
+                            </div>
                             <div class="sa-temas-list" id="saTemasList">
                                 <!-- Lista dinámica de temas del módulo seleccionado -->
                             </div>
@@ -251,6 +256,26 @@
                         </div>
 
                         <div class="sa-editor-body">
+                            <!-- PLANTILLA DE TÍTULO Y DESCRIPCIÓN DEL TEMA -->
+                            <div class="sa-template-box">
+                                <div class="sa-template-box-header">
+                                    <span><i class="fas fa-edit"></i> Información de Plantilla del Tema (Título y Descripción)</span>
+                                    <button type="button" class="btn-sa-apply-template" onclick="aplicarPlantillaVisualCompletaSA()" title="Genera el diseño HTML corporativo usando el título y descripción escritos abajo">
+                                        <i class="fas fa-magic"></i> Actualizar Plantilla con Título y Descripción
+                                    </button>
+                                </div>
+                                <div class="sa-template-grid">
+                                    <div class="sa-field-group">
+                                        <label class="sa-label">Título del Tema:</label>
+                                        <input type="text" id="saTemaTituloInput" class="sa-input" placeholder="Ej: Nuevo tema corporativo..." oninput="onEditarTituloDescripcionPlantillaSA()">
+                                    </div>
+                                    <div class="sa-field-group">
+                                        <label class="sa-label">Descripción / Información Principal del Tema (Plantilla):</label>
+                                        <textarea id="saTemaDescripcionInput" class="sa-textarea" rows="2" placeholder="Modifica aquí la descripción del tema. Al escribir o pulsar 'Actualizar Plantilla', se reflejará en el contenido del tema..." oninput="onEditarTituloDescripcionPlantillaSA()"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Selector de Tipo de Material -->
                             <div class="sa-field-group">
                                 <label class="sa-label">3. ¿Qué tipo de material deseas subir o asignar a este tema?</label>
@@ -369,6 +394,9 @@
                         <div class="sa-editor-footer">
                             <span id="saSaveFeedback" class="sa-save-feedback"></span>
                             <div class="sa-footer-btns">
+                                <button type="button" class="btn-sa-delete-tema" onclick="eliminarTemaActualSA()" title="Eliminar permanentemente este tema del módulo">
+                                    <i class="fas fa-trash-alt"></i> Eliminar Tema
+                                </button>
                                 <button type="button" class="btn-sa-restore" onclick="restaurarTemaPorDefectoSA()" title="Restaurar este tema a su contenido original">
                                     <i class="fas fa-undo"></i> Restaurar Original
                                 </button>
@@ -504,7 +532,7 @@
     </div>
 
     <!-- MEMORIA INICIAL DE PROGRESO Y CONTENIDOS (.JSON / .JS) -->
-    <script src="memoria-progreso.js?v=20261109v2" onerror="console.info('Memoria inicial se gestionará desde almacenamiento local / JSON.')"></script>
+    <script src="memoria-progreso.js?v=20261110v1" onerror="console.info('Memoria inicial se gestionará desde almacenamiento local / JSON.')"></script>
 
     <!-- MODAL POPUP COMPLEMENTARIO DE INFORMACIÓN ADICIONAL -->
     <div class="modal-info-popup" id="infoPopupModal">
@@ -528,7 +556,7 @@
     </div>
 
     <!-- JAVASCRIPT PRINCIPAL -->
-    <script src="script.js?v=20261109v2"></script>
+    <script src="script.js?v=20261110v1"></script>
 </body>
 
 </html>

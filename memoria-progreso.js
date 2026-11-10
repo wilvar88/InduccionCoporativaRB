@@ -1,6 +1,7 @@
-// Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
+// Memoria de Progreso y Contenidos de Inducción Corporativa RB
+// Este archivo se sincroniza automáticamente con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T19:56:23.304Z",
+  "ultimaActualizacion": "2026-11-10T20:10:08.214Z",
   "version": "2.1",
   "totalTemasPersonalizados": 19,
   "contenidosTemas": {
@@ -5900,5 +5901,11 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "porcentajeAvance": 0,
       "progresoModulos": {}
     }
-  }
+  },
+  "temasEliminados": [
+    21,
+    22,
+    23
+  ],
+  "temasAgregados": []
 };

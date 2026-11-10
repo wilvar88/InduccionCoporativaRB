@@ -153,10 +153,7 @@ const CATALOGO_MODULOS_BASE = [
             { colIndex: 17, titulo: 'Pago de pasaje', tipo: 'html', content: '<h3>Proceso de Pago de Pasaje</h3><p>Flujo transaccional sin contacto desde la validación de la tarjeta hasta la compensación centralizada.</p>' },
             { colIndex: 18, titulo: 'Tecnología zonal y troncal', tipo: 'html', content: '<h3>Tecnología Zonal y Troncal</h3><p>Equipamiento embarcado en buses zonales y equipamiento fijo en estaciones y portales troncales.</p>' },
             { colIndex: 19, titulo: 'Validadores y Torniquetes', tipo: 'html', content: '<h3>Validadores y Torniquetes</h3><p>Lectores sin contacto de alta velocidad instalados en buses y accesos de estaciones.</p>' },
-            { colIndex: 20, titulo: 'BCA, DCA, TCS', tipo: 'html', content: '<h3>Dispositivos BCA, DCA y TCS</h3><p>Barreras de Control de Acceso (BCA), Dispositivos de Control de Acceso para personas con movilidad reducida (DCA) y Terminales de Taquilla (TCS).</p>' },
-            { colIndex: 21, titulo: 'Dispositivos de recarga', tipo: 'html', content: '<h3>Dispositivos de Recarga</h3><p>Taquillas troncales, máquinas de autorrecarga (ATM), dispositivos POS en la red externa y recargas web.</p>' },
-            { colIndex: 22, titulo: 'Control de flota', tipo: 'html', content: '<h3>Tecnología de Control de Flota</h3><p>Unidades lógicas a bordo (OBU), consolas del conductor y comunicación de datos en tiempo real con el Centro de Control.</p>' },
-            { colIndex: 23, titulo: 'Principales equipos y dispositivos', tipo: 'html', content: '<h3>Principales Equipos y Dispositivos</h3><p>Resumen del hardware operativo que soporta la continuidad del servicio en vía y estaciones.</p>' }
+            { colIndex: 20, titulo: 'BCA, DCA, TCS', tipo: 'html', content: '<h3>Dispositivos BCA, DCA y TCS</h3><p>Barreras de Control de Acceso (BCA), Dispositivos de Control de Acceso para personas con movilidad reducida (DCA) y Terminales de Taquilla (TCS).</p>' }
         ]
     },
     {
@@ -500,6 +497,10 @@ const IDB_STORE_MEMORIA = 'memoria_json_store';
 // Mapa en memoria con todos los contenidos personalizados de temas (sincronizado con memoria-progreso.json)
 let customSubtemasCache = {};
 let contenidosDesdeArchivoJson = {};
+// Lista de colIndex de temas eliminados permanentemente (21, 22 y 23 eliminados del Módulo 3 por duplicidad)
+let temasEliminadosCache = [21, 22, 23];
+// Lista de nuevos temas añadidos por el Super Administrador ({ colIndex, moduloId, titulo, descripcion, tipo, content, ... })
+let temasAgregadosCache = [];
 
 function abrirIndexedDB() {
     return new Promise((resolve) => {
@@ -650,6 +651,37 @@ async function cargarTodosSubtemasCustomDeDB() {
         });
     }
 
+    // Sincronizar temas eliminados y temas agregados desde localStorage
+    try {
+        const lsElim = JSON.parse(localStorage.getItem('rb_temas_eliminados_v2') || '[]');
+        if (Array.isArray(lsElim)) {
+            lsElim.forEach(c => {
+                const n = Number(c);
+                if (n && !temasEliminadosCache.includes(n)) temasEliminadosCache.push(n);
+            });
+        }
+        localStorage.setItem('rb_temas_eliminados_v2', JSON.stringify(temasEliminadosCache));
+    } catch (e) {}
+
+    try {
+        const lsAgreg = JSON.parse(localStorage.getItem('rb_temas_agregados_v2') || '[]');
+        if (Array.isArray(lsAgreg)) {
+            lsAgreg.forEach(item => {
+                if (item && item.colIndex && !temasEliminadosCache.includes(Number(item.colIndex))) {
+                    const idx = temasAgregadosCache.findIndex(t => Number(t.colIndex) === Number(item.colIndex));
+                    if (idx === -1) temasAgregadosCache.push(item);
+                    else if (esRegistroMasReciente(item, temasAgregadosCache[idx])) temasAgregadosCache[idx] = item;
+                }
+            });
+        }
+        localStorage.setItem('rb_temas_agregados_v2', JSON.stringify(temasAgregadosCache));
+    } catch (e) {}
+
+    // Excluir del mapa de personalizados cualquier tema eliminado
+    temasEliminadosCache.forEach(colElim => {
+        delete customMap[colElim];
+    });
+
     customSubtemasCache = customMap;
 
     // Sincronizar localStorage con el mapa unificado
@@ -659,11 +691,41 @@ async function cargarTodosSubtemasCustomDeDB() {
 
     CATALOGO_MODULOS = JSON.parse(JSON.stringify(CATALOGO_MODULOS_BASE));
     CATALOGO_MODULOS.forEach(mod => {
+        // 1. Filtrar temas base eliminados
+        mod.subtemas = mod.subtemas.filter(st => !temasEliminadosCache.includes(Number(st.colIndex)));
+
+        // 2. Añadir temas creados por el Super Administrador para este módulo
+        const agregadosMod = temasAgregadosCache.filter(
+            t => Number(t.moduloId) === Number(mod.id) && !temasEliminadosCache.includes(Number(t.colIndex))
+        );
+        agregadosMod.forEach(nuevoTema => {
+            if (!mod.subtemas.some(st => Number(st.colIndex) === Number(nuevoTema.colIndex))) {
+                mod.subtemas.push({
+                    colIndex: Number(nuevoTema.colIndex),
+                    moduloId: Number(mod.id),
+                    titulo: nuevoTema.titulo || 'Nuevo Tema',
+                    descripcion: nuevoTema.descripcion || '',
+                    tipo: nuevoTema.tipo || 'html',
+                    url: nuevoTema.url || '',
+                    content: nuevoTema.content || '',
+                    fileDataUrl: nuevoTema.fileDataUrl || null,
+                    fileName: nuevoTema.fileName || null,
+                    audio: nuevoTema.audio || '',
+                    popup: nuevoTema.popup || null,
+                    isAddedByAdmin: true,
+                    isCustomized: true
+                });
+            }
+        });
+
+        // 3. Aplicar personalizaciones de contenido, título y descripción
         mod.subtemas.forEach((st, idx) => {
             const custom = customMap[st.colIndex];
             if (custom) {
                 mod.subtemas[idx] = {
                     ...st,
+                    titulo: custom.titulo ? custom.titulo : st.titulo,
+                    descripcion: custom.descripcion !== undefined ? custom.descripcion : (st.descripcion || ''),
                     tipo: custom.tipo || st.tipo,
                     url: custom.url !== undefined ? custom.url : st.url,
                     content: custom.content !== undefined ? custom.content : st.content,
@@ -779,13 +841,43 @@ async function inicializarMemoriaJSON() {
 async function fusionarDatosMemoriaExterna(jsonObj, esDesdeArchivoProyecto = true) {
     if (!jsonObj || typeof jsonObj !== 'object') return;
 
+    // A.0) Fusionar lista de temas eliminados y temas agregados
+    if (Array.isArray(jsonObj.temasEliminados)) {
+        jsonObj.temasEliminados.forEach(c => {
+            const n = Number(c);
+            if (n && !temasEliminadosCache.includes(n)) {
+                temasEliminadosCache.push(n);
+            }
+        });
+        try {
+            localStorage.setItem('rb_temas_eliminados_v2', JSON.stringify(temasEliminadosCache));
+        } catch (e) {}
+    }
+
+    if (Array.isArray(jsonObj.temasAgregados)) {
+        jsonObj.temasAgregados.forEach(item => {
+            if (!item || !item.colIndex) return;
+            const colIdx = Number(item.colIndex);
+            if (temasEliminadosCache.includes(colIdx)) return;
+            const existingIdx = temasAgregadosCache.findIndex(t => Number(t.colIndex) === colIdx);
+            if (existingIdx === -1) {
+                temasAgregadosCache.push({ ...item, colIndex: colIdx, isAddedByAdmin: true });
+            } else if (esDesdeArchivoProyecto || esRegistroMasReciente(item, temasAgregadosCache[existingIdx])) {
+                temasAgregadosCache[existingIdx] = { ...item, colIndex: colIdx, isAddedByAdmin: true };
+            }
+        });
+        try {
+            localStorage.setItem('rb_temas_agregados_v2', JSON.stringify(temasAgregadosCache));
+        } catch (e) {}
+    }
+
     // A) Fusionar contenidos de temas personalizados (contenidosTemas)
     const mapaTemas = jsonObj.contenidosTemas || jsonObj.customSubtemas || null;
     if (mapaTemas && typeof mapaTemas === 'object') {
         for (const k of Object.keys(mapaTemas)) {
             const colIdx = Number(k);
             const item = mapaTemas[k];
-            if (!colIdx || !item) continue;
+            if (!colIdx || !item || temasEliminadosCache.includes(colIdx)) continue;
 
             const existing = contenidosDesdeArchivoJson[colIdx] || customSubtemasCache[colIdx];
             if (esDesdeArchivoProyecto || esRegistroMasReciente(item, existing)) {
@@ -897,15 +989,21 @@ function construirObjetoMemoriaJSON() {
         const lsCustom = JSON.parse(localStorage.getItem('rb_custom_subtemas_v2') || '{}');
         Object.keys(lsCustom).forEach(k => {
             const numCol = Number(k);
-            if (numCol && lsCustom[k] && esRegistroMasReciente(lsCustom[k], temasExport[numCol])) {
+            if (numCol && lsCustom[k] && !temasEliminadosCache.includes(numCol) && esRegistroMasReciente(lsCustom[k], temasExport[numCol])) {
                 temasExport[numCol] = lsCustom[k];
             }
         });
     } catch (e) {}
 
+    temasEliminadosCache.forEach(colElim => {
+        delete temasExport[colElim];
+    });
+
     return {
         ultimaActualizacion: new Date().toISOString(),
-        version: '2.1',
+        version: '2.2',
+        temasEliminados: temasEliminadosCache,
+        temasAgregados: temasAgregadosCache,
         totalTemasPersonalizados: Object.keys(temasExport).length,
         contenidosTemas: temasExport,
         totalColaboradores: Object.keys(colaboradoresMap).length,
@@ -1649,14 +1747,22 @@ function cerrarSesion() {
 // FILTRADO ESTRICTO DE MÓDULOS Y TEMAS POR CARGO SEGÚN LAS "X" EN GOOGLE SHEETS
 // Si el cargo no tiene ninguna "X" o un tema no tiene "X", NO se muestra ese tema
 // =============================================================================
-function isSubtemaHabilitadoParaCargo(subtema, cargoPerms) {
+function isSubtemaHabilitadoParaCargo(subtema, cargoPerms, moduloObj = null) {
     if (!cargoPerms) return false;
     // 1. Verificar por índice exacto de columna en la hoja "Módulos por cargo" (1..81)
     if (cargoPerms.enabledCols && subtema.colIndex && cargoPerms.enabledCols[subtema.colIndex]) {
         return true;
     }
-    // 2. Verificar por título normalizado (solo si no hay colIndex o coincide único)
-    if (!subtema.colIndex && cargoPerms.modulosHabilitados) {
+    // 2. Si es un tema nuevo añadido por el Super Administrador (colIndex >= 1000 o isAddedByAdmin),
+    // habilitarlo si el cargo ya tiene habilitado al menos un tema de ese mismo módulo
+    if ((subtema.isAddedByAdmin || Number(subtema.colIndex) >= 1000) && moduloObj && Array.isArray(moduloObj.subtemas)) {
+        const tieneModuloHabilitado = moduloObj.subtemas.some(
+            other => Number(other.colIndex) < 1000 && cargoPerms.enabledCols && cargoPerms.enabledCols[other.colIndex]
+        );
+        if (tieneModuloHabilitado) return true;
+    }
+    // 3. Verificar por título normalizado (solo si no hay colIndex o coincide único)
+    if ((!subtema.colIndex || Number(subtema.colIndex) >= 1000) && cargoPerms.modulosHabilitados) {
         if (cargoPerms.modulosHabilitados[subtema.titulo] || cargoPerms.modulosHabilitados[normalizeStr(subtema.titulo)]) {
             return true;
         }
@@ -1690,7 +1796,7 @@ function getModulosHabilitadosParaCargo(cargoUser, ignoreSuperAdminToggle = fals
     // Filtrar cada módulo para conservar ÚNICAMENTE los subtemas que tienen 'X' para ese cargo
     const modulosFiltrados = [];
     CATALOGO_MODULOS.forEach(modulo => {
-        const subtemasHabilitados = modulo.subtemas.filter(st => isSubtemaHabilitadoParaCargo(st, cargoPerms));
+        const subtemasHabilitados = modulo.subtemas.filter(st => isSubtemaHabilitadoParaCargo(st, cargoPerms, modulo));
         if (subtemasHabilitados.length > 0) {
             modulosFiltrados.push({
                 ...modulo,
@@ -2470,9 +2576,16 @@ function onChangeSaModulo() {
 function renderizarListaTemasSA() {
     const mod = CATALOGO_MODULOS.find(m => m.id === saCurrentModuloId);
     const listEl = document.getElementById('saTemasList');
+    const selectMod = document.getElementById('saSelectModulo');
     if (!mod || !listEl) return;
 
-    if (!mod.subtemas.some(st => st.colIndex === saCurrentSubtemaColIndex)) {
+    if (selectMod) {
+        selectMod.innerHTML = CATALOGO_MODULOS.map(m =>
+            `<option value="${m.id}" ${m.id === saCurrentModuloId ? 'selected' : ''}>${m.numero}: ${m.titulo} (${m.subtemas.length} temas)</option>`
+        ).join('');
+    }
+
+    if (mod.subtemas.length > 0 && !mod.subtemas.some(st => st.colIndex === saCurrentSubtemaColIndex)) {
         saCurrentSubtemaColIndex = mod.subtemas[0].colIndex;
     }
 
@@ -2483,13 +2596,18 @@ function renderizarListaTemasSA() {
         const customIcon = st.isCustomized ? '<i class="fas fa-star" style="color:#f59e0b; margin-right:4px;" title="Contenido personalizado por Super Admin"></i>' : '';
         html += `
             <div class="sa-tema-item ${isActive ? 'active' : ''}" onclick="seleccionarTemaSA(${st.colIndex})">
-                <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${customIcon}${st.titulo}</span>
-                <span class="sa-tema-type-pill">${typeBadge}</span>
+                <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1;">${customIcon}${st.titulo}</span>
+                <div class="sa-tema-item-actions">
+                    <span class="sa-tema-type-pill">${typeBadge}</span>
+                    <button type="button" class="sa-tema-delete-btn" onclick="eliminarTemaDesdeListaSA(event, ${st.colIndex})" title="Eliminar este tema del módulo">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
             </div>
         `;
     });
 
-    listEl.innerHTML = html;
+    listEl.innerHTML = html || `<div style="padding:1rem; text-align:center; color:#64748b; font-size:0.85rem;">No hay temas en este módulo. Pulsa "+ Añadir Tema".</div>`;
     cargarDatosTemaEnFormularioSA();
 }
 
@@ -2504,6 +2622,200 @@ function obtenerSubtemaCatalogoPorCol(colIndex) {
         if (found) return { mod, subtema: found };
     }
     return null;
+}
+
+function extraerDescripcionDesdeHtml(htmlStr) {
+    if (!htmlStr || typeof htmlStr !== 'string') return '';
+    if (/<!DOCTYPE\s+html|<html[\s>]/i.test(htmlStr)) return '';
+    const matchP = htmlStr.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+    if (matchP && matchP[1]) {
+        return matchP[1].replace(/<[^>]+>/g, '').trim();
+    }
+    return htmlStr.replace(/<h3[^>]*>[\s\S]*?<\/h3>/i, '').replace(/<[^>]+>/g, '').trim();
+}
+
+function generarHtmlPlantillaCorporativa(titulo, descripcion, moduloBadge = 'Inducción Corporativa RB') {
+    const safeTitle = (titulo || 'Título del Tema').trim();
+    const safeDesc = (descripcion || 'Ingresa aquí la descripción y los lineamientos principales de este tema.').trim();
+    const parrafos = safeDesc
+        .split(/\n+/)
+        .map(p => p.trim())
+        .filter(Boolean)
+        .map(p => `<p>${p}</p>`)
+        .join('');
+
+    return `<h3>${safeTitle}</h3>${parrafos || `<p>${safeDesc}</p>`}`;
+}
+
+function onEditarTituloDescripcionPlantillaSA() {
+    const tituloInput = document.getElementById('saTemaTituloInput');
+    const descInput = document.getElementById('saTemaDescripcionInput');
+    const htmlArea = document.getElementById('saHtmlContentInput');
+    const headerTitle = document.getElementById('saEditorTemaTitulo');
+
+    const nuevoTitulo = tituloInput ? tituloInput.value.trim() : '';
+    const nuevaDesc = descInput ? descInput.value : '';
+
+    if (headerTitle && nuevoTitulo) {
+        headerTitle.textContent = nuevoTitulo;
+    }
+
+    // Si el contenido actual no es un documento HTML externo completo (<!DOCTYPE html>), actualizar la plantilla automáticamente
+    if (htmlArea) {
+        const currentHtml = htmlArea.value || '';
+        const esDocumentoCompleto = /<!DOCTYPE\s+html|<html[\s>]/i.test(currentHtml);
+        if (!esDocumentoCompleto) {
+            htmlArea.value = generarHtmlPlantillaCorporativa(nuevoTitulo || 'Título del Tema', nuevaDesc);
+        }
+    }
+}
+
+function aplicarPlantillaVisualCompletaSA() {
+    const found = obtenerSubtemaCatalogoPorCol(saCurrentSubtemaColIndex);
+    const modBadge = found && found.mod ? `${found.mod.numero} · ${found.mod.titulo}` : 'Recaudo Bogotá S.A.S.';
+    const titulo = (document.getElementById('saTemaTituloInput').value || 'Nuevo Tema Corporativo').trim();
+    const desc = (document.getElementById('saTemaDescripcionInput').value || 'Descripción principal del tema.').trim();
+
+    const parrafosHtml = desc
+        .split(/\n+/)
+        .map(p => p.trim())
+        .filter(Boolean)
+        .map(p => `<p style="margin-bottom:0.9rem; color:#334155; font-size:1.05rem; line-height:1.7;">${p}</p>`)
+        .join('');
+
+    const plantillaRica = `<div style="background:linear-gradient(135deg,#001e47 0%,#004e89 100%); color:#ffffff; padding:1.6rem 2rem; border-radius:16px; margin-bottom:1.5rem; box-shadow:0 10px 25px rgba(0,30,71,0.12);">
+    <span style="display:inline-block; background:rgba(205,212,0,0.2); color:#cdd400; font-size:0.78rem; font-weight:700; padding:0.25rem 0.75rem; border-radius:20px; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem;">${modBadge}</span>
+    <h2 style="margin:0; font-size:1.55rem; font-weight:700; color:#ffffff;">${titulo}</h2>
+</div>
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:5px solid #0088cc; border-radius:12px; padding:1.5rem 1.8rem;">
+    ${parrafosHtml}
+</div>`;
+
+    seleccionarTipoMaterialSA('html');
+    document.getElementById('saHtmlUrlInput').value = '';
+    document.getElementById('saHtmlContentInput').value = plantillaRica;
+    const feedback = document.getElementById('saSaveFeedback');
+    if (feedback) {
+        feedback.innerHTML = '<i class="fas fa-magic"></i> Plantilla aplicada con tu título y descripción. Pulsa "Guardar Contenido en este Tema" para publicar.';
+    }
+}
+
+async function agregarNuevoTemaConPlantillaSA() {
+    const mod = CATALOGO_MODULOS.find(m => m.id === saCurrentModuloId);
+    if (!mod) return;
+
+    // Generar un colIndex único >= 1001
+    let maxCol = 1000;
+    CATALOGO_MODULOS.forEach(m => {
+        m.subtemas.forEach(s => {
+            if (Number(s.colIndex) > maxCol) maxCol = Number(s.colIndex);
+        });
+    });
+    temasAgregadosCache.forEach(t => {
+        if (Number(t.colIndex) > maxCol) maxCol = Number(t.colIndex);
+    });
+    const nuevoColIndex = maxCol + 1;
+
+    const tituloInicial = `Nuevo Tema (${mod.numero})`;
+    const descInicial = `Ingresa aquí la descripción y los lineamientos principales de este tema para el ${mod.numero}: ${mod.titulo}.`;
+    const htmlInicial = generarHtmlPlantillaCorporativa(tituloInicial, descInicial, `${mod.numero} · ${mod.titulo}`);
+
+    const nuevoTemaObj = {
+        colIndex: nuevoColIndex,
+        moduloId: Number(mod.id),
+        titulo: tituloInicial,
+        descripcion: descInicial,
+        tipo: 'html',
+        url: '',
+        content: htmlInicial,
+        fileDataUrl: null,
+        fileName: null,
+        audio: '',
+        popup: null,
+        isAddedByAdmin: true,
+        updatedAt: new Date().toISOString()
+    };
+
+    temasAgregadosCache.push(nuevoTemaObj);
+    try {
+        localStorage.setItem('rb_temas_agregados_v2', JSON.stringify(temasAgregadosCache));
+    } catch (e) {}
+
+    await guardarSubtemaCustomEnDB(nuevoColIndex, nuevoTemaObj);
+    await cargarTodosSubtemasCustomDeDB();
+
+    saCurrentSubtemaColIndex = nuevoColIndex;
+    renderizarListaTemasSA();
+    renderizarCategoriasLaterales();
+    renderizarModulos(currentUser, document.getElementById('busquedaInput') ? document.getElementById('busquedaInput').value : '');
+
+    // Sincronizar con memoria-progreso.json y GitHub/Vercel
+    await sincronizarMemoriaJSONPersistente(false);
+
+    const tituloInput = document.getElementById('saTemaTituloInput');
+    if (tituloInput) {
+        tituloInput.focus();
+        tituloInput.select();
+    }
+
+    const feedback = document.getElementById('saSaveFeedback');
+    if (feedback) {
+        feedback.innerHTML = '<i class="fas fa-plus-circle"></i> ¡Nuevo tema añadido con plantilla! Modifica el título y descripción arriba y pulsa "Guardar Contenido en este Tema".';
+    }
+}
+
+async function eliminarTemaDesdeListaSA(event, colIndex) {
+    if (event) event.stopPropagation();
+    await ejecutarEliminacionTemaSA(colIndex);
+}
+
+async function eliminarTemaActualSA() {
+    await ejecutarEliminacionTemaSA(saCurrentSubtemaColIndex);
+}
+
+async function ejecutarEliminacionTemaSA(colIndex) {
+    const numCol = Number(colIndex);
+    const found = obtenerSubtemaCatalogoPorCol(numCol);
+    if (!found) return;
+
+    const { mod, subtema } = found;
+    if (!confirm(`¿Estás seguro de eliminar el tema "${subtema.titulo}" del ${mod.numero} (${mod.titulo})?\n\nEste cambio se guardará y actualizará para todos los usuarios.`)) {
+        return;
+    }
+
+    if (!temasEliminadosCache.includes(numCol)) {
+        temasEliminadosCache.push(numCol);
+    }
+    try {
+        localStorage.setItem('rb_temas_eliminados_v2', JSON.stringify(temasEliminadosCache));
+    } catch (e) {}
+
+    temasAgregadosCache = temasAgregadosCache.filter(t => Number(t.colIndex) !== numCol);
+    try {
+        localStorage.setItem('rb_temas_agregados_v2', JSON.stringify(temasAgregadosCache));
+    } catch (e) {}
+
+    await eliminarSubtemaCustomDeDB(numCol);
+    await cargarTodosSubtemasCustomDeDB();
+
+    const modActualizado = CATALOGO_MODULOS.find(m => m.id === mod.id);
+    if (modActualizado && modActualizado.subtemas.length > 0) {
+        saCurrentSubtemaColIndex = modActualizado.subtemas[0].colIndex;
+    }
+
+    const syncRes = await sincronizarMemoriaJSONPersistente(true);
+
+    renderizarListaTemasSA();
+    renderizarCategoriasLaterales();
+    renderizarModulos(currentUser, document.getElementById('busquedaInput') ? document.getElementById('busquedaInput').value : '');
+    if (currentUser) actualizarGraficaCircularBanner(currentUser);
+
+    const feedback = document.getElementById('saSaveFeedback');
+    if (feedback) {
+        feedback.innerHTML = syncRes && syncRes.guardadoEnNube
+            ? `<i class="fas fa-trash-alt"></i> Tema "${subtema.titulo}" eliminado y sincronizado en GitHub/Vercel.`
+            : `<i class="fas fa-trash-alt"></i> Tema "${subtema.titulo}" eliminado correctamente.`;
+    }
 }
 
 function cargarDatosTemaEnFormularioSA() {
@@ -2523,6 +2835,15 @@ function cargarDatosTemaEnFormularioSA() {
     document.getElementById('saEditorModuloBadge').textContent = `${mod.numero} · ${mod.titulo}`;
     document.getElementById('saEditorTemaTitulo').textContent = subtema.titulo;
     document.getElementById('saSaveFeedback').textContent = '';
+
+    const tituloInput = document.getElementById('saTemaTituloInput');
+    const descInput = document.getElementById('saTemaDescripcionInput');
+    if (tituloInput) tituloInput.value = subtema.titulo || '';
+    if (descInput) {
+        descInput.value = subtema.descripcion !== undefined && subtema.descripcion !== ''
+            ? subtema.descripcion
+            : extraerDescripcionDesdeHtml(subtema.content || '');
+    }
 
     document.getElementById('saVideoUrlInput').value = (subtema.tipo === 'video' && subtema.url) ? subtema.url : '';
     document.getElementById('saVideoFileStatus').textContent = saTempUploadedData.videoFileName
@@ -2668,8 +2989,14 @@ async function guardarContenidoTemaSA() {
     const popupContent = document.getElementById('saPopupContentInput').value.trim();
     const popupObj = (popupTitle || popupContent) ? { titulo: popupTitle || 'Información Adicional', content: popupContent } : null;
 
+    const nuevoTitulo = (document.getElementById('saTemaTituloInput') ? document.getElementById('saTemaTituloInput').value.trim() : '') || subtema.titulo;
+    const nuevaDescripcion = document.getElementById('saTemaDescripcionInput') ? document.getElementById('saTemaDescripcionInput').value.trim() : (subtema.descripcion || '');
+
     const customRecord = {
         colIndex: saCurrentSubtemaColIndex,
+        moduloId: found.mod.id,
+        titulo: nuevoTitulo,
+        descripcion: nuevaDescripcion,
         tipo,
         url: newUrl,
         content: newContent,
@@ -2677,8 +3004,22 @@ async function guardarContenidoTemaSA() {
         fileName: newFileName,
         audio: audioVal,
         popup: popupObj,
+        isAddedByAdmin: Boolean(subtema.isAddedByAdmin || Number(saCurrentSubtemaColIndex) >= 1000),
         updatedAt: new Date().toISOString()
     };
+
+    // Si es un tema agregado por el administrador, actualizar también temasAgregadosCache
+    if (customRecord.isAddedByAdmin) {
+        const idxAg = temasAgregadosCache.findIndex(t => Number(t.colIndex) === Number(saCurrentSubtemaColIndex));
+        if (idxAg !== -1) {
+            temasAgregadosCache[idxAg] = { ...temasAgregadosCache[idxAg], ...customRecord };
+        } else {
+            temasAgregadosCache.push(customRecord);
+        }
+        try {
+            localStorage.setItem('rb_temas_agregados_v2', JSON.stringify(temasAgregadosCache));
+        } catch (e) {}
+    }
 
     await guardarSubtemaCustomEnDB(saCurrentSubtemaColIndex, customRecord);
     await cargarTodosSubtemasCustomDeDB();
