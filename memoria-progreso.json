@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-10T23:24:29.631Z",
+  "ultimaActualizacion": "2026-11-11T00:14:42.440Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3097,7 +3097,14 @@
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1003233400": {
       "cedula": "1.003.233.400",
@@ -3314,7 +3321,14 @@
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1010162292": {
       "cedula": "1.010.162.292",
@@ -3508,7 +3522,14 @@
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1013104298": {
       "cedula": "1.013.104.298",
@@ -5542,7 +5563,14 @@
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1067728159": {
       "cedula": "1.067.728.159",
@@ -5654,13 +5682,17 @@
           "4": true,
           "5": true,
           "6": true,
+          "7": true,
           "col_16": true,
           "col_17": true,
           "col_18": true,
           "col_19": true,
           "col_20": true,
           "col_1001": true,
-          "col_1002": true
+          "col_1002": true,
+          "col_21": true,
+          "col_22": true,
+          "col_23": true
         },
         "4": {
           "0": true,
@@ -6173,5 +6205,6 @@
       "porcentajeAvance": 0,
       "progresoModulos": {}
     }
-  }
+  },
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
