@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-11T00:14:58.071Z",
+  "ultimaActualizacion": "2026-11-11T00:15:03.501Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5631,9 +5631,9 @@
       "cantidadIngresos": 14,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Política HSE",
-      "ultimoModuloId": 1,
-      "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
-      "ultimoTemaTitulo": "Contexto general de la organización",
+      "ultimoModuloId": 6,
+      "ultimoModuloNombre": "Módulo 6: Política HSE",
+      "ultimoTemaTitulo": "Política HSE",
       "modulosCompletados": 5,
       "totalModulosHabilitados": 12,
       "temasVistos": 33,
