@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-11T00:15:13.886Z",
+  "ultimaActualizacion": "2026-11-11T00:15:18.762Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5629,16 +5629,16 @@
       "primerIngreso": "5/11/26, 10:33:56 p. m.",
       "ultimoIngreso": "10/11/26, 5:55:44 p. m.",
       "cantidadIngresos": 14,
-      "moduloActual": "Módulo 6: Política HSE",
-      "temaActual": "Compromiso de la organización con la salud, seguridad y ambiente",
+      "moduloActual": "Módulo 7: Políticas HSE – Mantenimiento",
+      "temaActual": "Lineamientos específicos aplicables al cargo",
       "ultimoModuloId": 6,
       "ultimoModuloNombre": "Módulo 6: Política HSE",
       "ultimoTemaTitulo": "Política HSE",
-      "modulosCompletados": 5,
+      "modulosCompletados": 6,
       "totalModulosHabilitados": 12,
-      "temasVistos": 34,
+      "temasVistos": 35,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 55,
+      "porcentajeAvance": 56,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -5722,7 +5722,9 @@
         },
         "6": {
           "0": true,
-          "col_35": true
+          "1": true,
+          "col_35": true,
+          "col_36": true
         }
       }
     },
