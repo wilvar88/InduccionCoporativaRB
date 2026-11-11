@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-11T00:15:03.501Z",
+  "ultimaActualizacion": "2026-11-11T00:15:10.123Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5630,15 +5630,15 @@
       "ultimoIngreso": "10/11/26, 5:55:44 p. m.",
       "cantidadIngresos": 14,
       "moduloActual": "Módulo 6: Política HSE",
-      "temaActual": "Política HSE",
+      "temaActual": "Compromiso de la organización con la salud, seguridad y ambiente",
       "ultimoModuloId": 6,
       "ultimoModuloNombre": "Módulo 6: Política HSE",
       "ultimoTemaTitulo": "Política HSE",
       "modulosCompletados": 5,
       "totalModulosHabilitados": 12,
-      "temasVistos": 33,
+      "temasVistos": 34,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 53,
+      "porcentajeAvance": 55,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -5719,6 +5719,10 @@
           "col_32": true,
           "col_33": true,
           "col_34": true
+        },
+        "6": {
+          "0": true,
+          "col_35": true
         }
       }
     },
