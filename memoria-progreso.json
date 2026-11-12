@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-11T00:15:18.762Z",
+  "ultimaActualizacion": "2026-11-12T02:24:44.130Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5631,9 +5631,9 @@
       "cantidadIngresos": 14,
       "moduloActual": "Módulo 7: Políticas HSE – Mantenimiento",
       "temaActual": "Lineamientos específicos aplicables al cargo",
-      "ultimoModuloId": 6,
-      "ultimoModuloNombre": "Módulo 6: Política HSE",
-      "ultimoTemaTitulo": "Política HSE",
+      "ultimoModuloId": 5,
+      "ultimoModuloNombre": "Módulo 5: Organización y roles",
+      "ultimoTemaTitulo": "Organigrama",
       "modulosCompletados": 6,
       "totalModulosHabilitados": 12,
       "temasVistos": 35,
