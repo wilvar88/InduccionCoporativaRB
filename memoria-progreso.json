@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-12T02:24:44.130Z",
+  "ultimaActualizacion": "2026-11-12T02:25:42.377Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -448,7 +448,7 @@
   "totalColaboradores": 246,
   "colaboradores": {
     "420859": {
-      "cedula": "420.859",
+      "cedula": "420859",
       "nombre": "JAVIER CANCELA FRIAS",
       "cargo": "PRESIDENTE",
       "area": "",
@@ -471,7 +471,7 @@
       "progresoModulos": {}
     },
     "705633": {
-      "cedula": "705.633",
+      "cedula": "705633",
       "nombre": "ERICK JOSETTE GONZÁLEZ",
       "cargo": "TÉCNICO DE MANTENIMIENTO LOCATIVO",
       "area": "",
@@ -494,7 +494,7 @@
       "progresoModulos": {}
     },
     "11258914": {
-      "cedula": "11.258.914",
+      "cedula": "11258914",
       "nombre": "RODRIGUEZ ROMERO MARIO ALBERTO",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -517,7 +517,7 @@
       "progresoModulos": {}
     },
     "14297533": {
-      "cedula": "14.297.533",
+      "cedula": "14297533",
       "nombre": "CAMARGO PEDRAZA JAVIER MAURICIO",
       "cargo": "ANALISTA III DE SEGURIDAD",
       "area": "",
@@ -540,7 +540,7 @@
       "progresoModulos": {}
     },
     "16986751": {
-      "cedula": "16.986.751",
+      "cedula": "16986751",
       "nombre": "MONTENEGRO SANTIAGO JAVIER MAURICIO",
       "cargo": "SUPERVISOR DE MESA DE SERVICIOS",
       "area": "",
@@ -563,7 +563,7 @@
       "progresoModulos": {}
     },
     "17267050": {
-      "cedula": "17.267.050",
+      "cedula": "17267050",
       "nombre": "BARAHONA ROMERO OMAR VIANNEY",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -586,7 +586,7 @@
       "progresoModulos": {}
     },
     "20384636": {
-      "cedula": "20.384.636",
+      "cedula": "20384636",
       "nombre": "RODRIGUEZ MORA NELLY ESPERANZA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -609,7 +609,7 @@
       "progresoModulos": {}
     },
     "20573319": {
-      "cedula": "20.573.319",
+      "cedula": "20573319",
       "nombre": "LINARES DIAZ LUCY BERNARDA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -632,7 +632,7 @@
       "progresoModulos": {}
     },
     "25159137": {
-      "cedula": "25.159.137",
+      "cedula": "25159137",
       "nombre": "PATIÑO VELASQUEZ OLGA LUCIA",
       "cargo": "DIRECTOR DE SOPORTE, MANTENIMIENTO E IMPLEMENTACIÓN",
       "area": "",
@@ -655,7 +655,7 @@
       "progresoModulos": {}
     },
     "33435553": {
-      "cedula": "33.435.553",
+      "cedula": "33435553",
       "nombre": "FLORIDO ULLOA ZORIANA MAYER",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -678,7 +678,7 @@
       "progresoModulos": {}
     },
     "35250056": {
-      "cedula": "35.250.056",
+      "cedula": "35250056",
       "nombre": "MELO HERRERA NORMA INES",
       "cargo": "ANALISTA III DE SEGURIDAD",
       "area": "",
@@ -701,7 +701,7 @@
       "progresoModulos": {}
     },
     "35537935": {
-      "cedula": "35.537.935",
+      "cedula": "35537935",
       "nombre": "HERNANDEZ MAHECHA CATALINA",
       "cargo": "COORDINADOR DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -724,7 +724,7 @@
       "progresoModulos": {}
     },
     "37513196": {
-      "cedula": "37.513.196",
+      "cedula": "37513196",
       "nombre": "DUARTE MENDOZA DIHONNY PAOLA",
       "cargo": "JEFE DE MESA DE SERVICIOS",
       "area": "",
@@ -747,7 +747,7 @@
       "progresoModulos": {}
     },
     "39758815": {
-      "cedula": "39.758.815",
+      "cedula": "39758815",
       "nombre": "LYDA ANGELICA MURILLO PULIDO",
       "cargo": "JEFE DE OPERACIONES DE PERSONALIZACION",
       "area": "",
@@ -770,7 +770,7 @@
       "progresoModulos": {}
     },
     "39802853": {
-      "cedula": "39.802.853",
+      "cedula": "39802853",
       "nombre": "MARTHA ISABEL AVENDAÑO RAMIREZ",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -793,7 +793,7 @@
       "progresoModulos": {}
     },
     "39805912": {
-      "cedula": "39.805.912",
+      "cedula": "39805912",
       "nombre": "BARRETO ORTEGA OLGA LUCIA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -816,7 +816,7 @@
       "progresoModulos": {}
     },
     "40403040": {
-      "cedula": "40.403.040",
+      "cedula": "40403040",
       "nombre": "CASTILLO ROBAYO LUZ MAGLERY",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -839,7 +839,7 @@
       "progresoModulos": {}
     },
     "49669741": {
-      "cedula": "49.669.741",
+      "cedula": "49669741",
       "nombre": "YASIRIS GUEVARA",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -862,7 +862,7 @@
       "progresoModulos": {}
     },
     "51867770": {
-      "cedula": "51.867.770",
+      "cedula": "51867770",
       "nombre": "ORTIZ DELGADO MARTHA VERONICA",
       "cargo": "COORDINADOR DE COMPRAS",
       "area": "",
@@ -885,7 +885,7 @@
       "progresoModulos": {}
     },
     "51881799": {
-      "cedula": "51.881.799",
+      "cedula": "51881799",
       "nombre": "ACOSTA BARRERA DIANA MARIA",
       "cargo": "GERENTE DE GESTIÓN HUMANA",
       "area": "Gestión Humana",
@@ -908,7 +908,7 @@
       "progresoModulos": {}
     },
     "51893886": {
-      "cedula": "51.893.886",
+      "cedula": "51893886",
       "nombre": "IRMA ESPERANZA VASQUEZ MARIÑO",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -931,7 +931,7 @@
       "progresoModulos": {}
     },
     "52078704": {
-      "cedula": "52.078.704",
+      "cedula": "52078704",
       "nombre": "LOPEZ PEÑA GLORIA MIREYA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -954,7 +954,7 @@
       "progresoModulos": {}
     },
     "52232755": {
-      "cedula": "52.232.755",
+      "cedula": "52232755",
       "nombre": "AYALA VILLAMIL ANGELA YOHANA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -977,7 +977,7 @@
       "progresoModulos": {}
     },
     "52238626": {
-      "cedula": "52.238.626",
+      "cedula": "52238626",
       "nombre": "LUZ YAMILE DELGADO TORRES",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -1000,7 +1000,7 @@
       "progresoModulos": {}
     },
     "52308004": {
-      "cedula": "52.308.004",
+      "cedula": "52308004",
       "nombre": "RAMIREZ ROLDAN MARISOL",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1023,7 +1023,7 @@
       "progresoModulos": {}
     },
     "52319665": {
-      "cedula": "52.319.665",
+      "cedula": "52319665",
       "nombre": "ELIZABETH VALENCIA VALENCIA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -1046,7 +1046,7 @@
       "progresoModulos": {}
     },
     "52332660": {
-      "cedula": "52.332.660",
+      "cedula": "52332660",
       "nombre": "GARCIA GAVIRIA SANDRA MARGARITA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1069,7 +1069,7 @@
       "progresoModulos": {}
     },
     "52336478": {
-      "cedula": "52.336.478",
+      "cedula": "52336478",
       "nombre": "ALEXANDRA BELTRAN MORA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -1092,7 +1092,7 @@
       "progresoModulos": {}
     },
     "52389550": {
-      "cedula": "52.389.550",
+      "cedula": "52389550",
       "nombre": "RIVERA SALCEDO ADRIANA",
       "cargo": "SECRETARIA GENERAL",
       "area": "",
@@ -1115,7 +1115,7 @@
       "progresoModulos": {}
     },
     "52486829": {
-      "cedula": "52.486.829",
+      "cedula": "52486829",
       "nombre": "LOPEZ MORENO XIOMARA ANDREA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1138,7 +1138,7 @@
       "progresoModulos": {}
     },
     "52496580": {
-      "cedula": "52.496.580",
+      "cedula": "52496580",
       "nombre": "URIBE BRICEÑO LYZ STEPHANI",
       "cargo": "ASISTENTE DE PRESIDENCIA",
       "area": "",
@@ -1161,7 +1161,7 @@
       "progresoModulos": {}
     },
     "52514403": {
-      "cedula": "52.514.403",
+      "cedula": "52514403",
       "nombre": "DUSSAN ESCANDON CATALINA",
       "cargo": "DIRECTOR JURÍDICO",
       "area": "",
@@ -1184,7 +1184,7 @@
       "progresoModulos": {}
     },
     "52525820": {
-      "cedula": "52.525.820",
+      "cedula": "52525820",
       "nombre": "LOPEZ ACOSTA DIANA LUCIA",
       "cargo": "COORDINADOR ADMINISTRATIVO",
       "area": "",
@@ -1207,7 +1207,7 @@
       "progresoModulos": {}
     },
     "52551551": {
-      "cedula": "52.551.551",
+      "cedula": "52551551",
       "nombre": "MOSCOTE AYALA MARIANA DE JESUS",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1230,7 +1230,7 @@
       "progresoModulos": {}
     },
     "52661906": {
-      "cedula": "52.661.906",
+      "cedula": "52661906",
       "nombre": "MORENO TORRES MARTHA MILENA",
       "cargo": "DIRECTOR ADMINISTRATIVO",
       "area": "",
@@ -1253,7 +1253,7 @@
       "progresoModulos": {}
     },
     "52733766": {
-      "cedula": "52.733.766",
+      "cedula": "52733766",
       "nombre": "MARTINEZ RUIZ DIANA ALEXANDRA",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -1276,7 +1276,7 @@
       "progresoModulos": {}
     },
     "52751037": {
-      "cedula": "52.751.037",
+      "cedula": "52751037",
       "nombre": "CARRILLO BOGOTA DIANA MARCELA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1299,7 +1299,7 @@
       "progresoModulos": {}
     },
     "52761908": {
-      "cedula": "52.761.908",
+      "cedula": "52761908",
       "nombre": "JENNY LIZETH RODRIGUEZ BAQUERO",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -1322,7 +1322,7 @@
       "progresoModulos": {}
     },
     "52776216": {
-      "cedula": "52.776.216",
+      "cedula": "52776216",
       "nombre": "DANIS WILSONIA SANCHEZ MENDOZA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -1345,7 +1345,7 @@
       "progresoModulos": {}
     },
     "52779735": {
-      "cedula": "52.779.735",
+      "cedula": "52779735",
       "nombre": "CLAUDIA LILIANA SIERRA POVEDA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -1368,7 +1368,7 @@
       "progresoModulos": {}
     },
     "52782882": {
-      "cedula": "52.782.882",
+      "cedula": "52782882",
       "nombre": "MARLENY AVILA GOMEZ",
       "cargo": "JEFE DE GESTIÓN HUMANA Y HSE",
       "area": "Gestión Humana y HSE",
@@ -1391,7 +1391,7 @@
       "progresoModulos": {}
     },
     "52837805": {
-      "cedula": "52.837.805",
+      "cedula": "52837805",
       "nombre": "DUQUE MORENO CLAUDIA MILENA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1414,7 +1414,7 @@
       "progresoModulos": {}
     },
     "52850911": {
-      "cedula": "52.850.911",
+      "cedula": "52850911",
       "nombre": "RAMIREZ MORA DORA YENY",
       "cargo": "Analista III de Formación",
       "area": "Formación",
@@ -1480,7 +1480,7 @@
       }
     },
     "52914604": {
-      "cedula": "52.914.604",
+      "cedula": "52914604",
       "nombre": "LAITON CRUZ YUBITZA MARCELA",
       "cargo": "Supervisor de Convenios y Alianzas",
       "area": "",
@@ -1503,7 +1503,7 @@
       "progresoModulos": {}
     },
     "52978541": {
-      "cedula": "52.978.541",
+      "cedula": "52978541",
       "nombre": "OTALVARO LÓPEZ DIANA PATRICIA",
       "cargo": "ANALISTA III DE GESTION HUMANA",
       "area": "Selección",
@@ -1526,7 +1526,7 @@
       "progresoModulos": {}
     },
     "52992920": {
-      "cedula": "52.992.920",
+      "cedula": "52992920",
       "nombre": "ALBARRACIN QUINTANA NANCY",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1549,7 +1549,7 @@
       "progresoModulos": {}
     },
     "53009330": {
-      "cedula": "53.009.330",
+      "cedula": "53009330",
       "nombre": "XIMENA GUERRERO PACHECO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -1572,7 +1572,7 @@
       "progresoModulos": {}
     },
     "53067871": {
-      "cedula": "53.067.871",
+      "cedula": "53067871",
       "nombre": "OJEDA FIGUEROA JENNY ANDREA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1595,7 +1595,7 @@
       "progresoModulos": {}
     },
     "53070820": {
-      "cedula": "53.070.820",
+      "cedula": "53070820",
       "nombre": "CIFUENTES URBINA JENNYFFER ASTRID",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1618,7 +1618,7 @@
       "progresoModulos": {}
     },
     "53102296": {
-      "cedula": "53.102.296",
+      "cedula": "53102296",
       "nombre": "RUIZ OVIEDO SANDRA PATRICIA",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -1641,7 +1641,7 @@
       "progresoModulos": {}
     },
     "53106865": {
-      "cedula": "53.106.865",
+      "cedula": "53106865",
       "nombre": "MENDOZA LOZANO MYRIAM CONSUELO",
       "cargo": "ANALISTA III DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -1664,7 +1664,7 @@
       "progresoModulos": {}
     },
     "53117824": {
-      "cedula": "53.117.824",
+      "cedula": "53117824",
       "nombre": "CHAUX LILIANA AMINTA",
       "cargo": "ANALISTA III DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -1687,7 +1687,7 @@
       "progresoModulos": {}
     },
     "53130518": {
-      "cedula": "53.130.518",
+      "cedula": "53130518",
       "nombre": "ORTEGON YEPES FRANCY YANETH",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1710,7 +1710,7 @@
       "progresoModulos": {}
     },
     "53155837": {
-      "cedula": "53.155.837",
+      "cedula": "53155837",
       "nombre": "ELIZABETH OLARTE ARIZA",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -1733,7 +1733,7 @@
       "progresoModulos": {}
     },
     "63540067": {
-      "cedula": "63.540.067",
+      "cedula": "63540067",
       "nombre": "ACEVEDO CORREA LADY KARINA",
       "cargo": "ABOGADO SENIOR",
       "area": "",
@@ -1756,7 +1756,7 @@
       "progresoModulos": {}
     },
     "65749624": {
-      "cedula": "65.749.624",
+      "cedula": "65749624",
       "nombre": "CARDONA PINZON HILDA MAGNOLIA",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -1779,7 +1779,7 @@
       "progresoModulos": {}
     },
     "65770504": {
-      "cedula": "65.770.504",
+      "cedula": "65770504",
       "nombre": "PAULA ANDREA LOPEZ VARGAS",
       "cargo": "VICEPRESIDENTE DE OPERACIONES Y PLATAFORMAS",
       "area": "",
@@ -1802,7 +1802,7 @@
       "progresoModulos": {}
     },
     "72237927": {
-      "cedula": "72.237.927",
+      "cedula": "72237927",
       "nombre": "RODRIGUEZ MURILLO LUIS ARMANDO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -1825,7 +1825,7 @@
       "progresoModulos": {}
     },
     "74337799": {
-      "cedula": "74.337.799",
+      "cedula": "74337799",
       "nombre": "EDWIN ALBERTO VARGAS",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "",
@@ -1848,7 +1848,7 @@
       "progresoModulos": {}
     },
     "74372432": {
-      "cedula": "74.372.432",
+      "cedula": "74372432",
       "nombre": "AGUDELO VEGA HELBERT ENRIQUE",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -1871,7 +1871,7 @@
       "progresoModulos": {}
     },
     "74380273": {
-      "cedula": "74.380.273",
+      "cedula": "74380273",
       "nombre": "ANGEL ARMANDO NAUSA PUERTO",
       "cargo": "SUPERVISOR DE INVENTARIOS",
       "area": "",
@@ -1894,7 +1894,7 @@
       "progresoModulos": {}
     },
     "79065639": {
-      "cedula": "79.065.639",
+      "cedula": "79065639",
       "nombre": "EDISON ANDRES CASTRO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -1917,7 +1917,7 @@
       "progresoModulos": {}
     },
     "79148462": {
-      "cedula": "79.148.462",
+      "cedula": "79148462",
       "nombre": "OVIEDO FRANCO HENRY GONZALO",
       "cargo": "DIRECTOR DE SEGURIDAD FISICA",
       "area": "",
@@ -1940,7 +1940,7 @@
       "progresoModulos": {}
     },
     "79207627": {
-      "cedula": "79.207.627",
+      "cedula": "79207627",
       "nombre": "LEON MUETE RUBEN DARIO",
       "cargo": "DIRECTOR DE ESTACIONES",
       "area": "",
@@ -1963,7 +1963,7 @@
       "progresoModulos": {}
     },
     "79358871": {
-      "cedula": "79.358.871",
+      "cedula": "79358871",
       "nombre": "NEIVA LOPEZ JUAN CARLOS",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -1986,7 +1986,7 @@
       "progresoModulos": {}
     },
     "79444617": {
-      "cedula": "79.444.617",
+      "cedula": "79444617",
       "nombre": "WILLIAM HUMBERTO TORRES GONZALEZ",
       "cargo": "SUPERVISOR DE MESA DE SERVICIOS",
       "area": "",
@@ -2009,7 +2009,7 @@
       "progresoModulos": {}
     },
     "79474983": {
-      "cedula": "79.474.983",
+      "cedula": "79474983",
       "nombre": "PAEZ PEREZ GERMAN",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2032,7 +2032,7 @@
       "progresoModulos": {}
     },
     "79487325": {
-      "cedula": "79.487.325",
+      "cedula": "79487325",
       "nombre": "MATHIASEN TERREROS ARNE MICHEL",
       "cargo": "DIRECTOR DE RED EXTERNA Y EXPERIENCIA DEL SERVICIO",
       "area": "",
@@ -2055,7 +2055,7 @@
       "progresoModulos": {}
     },
     "79519041": {
-      "cedula": "79.519.041",
+      "cedula": "79519041",
       "nombre": "SAAVEDRA ANGEL GONZALO",
       "cargo": "CONDUCTOR",
       "area": "",
@@ -2078,7 +2078,7 @@
       "progresoModulos": {}
     },
     "79545314": {
-      "cedula": "79.545.314",
+      "cedula": "79545314",
       "nombre": "PUENTES PAEZ GUSTAVO",
       "cargo": "CONDUCTOR",
       "area": "",
@@ -2101,7 +2101,7 @@
       "progresoModulos": {}
     },
     "79575132": {
-      "cedula": "79.575.132",
+      "cedula": "79575132",
       "nombre": "RIVILLAS FORERO JULIO GIOVANNI",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2124,7 +2124,7 @@
       "progresoModulos": {}
     },
     "79579851": {
-      "cedula": "79.579.851",
+      "cedula": "79579851",
       "nombre": "CORRALES PORTELA IVAN ROLANDO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2147,7 +2147,7 @@
       "progresoModulos": {}
     },
     "79768254": {
-      "cedula": "79.768.254",
+      "cedula": "79768254",
       "nombre": "BECERRA RUIZ GUSTAVO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2170,7 +2170,7 @@
       "progresoModulos": {}
     },
     "79807092": {
-      "cedula": "79.807.092",
+      "cedula": "79807092",
       "nombre": "FLOREZ FERNANDEZ FREDY FERNANDO",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -2193,7 +2193,7 @@
       "progresoModulos": {}
     },
     "79881149": {
-      "cedula": "79.881.149",
+      "cedula": "79881149",
       "nombre": "ANDRES FERNANDO SAMACA ACOSTA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -2216,7 +2216,7 @@
       "progresoModulos": {}
     },
     "79895412": {
-      "cedula": "79.895.412",
+      "cedula": "79895412",
       "nombre": "CLAVIJO HERRERA ALVARO ALEXANDER",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -2239,7 +2239,7 @@
       "progresoModulos": {}
     },
     "79912424": {
-      "cedula": "79.912.424",
+      "cedula": "79912424",
       "nombre": "ORTEGON PINEDA WILBER",
       "cargo": "SUPERVISOR DE SOPORTE Y MANTENIMIENTO 2",
       "area": "",
@@ -2262,7 +2262,7 @@
       "progresoModulos": {}
     },
     "79938060": {
-      "cedula": "79.938.060",
+      "cedula": "79938060",
       "nombre": "CONTRERAS PEDRAZA OSCAR ANDRES",
       "cargo": "JEFE DE CONVENIOS Y ALIANZAS",
       "area": "",
@@ -2285,7 +2285,7 @@
       "progresoModulos": {}
     },
     "79949242": {
-      "cedula": "79.949.242",
+      "cedula": "79949242",
       "nombre": "ESCOBAR PUCCETTI JUAN PABLO",
       "cargo": "GERENTE FINANCIERO Y ADMINISTRATIVO",
       "area": "",
@@ -2308,7 +2308,7 @@
       "progresoModulos": {}
     },
     "79998357": {
-      "cedula": "79.998.357",
+      "cedula": "79998357",
       "nombre": "VILLALOBOS GARZON HERNAN FRANCISCO",
       "cargo": "ANALISTA III DE FACTURACIÓN Y RECAUDO",
       "area": "",
@@ -2331,7 +2331,7 @@
       "progresoModulos": {}
     },
     "80016968": {
-      "cedula": "80.016.968",
+      "cedula": "80016968",
       "nombre": "AMADO LEON ELKIN ARTURO",
       "cargo": "JEFE DE MESA OPERATIVA Y PERSONALIZACIÓN",
       "area": "",
@@ -2354,7 +2354,7 @@
       "progresoModulos": {}
     },
     "80022132": {
-      "cedula": "80.022.132",
+      "cedula": "80022132",
       "nombre": "BOHORQUEZ NOVA VICTOR MANUEL",
       "cargo": "PLANNER DE RECURSOS",
       "area": "",
@@ -2377,7 +2377,7 @@
       "progresoModulos": {}
     },
     "80068833": {
-      "cedula": "80.068.833",
+      "cedula": "80068833",
       "nombre": "LOPEZ GUTIERREZ CARLOS ANDRES",
       "cargo": "DIRECTOR DE CONTABILIDAD E IMPUESTOS",
       "area": "",
@@ -2400,7 +2400,7 @@
       "progresoModulos": {}
     },
     "80133245": {
-      "cedula": "80.133.245",
+      "cedula": "80133245",
       "nombre": "DEVIS MORALES JUAN NICOLAS",
       "cargo": "GERENTE JURÍDICO",
       "area": "",
@@ -2423,7 +2423,7 @@
       "progresoModulos": {}
     },
     "80151189": {
-      "cedula": "80.151.189",
+      "cedula": "80151189",
       "nombre": "JIMENEZ ALMONACID FERNANDO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2446,7 +2446,7 @@
       "progresoModulos": {}
     },
     "80178715": {
-      "cedula": "80.178.715",
+      "cedula": "80178715",
       "nombre": "HUERTAS CHOCONTA JAIME",
       "cargo": "AUXILIAR BACKOFFICE DE PERSONALIZACION",
       "area": "",
@@ -2469,7 +2469,7 @@
       "progresoModulos": {}
     },
     "80189991": {
-      "cedula": "80.189.991",
+      "cedula": "80189991",
       "nombre": "RODRIGUEZ DIAZ HUGO ALEXANDER",
       "cargo": "COORDINADOR DE TISC",
       "area": "",
@@ -2492,7 +2492,7 @@
       "progresoModulos": {}
     },
     "80243589": {
-      "cedula": "80.243.589",
+      "cedula": "80243589",
       "nombre": "BLANCO SANCHEZ EDGAR",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2515,7 +2515,7 @@
       "progresoModulos": {}
     },
     "80354165": {
-      "cedula": "80.354.165",
+      "cedula": "80354165",
       "nombre": "VEGA GAMEZ JOSE BENJAMIN",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2538,7 +2538,7 @@
       "progresoModulos": {}
     },
     "80374482": {
-      "cedula": "80.374.482",
+      "cedula": "80374482",
       "nombre": "JOSE AGUSTIN CARO GARCIA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -2561,7 +2561,7 @@
       "progresoModulos": {}
     },
     "80382053": {
-      "cedula": "80.382.053",
+      "cedula": "80382053",
       "nombre": "CACERES GUARIN GERMÁN ENRIQUE",
       "cargo": "AUDITOR SENIOR",
       "area": "",
@@ -2584,7 +2584,7 @@
       "progresoModulos": {}
     },
     "80740633": {
-      "cedula": "80.740.633",
+      "cedula": "80740633",
       "nombre": "BRIAM ALEXANDER CORTES",
       "cargo": "SUPERVISOR RED EXTERNA",
       "area": "",
@@ -2607,7 +2607,7 @@
       "progresoModulos": {}
     },
     "80749853": {
-      "cedula": "80.749.853",
+      "cedula": "80749853",
       "nombre": "WILKAR FERNANDO VEGA MENDOZA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -2630,7 +2630,7 @@
       "progresoModulos": {}
     },
     "80793306": {
-      "cedula": "80.793.306",
+      "cedula": "80793306",
       "nombre": "CAICEDO TOVAR CRISTHIAN JONNATAN",
       "cargo": "PROMOTOR DE RED EXTERNA",
       "area": "",
@@ -2653,7 +2653,7 @@
       "progresoModulos": {}
     },
     "80808078": {
-      "cedula": "80.808.078",
+      "cedula": "80808078",
       "nombre": "DIAZ VARGAS FREDY STEVEN",
       "cargo": "SUPERVISOR LOGÍSTICO DE OPERACIONES",
       "area": "",
@@ -2676,7 +2676,7 @@
       "progresoModulos": {}
     },
     "86056849": {
-      "cedula": "86.056.849",
+      "cedula": "86056849",
       "nombre": "CAICEDO ROJAS MARCO ALFONSO",
       "cargo": "AUDITOR ESPECIALISTA DE TI",
       "area": "",
@@ -2699,7 +2699,7 @@
       "progresoModulos": {}
     },
     "88131795": {
-      "cedula": "88.131.795",
+      "cedula": "88131795",
       "nombre": "RIOS MUÑOZ CARLOS YECID",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2722,7 +2722,7 @@
       "progresoModulos": {}
     },
     "91158323": {
-      "cedula": "91.158.323",
+      "cedula": "91158323",
       "nombre": "GOMEZ REYES JOHN ALEXANDER",
       "cargo": "DIRECTOR DE SOPORTE Y SERVICIO",
       "area": "",
@@ -2745,7 +2745,7 @@
       "progresoModulos": {}
     },
     "93360588": {
-      "cedula": "93.360.588",
+      "cedula": "93360588",
       "nombre": "BUITRAGO CHAVEZ GUILLERMO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -2768,7 +2768,7 @@
       "progresoModulos": {}
     },
     "1000001114": {
-      "cedula": "1.000.001.114",
+      "cedula": "1000001114",
       "nombre": "DANIELA HIDALGO",
       "cargo": "ABOGADO SENIOR",
       "area": "",
@@ -2791,7 +2791,7 @@
       "progresoModulos": {}
     },
     "1000007709": {
-      "cedula": "1.000.007.709",
+      "cedula": "1000007709",
       "nombre": "LAURA DANIELA CHACON VARGAS",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -2814,7 +2814,7 @@
       "progresoModulos": {}
     },
     "1000135354": {
-      "cedula": "1.000.135.354",
+      "cedula": "1000135354",
       "nombre": "CUARTAS DUQUE DIEGO ALEJANDRO",
       "cargo": "SUPERVISOR DE DCA",
       "area": "",
@@ -2837,7 +2837,7 @@
       "progresoModulos": {}
     },
     "1000157655": {
-      "cedula": "1.000.157.655",
+      "cedula": "1000157655",
       "nombre": "LAURA CAMILA RUIZ RODRIGUEZ",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -2860,7 +2860,7 @@
       "progresoModulos": {}
     },
     "1000241647": {
-      "cedula": "1.000.241.647",
+      "cedula": "1000241647",
       "nombre": "SEBASTIAN CAMILO BARRERA DUCUARA",
       "cargo": "ANALISTA I LOGISTICO",
       "area": "",
@@ -2883,7 +2883,7 @@
       "progresoModulos": {}
     },
     "1000272083": {
-      "cedula": "1.000.272.083",
+      "cedula": "1000272083",
       "nombre": "LUISA RUIZ",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -2906,7 +2906,7 @@
       "progresoModulos": {}
     },
     "1000464914": {
-      "cedula": "1.000.464.914",
+      "cedula": "1000464914",
       "nombre": "URBANO PABON CAMILA ANDREA",
       "cargo": "ASISTENTE JURÍDICO",
       "area": "",
@@ -2929,7 +2929,7 @@
       "progresoModulos": {}
     },
     "1000575823": {
-      "cedula": "1.000.575.823",
+      "cedula": "1000575823",
       "nombre": "EVELYN LORENA OSPINA RINCÓN",
       "cargo": "ANALISTA I LOGISTICO",
       "area": "",
@@ -2952,7 +2952,7 @@
       "progresoModulos": {}
     },
     "1000776871": {
-      "cedula": "1.000.776.871",
+      "cedula": "1000776871",
       "nombre": "ANDERSON ANDREY ARIAS ROJAS",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -2975,7 +2975,7 @@
       "progresoModulos": {}
     },
     "1000856889": {
-      "cedula": "1.000.856.889",
+      "cedula": "1000856889",
       "nombre": "DIEGO ANDRÉS CASTAÑEDA",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "",
@@ -2998,7 +2998,7 @@
       "progresoModulos": {}
     },
     "1001053072": {
-      "cedula": "1.001.053.072",
+      "cedula": "1001053072",
       "nombre": "MAYER REIREN CADENA FUENTES",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -3021,7 +3021,7 @@
       "progresoModulos": {}
     },
     "1001343976": {
-      "cedula": "1.001.343.976",
+      "cedula": "1001343976",
       "nombre": "LUGO NIETO LAURA VALENTINA",
       "cargo": "ANALISTA I DE RELACIONES LABORALES",
       "area": "Relaciones Laborales",
@@ -3044,7 +3044,7 @@
       "progresoModulos": {}
     },
     "1001360284": {
-      "cedula": "1.001.360.284",
+      "cedula": "1001360284",
       "nombre": "JUAN SEBASTIÁN GARCÍA AGUDELO",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -3067,7 +3067,7 @@
       "progresoModulos": {}
     },
     "1002296863": {
-      "cedula": "1.002.296.863",
+      "cedula": "1002296863",
       "nombre": "INELA ROCHA JEISON",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -3107,7 +3107,7 @@
       "temaActual": "Sin iniciar"
     },
     "1003233400": {
-      "cedula": "1.003.233.400",
+      "cedula": "1003233400",
       "nombre": "ZAPATA VILLARROEL FERNANDO ANDRES",
       "cargo": "AUXILIAR RELACIONES LABORALES",
       "area": "Relaciones Laborales",
@@ -3130,7 +3130,7 @@
       "progresoModulos": {}
     },
     "1003304818": {
-      "cedula": "1.003.304.818",
+      "cedula": "1003304818",
       "nombre": "MICHAEL ANDRES POLO",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "Formación",
@@ -3153,7 +3153,7 @@
       "progresoModulos": {}
     },
     "1003711083": {
-      "cedula": "1.003.711.083",
+      "cedula": "1003711083",
       "nombre": "LAURA BANESA CUBILLOS",
       "cargo": "ASISTENTE ADMINISTRATIVO",
       "area": "",
@@ -3176,7 +3176,7 @@
       "progresoModulos": {}
     },
     "1004374899": {
-      "cedula": "1.004.374.899",
+      "cedula": "1004374899",
       "nombre": "PABLA ANDREA COLON GUERRA",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -3199,7 +3199,7 @@
       "progresoModulos": {}
     },
     "1005452476": {
-      "cedula": "1.005.452.476",
+      "cedula": "1005452476",
       "nombre": "QUIROGA PEREA DIEGO EMERSON",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -3222,7 +3222,7 @@
       "progresoModulos": {}
     },
     "1005692211": {
-      "cedula": "1.005.692.211",
+      "cedula": "1005692211",
       "nombre": "DANIELA KATHERIN LOPEZ",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "Relaciones Laborales",
@@ -3245,7 +3245,7 @@
       "progresoModulos": {}
     },
     "1007198431": {
-      "cedula": "1.007.198.431",
+      "cedula": "1007198431",
       "nombre": "ROA LATORRE EDWING DAVID",
       "cargo": "ANALISTA II DE CONVENIOS Y ALIANZAS",
       "area": "",
@@ -3268,7 +3268,7 @@
       "progresoModulos": {}
     },
     "1007339915": {
-      "cedula": "1.007.339.915",
+      "cedula": "1007339915",
       "nombre": "LAGUNA LEIVA VALENTINA",
       "cargo": "ANALISTA I DE FORMACION",
       "area": "Formación",
@@ -3291,7 +3291,7 @@
       "progresoModulos": {}
     },
     "1007437530": {
-      "cedula": "1.007.437.530",
+      "cedula": "1007437530",
       "nombre": "SANTIAGO BAUTISTA",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -3331,7 +3331,7 @@
       "temaActual": "Sin iniciar"
     },
     "1010162292": {
-      "cedula": "1.010.162.292",
+      "cedula": "1010162292",
       "nombre": "JONNATAN PULIDO",
       "cargo": "SUPERVISOR DE INVENTARIOS",
       "area": "",
@@ -3354,7 +3354,7 @@
       "progresoModulos": {}
     },
     "1010176133": {
-      "cedula": "1.010.176.133",
+      "cedula": "1010176133",
       "nombre": "ARDILA GORDILLO JENIFERTH",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -3377,7 +3377,7 @@
       "progresoModulos": {}
     },
     "1012318516": {
-      "cedula": "1.012.318.516",
+      "cedula": "1012318516",
       "nombre": "RODRÍGUEZ ARAGÓN IVÁN ANDRES",
       "cargo": "ANALISTA I DE ACTIVOS F",
       "area": "",
@@ -3400,7 +3400,7 @@
       "progresoModulos": {}
     },
     "1012329361": {
-      "cedula": "1.012.329.361",
+      "cedula": "1012329361",
       "nombre": "SANABRIA QUIMBAY VIVIANA ANDREA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -3423,7 +3423,7 @@
       "progresoModulos": {}
     },
     "1012347133": {
-      "cedula": "1.012.347.133",
+      "cedula": "1012347133",
       "nombre": "DIANA MARCELA ALBARRACÍN",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "Compensación y Nómina",
@@ -3446,7 +3446,7 @@
       "progresoModulos": {}
     },
     "1012385268": {
-      "cedula": "1.012.385.268",
+      "cedula": "1012385268",
       "nombre": "SANJUAN GUTIERREZ JEFFERSON",
       "cargo": "ANALISTA I DE COMUNICACIONES",
       "area": "Comunicaciones",
@@ -3469,7 +3469,7 @@
       "progresoModulos": {}
     },
     "1012415112": {
-      "cedula": "1.012.415.112",
+      "cedula": "1012415112",
       "nombre": "ANGIE YULIETH LOZADA BOTACHE",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -3492,7 +3492,7 @@
       "progresoModulos": {}
     },
     "1012421653": {
-      "cedula": "1.012.421.653",
+      "cedula": "1012421653",
       "nombre": "MIGUEL ANGEL MORENO BUITRAGO",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -3532,7 +3532,7 @@
       "temaActual": "Sin iniciar"
     },
     "1013104298": {
-      "cedula": "1.013.104.298",
+      "cedula": "1013104298",
       "nombre": "JESSICA SOFIA SANTA SIERRA",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -3555,7 +3555,7 @@
       "progresoModulos": {}
     },
     "1013604656": {
-      "cedula": "1.013.604.656",
+      "cedula": "1013604656",
       "nombre": "CASTILLO NAVARRETE DIGNA PAOLA",
       "cargo": "ANALISTA III DE CONTABILIDAD",
       "area": "",
@@ -3578,7 +3578,7 @@
       "progresoModulos": {}
     },
     "1013607051": {
-      "cedula": "1.013.607.051",
+      "cedula": "1013607051",
       "nombre": "SANDRA MILENA PERILLA HORTUA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -3601,7 +3601,7 @@
       "progresoModulos": {}
     },
     "1013615133": {
-      "cedula": "1.013.615.133",
+      "cedula": "1013615133",
       "nombre": "RIOBO RODRIGUEZ ANGIE KATHERINNE",
       "cargo": "ANALISTA III DE RED EXTERNA",
       "area": "",
@@ -3624,7 +3624,7 @@
       "progresoModulos": {}
     },
     "1013625241": {
-      "cedula": "1.013.625.241",
+      "cedula": "1013625241",
       "nombre": "ROJAS VÁSQUEZ JESSID",
       "cargo": "ANALISTA III DE SEGURIDAD",
       "area": "",
@@ -3647,7 +3647,7 @@
       "progresoModulos": {}
     },
     "1013643413": {
-      "cedula": "1.013.643.413",
+      "cedula": "1013643413",
       "nombre": "JUAN HARVEY ACHURY LUGO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -3670,7 +3670,7 @@
       "progresoModulos": {}
     },
     "1013646568": {
-      "cedula": "1.013.646.568",
+      "cedula": "1013646568",
       "nombre": "JHON SEBASTIAN PIÑEROS BARRIOS",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -3693,7 +3693,7 @@
       "progresoModulos": {}
     },
     "1013669478": {
-      "cedula": "1.013.669.478",
+      "cedula": "1013669478",
       "nombre": "RIVERA RIVERA JENNI EMILCE",
       "cargo": "COORDINADOR DE TESORERIA",
       "area": "",
@@ -3716,7 +3716,7 @@
       "progresoModulos": {}
     },
     "1013685171": {
-      "cedula": "1.013.685.171",
+      "cedula": "1013685171",
       "nombre": "BRICEÑO LOZANO NATALIA",
       "cargo": "ANALISTA I DE RED EXTERNA",
       "area": "",
@@ -3739,7 +3739,7 @@
       "progresoModulos": {}
     },
     "1014193857": {
-      "cedula": "1.014.193.857",
+      "cedula": "1014193857",
       "nombre": "JULY VANESSA SANCHEZ BENITEZ",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -3762,7 +3762,7 @@
       "progresoModulos": {}
     },
     "1014279895": {
-      "cedula": "1.014.279.895",
+      "cedula": "1014279895",
       "nombre": "CRISTIAN ALFONSO BRAVO",
       "cargo": "ANALISTA I DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -3785,7 +3785,7 @@
       "progresoModulos": {}
     },
     "1014656672": {
-      "cedula": "1.014.656.672",
+      "cedula": "1014656672",
       "nombre": "DANNA ALEXANDRA CUERVO",
       "cargo": "AUXILIAR LOGÍSTICO DE OPERACIONES",
       "area": "",
@@ -3808,7 +3808,7 @@
       "progresoModulos": {}
     },
     "1015395829": {
-      "cedula": "1.015.395.829",
+      "cedula": "1015395829",
       "nombre": "CORTES RACINES ANDRES FELIPE",
       "cargo": "SUPERVISOR DE MESA DE SERVICIOS",
       "area": "",
@@ -3831,7 +3831,7 @@
       "progresoModulos": {}
     },
     "1015405392": {
-      "cedula": "1.015.405.392",
+      "cedula": "1015405392",
       "nombre": "MILENA LINARES",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "",
@@ -3854,7 +3854,7 @@
       "progresoModulos": {}
     },
     "1015435647": {
-      "cedula": "1.015.435.647",
+      "cedula": "1015435647",
       "nombre": "KATHERINE ROCIO MATIZ",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "",
@@ -3877,7 +3877,7 @@
       "progresoModulos": {}
     },
     "1015477212": {
-      "cedula": "1.015.477.212",
+      "cedula": "1015477212",
       "nombre": "NATALIA VALENTINA AYALA",
       "cargo": "AUXILIAR LOGÍSTICO DE OPERACIONES",
       "area": "",
@@ -3900,7 +3900,7 @@
       "progresoModulos": {}
     },
     "1016064509": {
-      "cedula": "1.016.064.509",
+      "cedula": "1016064509",
       "nombre": "OSCAR ALEXANDER SILVA CASAS",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -3923,7 +3923,7 @@
       "progresoModulos": {}
     },
     "1016078689": {
-      "cedula": "1.016.078.689",
+      "cedula": "1016078689",
       "nombre": "GONZALEZ OLAYA LINA MARCELA",
       "cargo": "COORDINADOR DE CONCILIACION RECARGA DIGITAL",
       "area": "",
@@ -3946,7 +3946,7 @@
       "progresoModulos": {}
     },
     "1018407702": {
-      "cedula": "1.018.407.702",
+      "cedula": "1018407702",
       "nombre": "DOMINGUEZ ACUÑA ALBERTO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -3969,7 +3969,7 @@
       "progresoModulos": {}
     },
     "1018455124": {
-      "cedula": "1.018.455.124",
+      "cedula": "1018455124",
       "nombre": "DIEGO ALBERTO ALAYON VILLAMIL",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -3992,7 +3992,7 @@
       "progresoModulos": {}
     },
     "1018500113": {
-      "cedula": "1.018.500.113",
+      "cedula": "1018500113",
       "nombre": "ENRIQUE UMAÑA",
       "cargo": "COORDINADOR JURÍDICO",
       "area": "",
@@ -4015,7 +4015,7 @@
       "progresoModulos": {}
     },
     "1019007262": {
-      "cedula": "1.019.007.262",
+      "cedula": "1019007262",
       "nombre": "GONZALO ANDRES GOMEZ GARCIA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -4038,7 +4038,7 @@
       "progresoModulos": {}
     },
     "1019042346": {
-      "cedula": "1.019.042.346",
+      "cedula": "1019042346",
       "nombre": "ROSSY HASBLEIDY JOYA",
       "cargo": "ANALISTA III DE COMPRAS",
       "area": "",
@@ -4061,7 +4061,7 @@
       "progresoModulos": {}
     },
     "1019065599": {
-      "cedula": "1.019.065.599",
+      "cedula": "1019065599",
       "nombre": "MONTAÑEZ RINCON ANGIE LORENA",
       "cargo": "ANALISTA I DE RED EXTERNA",
       "area": "",
@@ -4084,7 +4084,7 @@
       "progresoModulos": {}
     },
     "1019076333": {
-      "cedula": "1.019.076.333",
+      "cedula": "1019076333",
       "nombre": "MARTÍNEZ BELLO LINA PAHOLA",
       "cargo": "JEFE DE TESORERIA",
       "area": "",
@@ -4107,7 +4107,7 @@
       "progresoModulos": {}
     },
     "1019085902": {
-      "cedula": "1.019.085.902",
+      "cedula": "1019085902",
       "nombre": "BUSTOS GALINDO ANDREA PAOLA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -4130,7 +4130,7 @@
       "progresoModulos": {}
     },
     "1019091572": {
-      "cedula": "1.019.091.572",
+      "cedula": "1019091572",
       "nombre": "TORRES CASTRO LEIDY CATERIN",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -4153,7 +4153,7 @@
       "progresoModulos": {}
     },
     "1020768856": {
-      "cedula": "1.020.768.856",
+      "cedula": "1020768856",
       "nombre": "YEIMI PAOLA PARADA",
       "cargo": "ANALISTA II DE TESORERIA",
       "area": "",
@@ -4176,7 +4176,7 @@
       "progresoModulos": {}
     },
     "1020769742": {
-      "cedula": "1.020.769.742",
+      "cedula": "1020769742",
       "nombre": "BRIAN FABIAN PEDRAZA AGUAZACO",
       "cargo": "SUPERVISOR DE MESA DE SERVICIOS",
       "area": "",
@@ -4199,7 +4199,7 @@
       "progresoModulos": {}
     },
     "1020818730": {
-      "cedula": "1.020.818.730",
+      "cedula": "1020818730",
       "nombre": "HERNANDEZ CONTRERAS MATEO",
       "cargo": "GERENTE CORPORATIVO",
       "area": "",
@@ -4222,7 +4222,7 @@
       "progresoModulos": {}
     },
     "1022331455": {
-      "cedula": "1.022.331.455",
+      "cedula": "1022331455",
       "nombre": "CATALINA ARIAS PARADA",
       "cargo": "COORDINADOR DE RELACIONES LABORALES",
       "area": "Relaciones Laborales",
@@ -4245,7 +4245,7 @@
       "progresoModulos": {}
     },
     "1022409849": {
-      "cedula": "1.022.409.849",
+      "cedula": "1022409849",
       "nombre": "KELLY TATIANA CANTOR FLOREZ",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -4268,7 +4268,7 @@
       "progresoModulos": {}
     },
     "1022928146": {
-      "cedula": "1.022.928.146",
+      "cedula": "1022928146",
       "nombre": "NUÑEZ BARRERA DIANA MILENA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -4291,7 +4291,7 @@
       "progresoModulos": {}
     },
     "1022945621": {
-      "cedula": "1.022.945.621",
+      "cedula": "1022945621",
       "nombre": "SANDY JULIET MARTINEZ PEÑA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -4314,7 +4314,7 @@
       "progresoModulos": {}
     },
     "1022946990": {
-      "cedula": "1.022.946.990",
+      "cedula": "1022946990",
       "nombre": "ALDANA AMADO ALISSON MALARY",
       "cargo": "JEFE DE OPERACIONES",
       "area": "",
@@ -4337,7 +4337,7 @@
       "progresoModulos": {}
     },
     "1022951502": {
-      "cedula": "1.022.951.502",
+      "cedula": "1022951502",
       "nombre": "JAIRO ALONSO CAMACHO",
       "cargo": "ANALISTA I DE PLANEACION LOGISTICA",
       "area": "",
@@ -4360,7 +4360,7 @@
       "progresoModulos": {}
     },
     "1022962742": {
-      "cedula": "1.022.962.742",
+      "cedula": "1022962742",
       "nombre": "ERIKA NATHALY MONSALVE",
       "cargo": "AUXILIAR LOGÍSTICO DE OPERACIONES",
       "area": "",
@@ -4383,7 +4383,7 @@
       "progresoModulos": {}
     },
     "1022984104": {
-      "cedula": "1.022.984.104",
+      "cedula": "1022984104",
       "nombre": "CUENCA GALEANO YUDI ALEJANDRA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -4406,7 +4406,7 @@
       "progresoModulos": {}
     },
     "1023007903": {
-      "cedula": "1.023.007.903",
+      "cedula": "1023007903",
       "nombre": "JOSE ALEXANDER ARIAS JIMENEZ",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -4429,7 +4429,7 @@
       "progresoModulos": {}
     },
     "1023009277": {
-      "cedula": "1.023.009.277",
+      "cedula": "1023009277",
       "nombre": "KAREN FERNANDA VELANDIA CALDERON",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -4452,7 +4452,7 @@
       "progresoModulos": {}
     },
     "1023363326": {
-      "cedula": "1.023.363.326",
+      "cedula": "1023363326",
       "nombre": "KAROLL HASBLEIDY ACEVEDO",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "Selección",
@@ -4475,7 +4475,7 @@
       "progresoModulos": {}
     },
     "1023866743": {
-      "cedula": "1.023.866.743",
+      "cedula": "1023866743",
       "nombre": "WILSON ANDRES HERNANDEZ BEJARANO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -4498,7 +4498,7 @@
       "progresoModulos": {}
     },
     "1023869023": {
-      "cedula": "1.023.869.023",
+      "cedula": "1023869023",
       "nombre": "JIMENEZ GACHA GERMAN EDUARDO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -4521,7 +4521,7 @@
       "progresoModulos": {}
     },
     "1023886466": {
-      "cedula": "1.023.886.466",
+      "cedula": "1023886466",
       "nombre": "GALINDO CARDONA JENNIFER",
       "cargo": "AUDITOR",
       "area": "",
@@ -4544,7 +4544,7 @@
       "progresoModulos": {}
     },
     "1023893766": {
-      "cedula": "1.023.893.766",
+      "cedula": "1023893766",
       "nombre": "SANDRA MILENA SALCEDO POVEDA",
       "cargo": "COORDINADOR MESA OPERATIVA",
       "area": "",
@@ -4567,7 +4567,7 @@
       "progresoModulos": {}
     },
     "1023913534": {
-      "cedula": "1.023.913.534",
+      "cedula": "1023913534",
       "nombre": "LEIDY CONSUELO RIVEROS RODRIGUEZ",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -4590,7 +4590,7 @@
       "progresoModulos": {}
     },
     "1023933346": {
-      "cedula": "1.023.933.346",
+      "cedula": "1023933346",
       "nombre": "BEJARANO GARZON WILMER ALEJANDRO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -4613,7 +4613,7 @@
       "progresoModulos": {}
     },
     "1023942209": {
-      "cedula": "1.023.942.209",
+      "cedula": "1023942209",
       "nombre": "LINDA MICHELL GARCIA VELASCO",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -4636,7 +4636,7 @@
       "progresoModulos": {}
     },
     "1023957829": {
-      "cedula": "1.023.957.829",
+      "cedula": "1023957829",
       "nombre": "DUVAN DAVID BOLIVAR",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "",
@@ -4659,7 +4659,7 @@
       "progresoModulos": {}
     },
     "1024491235": {
-      "cedula": "1.024.491.235",
+      "cedula": "1024491235",
       "nombre": "OSPINA BASTIDAS DAVID ALEXANDER",
       "cargo": "ANALISTA I DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -4682,7 +4682,7 @@
       "progresoModulos": {}
     },
     "1024519562": {
-      "cedula": "1.024.519.562",
+      "cedula": "1024519562",
       "nombre": "YERALDIN GONZALEZ",
       "cargo": "ANALISTA III DE GESTION HUMANA",
       "area": "Selección",
@@ -4705,7 +4705,7 @@
       "progresoModulos": {}
     },
     "1024560218": {
-      "cedula": "1.024.560.218",
+      "cedula": "1024560218",
       "nombre": "LUIS FERNANDO DAZA",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "Compensación y Nómina",
@@ -4728,7 +4728,7 @@
       "progresoModulos": {}
     },
     "1024586149": {
-      "cedula": "1.024.586.149",
+      "cedula": "1024586149",
       "nombre": "SUAREZ GARRIDO YEIMY ALEXANDRA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -4751,7 +4751,7 @@
       "progresoModulos": {}
     },
     "1024595085": {
-      "cedula": "1.024.595.085",
+      "cedula": "1024595085",
       "nombre": "MOQUE GÓMEZ ALEXANDRA CAROLINA",
       "cargo": "AUXILIAR BACKOFFICE DE PERSONALIZACION",
       "area": "",
@@ -4774,7 +4774,7 @@
       "progresoModulos": {}
     },
     "1026573670": {
-      "cedula": "1.026.573.670",
+      "cedula": "1026573670",
       "nombre": "GONZALEZ GUSTAVO ADOLFO",
       "cargo": "ANALISTA I DE TISC",
       "area": "",
@@ -4797,7 +4797,7 @@
       "progresoModulos": {}
     },
     "1026580615": {
-      "cedula": "1.026.580.615",
+      "cedula": "1026580615",
       "nombre": "YENNY LIZETH CAMPO",
       "cargo": "ANALISTA I BIENESTAR",
       "area": "Bienestar",
@@ -4820,7 +4820,7 @@
       "progresoModulos": {}
     },
     "1030530446": {
-      "cedula": "1.030.530.446",
+      "cedula": "1030530446",
       "nombre": "LOPEZ LOZANO EDISON JAVIER",
       "cargo": "COORDINADOR DE INVENTARIOS",
       "area": "",
@@ -4843,7 +4843,7 @@
       "progresoModulos": {}
     },
     "1030572735": {
-      "cedula": "1.030.572.735",
+      "cedula": "1030572735",
       "nombre": "PLAZAS ORTIZ ISABEL SOFIA",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "",
@@ -4866,7 +4866,7 @@
       "progresoModulos": {}
     },
     "1030598398": {
-      "cedula": "1.030.598.398",
+      "cedula": "1030598398",
       "nombre": "ROJAS CABALLERO JUAN FRANCISCO",
       "cargo": "PROMOTOR DE RED EXTERNA",
       "area": "",
@@ -4889,7 +4889,7 @@
       "progresoModulos": {}
     },
     "1030603974": {
-      "cedula": "1.030.603.974",
+      "cedula": "1030603974",
       "nombre": "JOSE ALBINO TAPIERO CAPERA",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -4912,7 +4912,7 @@
       "progresoModulos": {}
     },
     "1030617839": {
-      "cedula": "1.030.617.839",
+      "cedula": "1030617839",
       "nombre": "PAOLA ANDREA LÓPEZ",
       "cargo": "ANALISTA III DE HSE",
       "area": "HSE",
@@ -4935,7 +4935,7 @@
       "progresoModulos": {}
     },
     "1030638474": {
-      "cedula": "1.030.638.474",
+      "cedula": "1030638474",
       "nombre": "WILLIAM ANDRES SOTO",
       "cargo": "COORDINADOR DE COMPENSACIÓN Y NOMINA",
       "area": "Compensación y Nómina",
@@ -4958,7 +4958,7 @@
       "progresoModulos": {}
     },
     "1030648935": {
-      "cedula": "1.030.648.935",
+      "cedula": "1030648935",
       "nombre": "JENNY ALEJANDRA CARO CARDENAS",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -4981,7 +4981,7 @@
       "progresoModulos": {}
     },
     "1030655715": {
-      "cedula": "1.030.655.715",
+      "cedula": "1030655715",
       "nombre": "JENIFER CAROLAY MARTINEZ CAÑON",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -5004,7 +5004,7 @@
       "progresoModulos": {}
     },
     "1030659434": {
-      "cedula": "1.030.659.434",
+      "cedula": "1030659434",
       "nombre": "WILMER ANDRES ZAMBRANO",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -5027,7 +5027,7 @@
       "progresoModulos": {}
     },
     "1031120535": {
-      "cedula": "1.031.120.535",
+      "cedula": "1031120535",
       "nombre": "VIVIANA YAÑEZ BARRIGA",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -5050,7 +5050,7 @@
       "progresoModulos": {}
     },
     "1031121418": {
-      "cedula": "1.031.121.418",
+      "cedula": "1031121418",
       "nombre": "YURI TATIANA PARRA",
       "cargo": "AUXILIAR ADMINISTRATIVO DE CONVENIOS",
       "area": "",
@@ -5073,7 +5073,7 @@
       "progresoModulos": {}
     },
     "1031168392": {
-      "cedula": "1.031.168.392",
+      "cedula": "1031168392",
       "nombre": "MORA SANDOVAL LAURA STEPFANIE",
       "cargo": "ASISTENTE DE COMPRAS",
       "area": "",
@@ -5096,7 +5096,7 @@
       "progresoModulos": {}
     },
     "1031176012": {
-      "cedula": "1.031.176.012",
+      "cedula": "1031176012",
       "nombre": "BAIRON STIVEN TORRES RAMIREZ",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5119,7 +5119,7 @@
       "progresoModulos": {}
     },
     "1031177506": {
-      "cedula": "1.031.177.506",
+      "cedula": "1031177506",
       "nombre": "CORTES TIQUE HECTOR STEVEN",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5142,7 +5142,7 @@
       "progresoModulos": {}
     },
     "1031178434": {
-      "cedula": "1.031.178.434",
+      "cedula": "1031178434",
       "nombre": "GARCIA MOTOA YURI XIOMARA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5165,7 +5165,7 @@
       "progresoModulos": {}
     },
     "1032357120": {
-      "cedula": "1.032.357.120",
+      "cedula": "1032357120",
       "nombre": "ALGARRA DIEGO FERNANDO",
       "cargo": "ANALISTA III DE CONTABILIDAD",
       "area": "",
@@ -5188,7 +5188,7 @@
       "progresoModulos": {}
     },
     "1032372080": {
-      "cedula": "1.032.372.080",
+      "cedula": "1032372080",
       "nombre": "ESPITIA CORTES JOHN ANDERSON",
       "cargo": "ASISTENTE DE COMPRAS",
       "area": "",
@@ -5211,7 +5211,7 @@
       "progresoModulos": {}
     },
     "1032383342": {
-      "cedula": "1.032.383.342",
+      "cedula": "1032383342",
       "nombre": "MENA CORDOBA EDWIN ORLANDO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5234,7 +5234,7 @@
       "progresoModulos": {}
     },
     "1032387446": {
-      "cedula": "1.032.387.446",
+      "cedula": "1032387446",
       "nombre": "NATALY MARCELA ARIAS REYES",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5257,7 +5257,7 @@
       "progresoModulos": {}
     },
     "1032389248": {
-      "cedula": "1.032.389.248",
+      "cedula": "1032389248",
       "nombre": "SANDRA MILENA RODRIGUEZ ALFONSO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5280,7 +5280,7 @@
       "progresoModulos": {}
     },
     "1032394395": {
-      "cedula": "1.032.394.395",
+      "cedula": "1032394395",
       "nombre": "FLOREZ GUTIERREZ ERWIN ALEXANDER",
       "cargo": "COORDINADOR DE CONTABILIDAD E IMPUESTOS",
       "area": "",
@@ -5303,7 +5303,7 @@
       "progresoModulos": {}
     },
     "1032407681": {
-      "cedula": "1.032.407.681",
+      "cedula": "1032407681",
       "nombre": "WALTER JAVIER MOLINA PEDRAZA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5326,7 +5326,7 @@
       "progresoModulos": {}
     },
     "1032420396": {
-      "cedula": "1.032.420.396",
+      "cedula": "1032420396",
       "nombre": "HERNANDEZ HERNANDEZ GERMAN ALFREDO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5349,7 +5349,7 @@
       "progresoModulos": {}
     },
     "1033731501": {
-      "cedula": "1.033.731.501",
+      "cedula": "1033731501",
       "nombre": "JOHN ANDERSON OSORIO OSORIO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5372,7 +5372,7 @@
       "progresoModulos": {}
     },
     "1033735036": {
-      "cedula": "1.033.735.036",
+      "cedula": "1033735036",
       "nombre": "MAYERLI HERNANDEZ GIL",
       "cargo": "ANALISTA I DE MESA OPERATIVA",
       "area": "",
@@ -5395,7 +5395,7 @@
       "progresoModulos": {}
     },
     "1033780261": {
-      "cedula": "1.033.780.261",
+      "cedula": "1033780261",
       "nombre": "HENRY DAVID LEYTON ROSAS",
       "cargo": "ANALISTA I LOGISTICO",
       "area": "",
@@ -5418,7 +5418,7 @@
       "progresoModulos": {}
     },
     "1033812366": {
-      "cedula": "1.033.812.366",
+      "cedula": "1033812366",
       "nombre": "GARCIA MOTOA CAREN YULIED",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5441,7 +5441,7 @@
       "progresoModulos": {}
     },
     "1045695756": {
-      "cedula": "1.045.695.756",
+      "cedula": "1045695756",
       "nombre": "GOMEZ HURTADO YURANIS MILENA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5464,7 +5464,7 @@
       "progresoModulos": {}
     },
     "1049634866": {
-      "cedula": "1.049.634.866",
+      "cedula": "1049634866",
       "nombre": "JULIAN ESTEBAN LOZANO",
       "cargo": "DIRECTOR JURÍDICO",
       "area": "",
@@ -5487,7 +5487,7 @@
       "progresoModulos": {}
     },
     "1053342931": {
-      "cedula": "1.053.342.931",
+      "cedula": "1053342931",
       "nombre": "JOHAN EDWARDO LÓPEZ MONROY",
       "cargo": "ANALISTA I LOGISTICO",
       "area": "",
@@ -5510,7 +5510,7 @@
       "progresoModulos": {}
     },
     "1054802543": {
-      "cedula": "1.054.802.543",
+      "cedula": "1054802543",
       "nombre": "CRUZ GALINDO YEIMY VIVIANA",
       "cargo": "ANALISTA III DE HSE",
       "area": "HSE",
@@ -5533,7 +5533,7 @@
       "progresoModulos": {}
     },
     "1057606253": {
-      "cedula": "1.057.606.253",
+      "cedula": "1057606253",
       "nombre": "CARLOS HUMBERTO BLANCO",
       "cargo": "PLANEADOR DE DEMANDA",
       "area": "",
@@ -5573,7 +5573,7 @@
       "temaActual": "Sin iniciar"
     },
     "1067728159": {
-      "cedula": "1.067.728.159",
+      "cedula": "1067728159",
       "nombre": "ELIEIDYS MARGARITA MAVAREZ",
       "cargo": "AUXILIAR ADMINISTRATIVO",
       "area": "",
@@ -5596,7 +5596,7 @@
       "progresoModulos": {}
     },
     "1069052881": {
-      "cedula": "1.069.052.881",
+      "cedula": "1069052881",
       "nombre": "ROOSBELTH FERNEY ROJAS MELO",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5619,7 +5619,7 @@
       "progresoModulos": {}
     },
     "1069432843": {
-      "cedula": "1.069.432.843",
+      "cedula": "1069432843",
       "nombre": "WILSON VARELA MUÑOZ",
       "cargo": "Analista Senior de Capacitación",
       "area": "FORMACIÓN",
@@ -5729,7 +5729,7 @@
       }
     },
     "1069753425": {
-      "cedula": "1.069.753.425",
+      "cedula": "1069753425",
       "nombre": "TORRES SANCHEZ JHONATAN ALEXANDER",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5752,7 +5752,7 @@
       "progresoModulos": {}
     },
     "1072197870": {
-      "cedula": "1.072.197.870",
+      "cedula": "1072197870",
       "nombre": "JULIAN ESTEBAN GUTIERREZ GONZALEZ",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5775,7 +5775,7 @@
       "progresoModulos": {}
     },
     "1072496965": {
-      "cedula": "1.072.496.965",
+      "cedula": "1072496965",
       "nombre": "FABIAN ANDRES MORENO GARZON",
       "cargo": "TECNICO DE CAMPO",
       "area": "",
@@ -5798,7 +5798,7 @@
       "progresoModulos": {}
     },
     "1072895362": {
-      "cedula": "1.072.895.362",
+      "cedula": "1072895362",
       "nombre": "RODRIGUEZ VILLALBA SEBASTIAN",
       "cargo": "ANALISTA III DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -5821,7 +5821,7 @@
       "progresoModulos": {}
     },
     "1073984533": {
-      "cedula": "1.073.984.533",
+      "cedula": "1073984533",
       "nombre": "ANGELA PATRICIA CERPA PEREIRA",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5844,7 +5844,7 @@
       "progresoModulos": {}
     },
     "1082904869": {
-      "cedula": "1.082.904.869",
+      "cedula": "1082904869",
       "nombre": "AGREDO VERA DORA ALEJANDRA",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5867,7 +5867,7 @@
       "progresoModulos": {}
     },
     "1085046371": {
-      "cedula": "1.085.046.371",
+      "cedula": "1085046371",
       "nombre": "CRISTO AVILA JAVIER",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -5890,7 +5890,7 @@
       "progresoModulos": {}
     },
     "1085635261": {
-      "cedula": "1.085.635.261",
+      "cedula": "1085635261",
       "nombre": "ANDREA GABRIELA VALENZUELA NASTUL",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5913,7 +5913,7 @@
       "progresoModulos": {}
     },
     "1094915183": {
-      "cedula": "1.094.915.183",
+      "cedula": "1094915183",
       "nombre": "LEAL VERA LUISA FERNANDA",
       "cargo": "COORDINADOR HSE",
       "area": "HSE",
@@ -5936,7 +5936,7 @@
       "progresoModulos": {}
     },
     "1097332113": {
-      "cedula": "1.097.332.113",
+      "cedula": "1097332113",
       "nombre": "JOSE LUIS QUITIAN CUBIDES",
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
       "area": "",
@@ -5959,7 +5959,7 @@
       "progresoModulos": {}
     },
     "1098721133": {
-      "cedula": "1.098.721.133",
+      "cedula": "1098721133",
       "nombre": "ALVAREZ HERNANDEZ ALEYDA TATIANA",
       "cargo": "COORDINADOR DE ASEGURAMIENTO DEL SERVICIO",
       "area": "",
@@ -5982,7 +5982,7 @@
       "progresoModulos": {}
     },
     "1102353533": {
-      "cedula": "1.102.353.533",
+      "cedula": "1102353533",
       "nombre": "CONTRERAS FERNANDEZ JUAN DANIEL",
       "cargo": "ANALISTA III DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -6005,7 +6005,7 @@
       "progresoModulos": {}
     },
     "1102835784": {
-      "cedula": "1.102.835.784",
+      "cedula": "1102835784",
       "nombre": "PELUFO ARIAS YURLEIS JUDID",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -6028,7 +6028,7 @@
       "progresoModulos": {}
     },
     "1106781663": {
-      "cedula": "1.106.781.663",
+      "cedula": "1106781663",
       "nombre": "RODRIGUEZ MENDOZA OSCAR MAURICIO",
       "cargo": "SUPERVISOR DE OPERACIONES",
       "area": "",
@@ -6051,7 +6051,7 @@
       "progresoModulos": {}
     },
     "1106895769": {
-      "cedula": "1.106.895.769",
+      "cedula": "1106895769",
       "nombre": "PARRA ARBOLEDA JONATHAN ERVEY",
       "cargo": "ANALISTA I DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -6074,7 +6074,7 @@
       "progresoModulos": {}
     },
     "1109295564": {
-      "cedula": "1.109.295.564",
+      "cedula": "1109295564",
       "nombre": "GOMEZ HENAO HEINER SANTIAGO",
       "cargo": "ANALISTA III DE CONTABILIDAD E IMPUESTOS",
       "area": "",
@@ -6097,7 +6097,7 @@
       "progresoModulos": {}
     },
     "1110235023": {
-      "cedula": "1.110.235.023",
+      "cedula": "1110235023",
       "nombre": "DIAZ RAMIREZ YESSICA ALEJANDRA",
       "cargo": "ANALISTA I DE SOPORTE ESPECIALIZADO",
       "area": "",
@@ -6120,7 +6120,7 @@
       "progresoModulos": {}
     },
     "1110536216": {
-      "cedula": "1.110.536.216",
+      "cedula": "1110536216",
       "nombre": "LEONEL MANUEL OSPINA LEON",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -6143,7 +6143,7 @@
       "progresoModulos": {}
     },
     "1110598958": {
-      "cedula": "1.110.598.958",
+      "cedula": "1110598958",
       "nombre": "JEFERSON OVIDIO ORTIZ MANRIQUE",
       "cargo": "AUXILIAR DE INVENTARIOS",
       "area": "",
@@ -6166,7 +6166,7 @@
       "progresoModulos": {}
     },
     "1116854886": {
-      "cedula": "1.116.854.886",
+      "cedula": "1116854886",
       "nombre": "MARYURY LIZBETH RIAÑO",
       "cargo": "ANALISTA I DE CONTABILIDAD",
       "area": "",
@@ -6189,7 +6189,7 @@
       "progresoModulos": {}
     },
     "1234089463": {
-      "cedula": "1.234.089.463",
+      "cedula": "1234089463",
       "nombre": "CORONADO CARDENAS LUISA FERNANDA",
       "cargo": "ANALISTA II GESTION HUMANA",
       "area": "Compensación y Nómina",
