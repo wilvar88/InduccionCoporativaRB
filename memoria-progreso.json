@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:03:28.212Z",
+  "ultimaActualizacion": "2026-11-17T16:03:34.621Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
-      "temaActual": "Tecnología zonal y troncal",
+      "temaActual": "Validadores y Torniquetes",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
       "ultimoTemaTitulo": "Tecnología zonal y troncal",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 17,
+      "temasVistos": 18,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 27,
+      "porcentajeAvance": 29,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3326,8 +3326,10 @@
         "3": {
           "0": true,
           "1": true,
+          "2": true,
           "col_16": true,
-          "col_17": true
+          "col_17": true,
+          "col_18": true
         }
       }
     },
