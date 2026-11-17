@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:49:48.512Z",
+  "ultimaActualizacion": "2026-11-17T15:49:50.634Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,27 +3279,29 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 1: Bienvenida e introducción corporativa",
-      "temaActual": "Misión",
+      "temaActual": "Visión",
       "ultimoModuloId": 1,
       "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
       "ultimoTemaTitulo": "Bienvenida",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
-      "temasVistos": 5,
+      "temasVistos": 6,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 8,
+      "porcentajeAvance": 10,
       "progresoModulos": {
         "1": {
           "0": true,
           "1": true,
           "2": true,
+          "3": true,
           "5": true,
           "6": true,
           "col_1": true,
           "col_2": true,
           "col_3": true,
           "col_6": true,
-          "col_7": true
+          "col_7": true,
+          "col_4": true
         }
       }
     },
