@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:49:59.991Z",
+  "ultimaActualizacion": "2026-11-17T15:50:14.791Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3280,9 +3280,9 @@
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 2: Conociendo nuestro negocio",
       "temaActual": "Transmilenio",
-      "ultimoModuloId": 1,
-      "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
-      "ultimoTemaTitulo": "Visión",
+      "ultimoModuloId": 2,
+      "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
+      "ultimoTemaTitulo": "Transmilenio",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
       "temasVistos": 7,
