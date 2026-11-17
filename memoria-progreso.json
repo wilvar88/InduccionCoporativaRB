@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T17:24:22.633Z",
+  "ultimaActualizacion": "2026-11-17T17:24:29.308Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3285,9 +3285,9 @@
       "ultimoTemaTitulo": "Moodle",
       "modulosCompletados": 4,
       "totalModulosHabilitados": 12,
-      "temasVistos": 30,
+      "temasVistos": 31,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 48,
+      "porcentajeAvance": 50,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3357,7 +3357,9 @@
         },
         "12": {
           "0": true,
-          "col_68": true
+          "1": true,
+          "col_68": true,
+          "col_69": true
         }
       }
     },
