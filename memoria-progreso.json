@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:49:18.394Z",
+  "ultimaActualizacion": "2026-11-17T15:49:20.526Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,19 +3279,21 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 1: Bienvenida e introducción corporativa",
-      "temaActual": "Objetivo de la inducción",
+      "temaActual": "¿Quiénes somos?",
       "ultimoModuloId": 1,
       "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
       "ultimoTemaTitulo": "Objetivo de la inducción",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
-      "temasVistos": 1,
+      "temasVistos": 2,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 2,
+      "porcentajeAvance": 3,
       "progresoModulos": {
         "1": {
           "0": true,
-          "col_1": true
+          "1": true,
+          "col_1": true,
+          "col_2": true
         }
       }
     },
