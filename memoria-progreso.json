@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:06:01.487Z",
+  "ultimaActualizacion": "2026-11-17T16:06:08.073Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 4: Tarjetas y medios de acceso",
-      "temaActual": "Adulto Mayor",
+      "temaActual": "Apoyo Ciudadano",
       "ultimoModuloId": 4,
       "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
       "ultimoTemaTitulo": "Adulto Mayor",
       "modulosCompletados": 3,
       "totalModulosHabilitados": 12,
-      "temasVistos": 25,
+      "temasVistos": 26,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 40,
+      "porcentajeAvance": 42,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3343,9 +3343,11 @@
           "0": true,
           "1": true,
           "2": true,
+          "3": true,
           "col_24": true,
           "col_25": true,
-          "col_26": true
+          "col_26": true,
+          "col_27": true
         }
       }
     },
