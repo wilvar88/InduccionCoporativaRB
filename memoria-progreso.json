@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:03:07.141Z",
+  "ultimaActualizacion": "2026-11-17T16:03:10.646Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
-      "temaActual": "Estructura tecnológica de recaudo",
+      "temaActual": "Pago de pasaje",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
       "ultimoTemaTitulo": "Estructura tecnológica de recaudo",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 15,
+      "temasVistos": 16,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 24,
+      "porcentajeAvance": 26,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3322,6 +3322,10 @@
           "col_12": true,
           "col_13": true,
           "col_14": true
+        },
+        "3": {
+          "0": true,
+          "col_16": true
         }
       }
     },
