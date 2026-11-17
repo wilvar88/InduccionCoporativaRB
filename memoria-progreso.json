@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T17:18:48.246Z",
+  "ultimaActualizacion": "2026-11-17T17:18:55.230Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 4: Tarjetas y medios de acceso",
-      "temaActual": "Apoyo Ciudadano",
+      "temaActual": "Tarjetas híbridas",
       "ultimoModuloId": 4,
       "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
       "ultimoTemaTitulo": "Apoyo Ciudadano",
       "modulosCompletados": 3,
       "totalModulosHabilitados": 12,
-      "temasVistos": 26,
+      "temasVistos": 27,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 42,
+      "porcentajeAvance": 44,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3344,10 +3344,12 @@
           "1": true,
           "2": true,
           "3": true,
+          "4": true,
           "col_24": true,
           "col_25": true,
           "col_26": true,
-          "col_27": true
+          "col_27": true,
+          "col_28": true
         }
       }
     },
