@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:03:48.355Z",
+  "ultimaActualizacion": "2026-11-17T16:03:51.846Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3282,7 +3282,7 @@
       "temaActual": "BCA, DCA, TCS",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Validadores y Torniquetes",
+      "ultimoTemaTitulo": "Flota SITP",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 19,
