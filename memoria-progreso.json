@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:50:28.552Z",
+  "ultimaActualizacion": "2026-11-17T15:50:38.468Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 2: Conociendo nuestro negocio",
-      "temaActual": "Transmilenio",
+      "temaActual": "Tullave",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
       "ultimoTemaTitulo": "Transmilenio",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
-      "temasVistos": 8,
+      "temasVistos": 9,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 13,
+      "porcentajeAvance": 15,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3306,8 +3306,10 @@
           "col_5": true
         },
         "2": {
+          "0": true,
           "1": true,
-          "col_9": true
+          "col_9": true,
+          "col_8": true
         }
       }
     },
