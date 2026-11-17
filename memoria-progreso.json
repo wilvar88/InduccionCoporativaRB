@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T17:24:31.617Z",
+  "ultimaActualizacion": "2026-11-17T17:24:37.202Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3283,11 +3283,11 @@
       "ultimoModuloId": 12,
       "ultimoModuloNombre": "Módulo 12: Herramientas corporativas",
       "ultimoTemaTitulo": "Moodle",
-      "modulosCompletados": 4,
+      "modulosCompletados": 5,
       "totalModulosHabilitados": 12,
-      "temasVistos": 31,
+      "temasVistos": 32,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 50,
+      "porcentajeAvance": 52,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3358,8 +3358,10 @@
         "12": {
           "0": true,
           "1": true,
+          "2": true,
           "col_68": true,
-          "col_69": true
+          "col_69": true,
+          "col_71": true
         }
       }
     },
