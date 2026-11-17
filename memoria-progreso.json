@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:47:41.188Z",
+  "ultimaActualizacion": "2026-11-17T15:47:47.404Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3278,11 +3278,11 @@
       "primerIngreso": "5/11/26, 11:13:34 p. m.",
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
-      "moduloActual": "Sin iniciar",
-      "temaActual": "Sin iniciar",
-      "ultimoModuloId": null,
-      "ultimoModuloNombre": "",
-      "ultimoTemaTitulo": "",
+      "moduloActual": "Módulo 1: Bienvenida e introducción corporativa",
+      "temaActual": "Bienvenida",
+      "ultimoModuloId": 1,
+      "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
+      "ultimoTemaTitulo": "Bienvenida",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
       "temasVistos": 0,
