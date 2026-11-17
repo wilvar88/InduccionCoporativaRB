@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:03:51.846Z",
+  "ultimaActualizacion": "2026-11-17T16:03:58.322Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3285,9 +3285,9 @@
       "ultimoTemaTitulo": "Flota SITP",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 19,
+      "temasVistos": 20,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 31,
+      "porcentajeAvance": 32,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3328,10 +3328,12 @@
           "1": true,
           "2": true,
           "3": true,
+          "5": true,
           "col_16": true,
           "col_17": true,
           "col_18": true,
-          "col_19": true
+          "col_19": true,
+          "col_1001": true
         }
       }
     },
