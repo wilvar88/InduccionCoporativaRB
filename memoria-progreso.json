@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:02:49.709Z",
+  "ultimaActualizacion": "2026-11-17T16:02:55.048Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3282,7 +3282,7 @@
       "temaActual": "Estructura tecnológica de recaudo",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
-      "ultimoTemaTitulo": "Recaudo",
+      "ultimoTemaTitulo": "Estructura general del sistema",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 15,
