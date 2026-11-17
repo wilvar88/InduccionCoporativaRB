@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:49:56.205Z",
+  "ultimaActualizacion": "2026-11-17T15:49:59.991Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3278,22 +3278,23 @@
       "primerIngreso": "5/11/26, 11:13:34 p. m.",
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
-      "moduloActual": "Módulo 1: Bienvenida e introducción corporativa",
-      "temaActual": "Visión",
+      "moduloActual": "Módulo 2: Conociendo nuestro negocio",
+      "temaActual": "Transmilenio",
       "ultimoModuloId": 1,
       "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
       "ultimoTemaTitulo": "Visión",
-      "modulosCompletados": 0,
+      "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
-      "temasVistos": 6,
+      "temasVistos": 7,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 10,
+      "porcentajeAvance": 11,
       "progresoModulos": {
         "1": {
           "0": true,
           "1": true,
           "2": true,
           "3": true,
+          "4": true,
           "5": true,
           "6": true,
           "col_1": true,
@@ -3301,7 +3302,8 @@
           "col_3": true,
           "col_6": true,
           "col_7": true,
-          "col_4": true
+          "col_4": true,
+          "col_5": true
         }
       }
     },
