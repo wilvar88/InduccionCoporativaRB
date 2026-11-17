@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:51:22.833Z",
+  "ultimaActualizacion": "2026-11-17T15:51:25.870Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3282,7 +3282,7 @@
       "temaActual": "Tullave",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
-      "ultimoTemaTitulo": "Control de flota",
+      "ultimoTemaTitulo": "Información al usuario",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
       "temasVistos": 9,
