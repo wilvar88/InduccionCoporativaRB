@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:51:28.785Z",
+  "ultimaActualizacion": "2026-11-17T15:51:30.950Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3285,9 +3285,9 @@
       "ultimoTemaTitulo": "Estructura general del sistema",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
-      "temasVistos": 9,
+      "temasVistos": 10,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 15,
+      "porcentajeAvance": 16,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3308,8 +3308,10 @@
         "2": {
           "0": true,
           "1": true,
+          "7": true,
           "col_9": true,
-          "col_8": true
+          "col_8": true,
+          "col_15": true
         }
       }
     },
