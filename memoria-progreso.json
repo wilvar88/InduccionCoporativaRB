@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T17:22:53.070Z",
+  "ultimaActualizacion": "2026-11-17T17:22:59.923Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3278,16 +3278,16 @@
       "primerIngreso": "5/11/26, 11:13:34 p. m.",
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
-      "moduloActual": "Módulo 4: Tarjetas y medios de acceso",
-      "temaActual": "Características y usos",
+      "moduloActual": "Módulo 5: Organización y roles",
+      "temaActual": "Organigrama",
       "ultimoModuloId": 4,
       "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
-      "ultimoTemaTitulo": "Características y usos",
-      "modulosCompletados": 3,
+      "ultimoTemaTitulo": "Tarjetas híbridas",
+      "modulosCompletados": 4,
       "totalModulosHabilitados": 12,
-      "temasVistos": 28,
+      "temasVistos": 29,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 45,
+      "porcentajeAvance": 47,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3346,12 +3346,14 @@
           "3": true,
           "4": true,
           "5": true,
+          "6": true,
           "col_24": true,
           "col_25": true,
           "col_26": true,
           "col_27": true,
           "col_28": true,
-          "col_29": true
+          "col_29": true,
+          "col_30": true
         }
       }
     },
