@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T17:23:32.771Z",
+  "ultimaActualizacion": "2026-11-17T17:23:40.365Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3280,14 +3280,14 @@
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 5: Organización y roles",
       "temaActual": "Organigrama",
-      "ultimoModuloId": 12,
-      "ultimoModuloNombre": "Módulo 12: Herramientas corporativas",
-      "ultimoTemaTitulo": "Workforce",
+      "ultimoModuloId": 4,
+      "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
+      "ultimoTemaTitulo": "Tarjetas híbridas",
       "modulosCompletados": 4,
       "totalModulosHabilitados": 12,
-      "temasVistos": 29,
+      "temasVistos": 30,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 47,
+      "porcentajeAvance": 48,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3354,6 +3354,10 @@
           "col_28": true,
           "col_29": true,
           "col_30": true
+        },
+        "12": {
+          "0": true,
+          "col_68": true
         }
       }
     },
