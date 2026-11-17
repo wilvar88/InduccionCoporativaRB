@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:02:12.323Z",
+  "ultimaActualizacion": "2026-11-17T16:02:19.016Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 2: Conociendo nuestro negocio",
-      "temaActual": "SIRCI",
+      "temaActual": "Recaudo",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
       "ultimoTemaTitulo": "SIRCI",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
-      "temasVistos": 11,
+      "temasVistos": 12,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 18,
+      "porcentajeAvance": 19,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3309,11 +3309,13 @@
           "0": true,
           "1": true,
           "2": true,
+          "3": true,
           "7": true,
           "col_9": true,
           "col_8": true,
           "col_15": true,
-          "col_10": true
+          "col_10": true,
+          "col_11": true
         }
       }
     },
