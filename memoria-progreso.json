@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:49:39.170Z",
+  "ultimaActualizacion": "2026-11-17T15:49:41.501Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3285,19 +3285,21 @@
       "ultimoTemaTitulo": "Misión",
       "modulosCompletados": 0,
       "totalModulosHabilitados": 12,
-      "temasVistos": 4,
+      "temasVistos": 5,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 6,
+      "porcentajeAvance": 8,
       "progresoModulos": {
         "1": {
           "0": true,
           "1": true,
           "2": true,
           "5": true,
+          "6": true,
           "col_1": true,
           "col_2": true,
           "col_3": true,
-          "col_6": true
+          "col_6": true,
+          "col_7": true
         }
       }
     },
