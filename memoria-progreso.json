@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:04:02.904Z",
+  "ultimaActualizacion": "2026-11-17T16:04:06.086Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
-      "temaActual": "BCA, DCA, TCS",
+      "temaActual": "Canales de Comunicación",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
       "ultimoTemaTitulo": "Flota SITP",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 20,
+      "temasVistos": 21,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 32,
+      "porcentajeAvance": 34,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3328,12 +3328,14 @@
           "1": true,
           "2": true,
           "3": true,
+          "4": true,
           "5": true,
           "col_16": true,
           "col_17": true,
           "col_18": true,
           "col_19": true,
-          "col_1001": true
+          "col_1001": true,
+          "col_20": true
         }
       }
     },
