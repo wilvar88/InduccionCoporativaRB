@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T15:50:17.735Z",
+  "ultimaActualizacion": "2026-11-17T15:50:24.357Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3285,9 +3285,9 @@
       "ultimoTemaTitulo": "SITP",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
-      "temasVistos": 7,
+      "temasVistos": 8,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 11,
+      "porcentajeAvance": 13,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3304,6 +3304,10 @@
           "col_7": true,
           "col_4": true,
           "col_5": true
+        },
+        "2": {
+          "1": true,
+          "col_9": true
         }
       }
     },
