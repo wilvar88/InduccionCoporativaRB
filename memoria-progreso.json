@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:02:04.326Z",
+  "ultimaActualizacion": "2026-11-17T16:02:10.075Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3282,7 +3282,7 @@
       "temaActual": "SIRCI",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
-      "ultimoTemaTitulo": "SIRCI",
+      "ultimoTemaTitulo": "Recaudo",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
       "temasVistos": 11,
