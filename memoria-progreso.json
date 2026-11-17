@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:03:39.396Z",
+  "ultimaActualizacion": "2026-11-17T16:03:45.915Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
-      "temaActual": "Validadores y Torniquetes",
+      "temaActual": "BCA, DCA, TCS",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
       "ultimoTemaTitulo": "Validadores y Torniquetes",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 18,
+      "temasVistos": 19,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 29,
+      "porcentajeAvance": 31,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3327,9 +3327,11 @@
           "0": true,
           "1": true,
           "2": true,
+          "3": true,
           "col_16": true,
           "col_17": true,
-          "col_18": true
+          "col_18": true,
+          "col_19": true
         }
       }
     },
