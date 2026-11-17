@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:02:38.492Z",
+  "ultimaActualizacion": "2026-11-17T16:02:42.441Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3279,15 +3279,15 @@
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 2: Conociendo nuestro negocio",
-      "temaActual": "Control de flota",
+      "temaActual": "Información al usuario",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
       "ultimoTemaTitulo": "Recaudo",
       "modulosCompletados": 1,
       "totalModulosHabilitados": 12,
-      "temasVistos": 13,
+      "temasVistos": 14,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 21,
+      "porcentajeAvance": 23,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3311,13 +3311,15 @@
           "2": true,
           "3": true,
           "4": true,
+          "5": true,
           "7": true,
           "col_9": true,
           "col_8": true,
           "col_15": true,
           "col_10": true,
           "col_11": true,
-          "col_12": true
+          "col_12": true,
+          "col_13": true
         }
       }
     },
