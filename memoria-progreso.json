@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T17:22:59.923Z",
+  "ultimaActualizacion": "2026-11-17T17:23:32.771Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3280,9 +3280,9 @@
       "cantidadIngresos": 4,
       "moduloActual": "Módulo 5: Organización y roles",
       "temaActual": "Organigrama",
-      "ultimoModuloId": 4,
-      "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
-      "ultimoTemaTitulo": "Tarjetas híbridas",
+      "ultimoModuloId": 12,
+      "ultimoModuloNombre": "Módulo 12: Herramientas corporativas",
+      "ultimoTemaTitulo": "Workforce",
       "modulosCompletados": 4,
       "totalModulosHabilitados": 12,
       "temasVistos": 29,
