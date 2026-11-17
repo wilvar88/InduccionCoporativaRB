@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-17T16:02:44.881Z",
+  "ultimaActualizacion": "2026-11-17T16:02:49.709Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -3278,16 +3278,16 @@
       "primerIngreso": "5/11/26, 11:13:34 p. m.",
       "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
       "cantidadIngresos": 4,
-      "moduloActual": "Módulo 2: Conociendo nuestro negocio",
-      "temaActual": "Información al usuario",
+      "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
+      "temaActual": "Estructura tecnológica de recaudo",
       "ultimoModuloId": 2,
       "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
       "ultimoTemaTitulo": "Recaudo",
-      "modulosCompletados": 1,
+      "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 14,
+      "temasVistos": 15,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 23,
+      "porcentajeAvance": 24,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -3312,6 +3312,7 @@
           "3": true,
           "4": true,
           "5": true,
+          "6": true,
           "7": true,
           "col_9": true,
           "col_8": true,
@@ -3319,7 +3320,8 @@
           "col_10": true,
           "col_11": true,
           "col_12": true,
-          "col_13": true
+          "col_13": true,
+          "col_14": true
         }
       }
     },
