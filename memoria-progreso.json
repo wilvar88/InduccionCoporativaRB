@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:49:50.920Z",
+  "ultimaActualizacion": "2026-11-18T21:49:58.756Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1446,9 +1446,9 @@
       "ultimoTemaTitulo": "BCA, DCA, TCS",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 18,
+      "temasVistos": 19,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 29,
+      "porcentajeAvance": 31,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -1488,9 +1488,11 @@
           "1": true,
           "2": true,
           "3": true,
+          "4": true,
           "col_19": true,
           "col_17": true,
-          "col_18": true
+          "col_18": true,
+          "col_20": true
         }
       }
     },
