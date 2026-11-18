@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:50:49.818Z",
+  "ultimaActualizacion": "2026-11-18T21:50:57.116Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1446,9 +1446,9 @@
       "ultimoTemaTitulo": "Tarjeta básica",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 20,
+      "temasVistos": 21,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 32,
+      "porcentajeAvance": 34,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -1495,6 +1495,10 @@
           "col_18": true,
           "col_20": true,
           "col_1002": true
+        },
+        "4": {
+          "0": true,
+          "col_24": true
         }
       }
     },
