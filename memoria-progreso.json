@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:49:46.189Z",
+  "ultimaActualizacion": "2026-11-18T21:49:50.920Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1443,7 +1443,7 @@
       "temaActual": "Estructura tecnológica de recaudo",
       "ultimoModuloId": 3,
       "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Validadores y Torniquetes",
+      "ultimoTemaTitulo": "BCA, DCA, TCS",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 18,
