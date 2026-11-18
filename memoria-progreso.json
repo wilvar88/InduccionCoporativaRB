@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T14:25:57.832Z",
+  "ultimaActualizacion": "2026-11-18T14:26:30.377Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1426,9 +1426,9 @@
       "cantidadIngresos": 10,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
       "temaActual": "Estructura tecnológica de recaudo",
-      "ultimoModuloId": 2,
-      "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
-      "ultimoTemaTitulo": "Estructura general del sistema",
+      "ultimoModuloId": 5,
+      "ultimoModuloNombre": "Módulo 5: Organización y roles",
+      "ultimoTemaTitulo": "Organigrama",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 18,
