@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-10T23:24:29.631Z",
+  "ultimaActualizacion": "2026-11-18T21:27:01.515Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -39,7 +39,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 32,
+  "totalTemasPersonalizados": 33,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -414,6 +414,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-10T22:46:19.951Z"
+    },
+    "35": {
+      "colIndex": 35,
+      "moduloId": 6,
+      "titulo": "Política HSE",
+      "descripcion": "Directrices del Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST) y Gestión Ambiental de Recaudo Bogotá S.A.S.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1ev-HobeUrzIfvYrfML5iOwRqiTqM2JxU/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-18T21:27:00.406Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -1423,8 +1438,8 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "jefe": "52.782.882",
       "rol": "Estudiante",
       "primerIngreso": "5/11/26, 9:49:04 p. m.",
-      "ultimoIngreso": "6/11/26, 10:03:52 a. m.",
-      "cantidadIngresos": 9,
+      "ultimoIngreso": "18/11/26, 9:22:38 a. m.",
+      "cantidadIngresos": 10,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
       "temaActual": "Estructura tecnológica de recaudo",
       "ultimoModuloId": 3,
@@ -3098,7 +3113,14 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1003233400": {
       "cedula": "1.003.233.400",
@@ -3270,19 +3292,94 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "jefe": "52.782.882",
       "rol": "Estudiante",
       "primerIngreso": "5/11/26, 11:13:34 p. m.",
-      "ultimoIngreso": "5/11/26, 11:47:04 p. m.",
-      "cantidadIngresos": 2,
-      "moduloActual": "Sin iniciar",
-      "temaActual": "Sin iniciar",
-      "ultimoModuloId": null,
-      "ultimoModuloNombre": "",
-      "ultimoTemaTitulo": "",
-      "modulosCompletados": 0,
+      "ultimoIngreso": "17/11/26, 10:47:40 a. m.",
+      "cantidadIngresos": 4,
+      "moduloActual": "Módulo 5: Organización y roles",
+      "temaActual": "Organigrama",
+      "ultimoModuloId": 11,
+      "ultimoModuloNombre": "Módulo 11: Bienestar y beneficios",
+      "ultimoTemaTitulo": "Bienestar",
+      "modulosCompletados": 5,
       "totalModulosHabilitados": 12,
-      "temasVistos": 0,
+      "temasVistos": 32,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 0,
-      "progresoModulos": {}
+      "porcentajeAvance": 52,
+      "progresoModulos": {
+        "1": {
+          "0": true,
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true,
+          "col_1": true,
+          "col_2": true,
+          "col_3": true,
+          "col_6": true,
+          "col_7": true,
+          "col_4": true,
+          "col_5": true
+        },
+        "2": {
+          "0": true,
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true,
+          "7": true,
+          "col_9": true,
+          "col_8": true,
+          "col_15": true,
+          "col_10": true,
+          "col_11": true,
+          "col_12": true,
+          "col_13": true,
+          "col_14": true
+        },
+        "3": {
+          "0": true,
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true,
+          "col_16": true,
+          "col_17": true,
+          "col_18": true,
+          "col_19": true,
+          "col_1001": true,
+          "col_20": true,
+          "col_1002": true
+        },
+        "4": {
+          "0": true,
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true,
+          "col_24": true,
+          "col_25": true,
+          "col_26": true,
+          "col_27": true,
+          "col_28": true,
+          "col_29": true,
+          "col_30": true
+        },
+        "12": {
+          "0": true,
+          "1": true,
+          "2": true,
+          "col_68": true,
+          "col_69": true,
+          "col_71": true
+        }
+      }
     },
     "1007437530": {
       "cedula": "1.007.437.530",
@@ -3315,7 +3412,14 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1010162292": {
       "cedula": "1.010.162.292",
@@ -3509,7 +3613,14 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1013104298": {
       "cedula": "1.013.104.298",
@@ -5543,7 +5654,14 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloId": null,
       "ultimoModuloNombre": "",
       "ultimoTemaTitulo": "",
-      "progresoModulos": {}
+      "progresoModulos": {},
+      "modulosCompletados": 0,
+      "totalModulosHabilitados": 0,
+      "temasVistos": 0,
+      "totalTemasHabilitados": 0,
+      "porcentajeAvance": 0,
+      "moduloActual": "Sin iniciar",
+      "temaActual": "Sin iniciar"
     },
     "1067728159": {
       "cedula": "1.067.728.159",
@@ -5600,18 +5718,18 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "jefe": "",
       "rol": "Super Administrador",
       "primerIngreso": "5/11/26, 10:33:56 p. m.",
-      "ultimoIngreso": "10/11/26, 12:14:02 p. m.",
-      "cantidadIngresos": 12,
-      "moduloActual": "Módulo 6: Política HSE",
-      "temaActual": "Política HSE",
-      "ultimoModuloId": 5,
-      "ultimoModuloNombre": "Módulo 5: Organización y roles",
-      "ultimoTemaTitulo": "Organigrama",
-      "modulosCompletados": 5,
+      "ultimoIngreso": "18/11/26, 11:30:13 a. m.",
+      "cantidadIngresos": 15,
+      "moduloActual": "Módulo 7: Políticas HSE – Mantenimiento",
+      "temaActual": "Lineamientos específicos aplicables al cargo",
+      "ultimoModuloId": 6,
+      "ultimoModuloNombre": "Módulo 6: Política HSE",
+      "ultimoTemaTitulo": "Política HSE",
+      "modulosCompletados": 6,
       "totalModulosHabilitados": 12,
-      "temasVistos": 33,
+      "temasVistos": 35,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 53,
+      "porcentajeAvance": 56,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -5655,13 +5773,17 @@ window.RB_MEMORIA_INICIAL_JSON = {
           "4": true,
           "5": true,
           "6": true,
+          "7": true,
           "col_16": true,
           "col_17": true,
           "col_18": true,
           "col_19": true,
           "col_20": true,
           "col_1001": true,
-          "col_1002": true
+          "col_1002": true,
+          "col_21": true,
+          "col_22": true,
+          "col_23": true
         },
         "4": {
           "0": true,
@@ -5688,6 +5810,12 @@ window.RB_MEMORIA_INICIAL_JSON = {
           "col_32": true,
           "col_33": true,
           "col_34": true
+        },
+        "6": {
+          "0": true,
+          "1": true,
+          "col_35": true,
+          "col_36": true
         }
       }
     },
@@ -6174,5 +6302,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "porcentajeAvance": 0,
       "progresoModulos": {}
     }
-  }
+  },
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
+  "_syncJsFile": true
 };
