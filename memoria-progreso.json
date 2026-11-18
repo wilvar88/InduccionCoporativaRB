@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:27:14.928Z",
+  "ultimaActualizacion": "2026-11-18T21:41:26.368Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1437,8 +1437,8 @@
       "jefe": "52.782.882",
       "rol": "Estudiante",
       "primerIngreso": "5/11/26, 9:49:04 p. m.",
-      "ultimoIngreso": "18/11/26, 9:22:38 a. m.",
-      "cantidadIngresos": 10,
+      "ultimoIngreso": "18/11/26, 4:41:24 p. m.",
+      "cantidadIngresos": 11,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
       "temaActual": "Estructura tecnológica de recaudo",
       "ultimoModuloId": 3,
