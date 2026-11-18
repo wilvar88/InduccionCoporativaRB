@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:41:26.368Z",
+  "ultimaActualizacion": "2026-11-18T21:46:52.318Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1441,9 +1441,9 @@
       "cantidadIngresos": 11,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
       "temaActual": "Estructura tecnológica de recaudo",
-      "ultimoModuloId": 3,
-      "ultimoModuloNombre": "Módulo 3: Tecnología y sistemas de recaudo",
-      "ultimoTemaTitulo": "Tecnología zonal y troncal",
+      "ultimoModuloId": 1,
+      "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
+      "ultimoTemaTitulo": "Bienvenida",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 18,
