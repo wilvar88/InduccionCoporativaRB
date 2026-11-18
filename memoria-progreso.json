@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:52:08.977Z",
+  "ultimaActualizacion": "2026-11-18T21:53:39.520Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1441,9 +1441,9 @@
       "cantidadIngresos": 11,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
       "temaActual": "Estructura tecnológica de recaudo",
-      "ultimoModuloId": 4,
-      "ultimoModuloNombre": "Módulo 4: Tarjetas y medios de acceso",
-      "ultimoTemaTitulo": "Adulto Mayor",
+      "ultimoModuloId": 2,
+      "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
+      "ultimoTemaTitulo": "Transmilenio",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 22,
