@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:50:34.350Z",
+  "ultimaActualizacion": "2026-11-18T21:50:41.650Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1446,9 +1446,9 @@
       "ultimoTemaTitulo": "Canales de Comunicación",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
-      "temasVistos": 19,
+      "temasVistos": 20,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 31,
+      "porcentajeAvance": 32,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -1489,10 +1489,12 @@
           "2": true,
           "3": true,
           "4": true,
+          "6": true,
           "col_19": true,
           "col_17": true,
           "col_18": true,
-          "col_20": true
+          "col_20": true,
+          "col_1002": true
         }
       }
     },
