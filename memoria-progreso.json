@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:53:42.870Z",
+  "ultimaActualizacion": "2026-11-18T21:53:48.407Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1441,9 +1441,9 @@
       "cantidadIngresos": 11,
       "moduloActual": "Módulo 3: Tecnología y sistemas de recaudo",
       "temaActual": "Estructura tecnológica de recaudo",
-      "ultimoModuloId": 2,
-      "ultimoModuloNombre": "Módulo 2: Conociendo nuestro negocio",
-      "ultimoTemaTitulo": "SITP",
+      "ultimoModuloId": 1,
+      "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
+      "ultimoTemaTitulo": "Bienvenida",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 22,
