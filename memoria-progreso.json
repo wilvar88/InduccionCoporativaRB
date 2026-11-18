@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:26:49.886Z",
+  "ultimaActualizacion": "2026-11-18T21:27:01.515Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -38,7 +38,7 @@
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 32,
+  "totalTemasPersonalizados": 33,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -413,6 +413,21 @@
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-10T22:46:19.951Z"
+    },
+    "35": {
+      "colIndex": 35,
+      "moduloId": 6,
+      "titulo": "Política HSE",
+      "descripcion": "Directrices del Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST) y Gestión Ambiental de Recaudo Bogotá S.A.S.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1ev-HobeUrzIfvYrfML5iOwRqiTqM2JxU/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-18T21:27:00.406Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -6287,5 +6302,6 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
+  "_syncJsFile": true
 }
