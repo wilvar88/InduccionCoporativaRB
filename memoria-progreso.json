@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-18T21:47:48.660Z",
+  "ultimaActualizacion": "2026-11-18T21:48:14.502Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -1443,7 +1443,7 @@
       "temaActual": "Estructura tecnológica de recaudo",
       "ultimoModuloId": 1,
       "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
-      "ultimoTemaTitulo": "Misión",
+      "ultimoTemaTitulo": "Contexto general de la organización",
       "modulosCompletados": 2,
       "totalModulosHabilitados": 12,
       "temasVistos": 18,
