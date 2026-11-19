@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:31:56.356Z",
+  "ultimaActualizacion": "2026-11-19T20:32:02.846Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1651,6 +1651,9 @@
         "35": true,
         "36": true,
         "37": true,
+        "38": true,
+        "39": true,
+        "40": true,
         "41": true,
         "47": true,
         "49": true,
@@ -1772,10 +1775,16 @@
         "MOODLE": true,
         "BUK": true,
         "Otros sistemas corporativos": true,
-        "OTROS SISTEMAS CORPORATIVOS": true
+        "OTROS SISTEMAS CORPORATIVOS": true,
+        "Políticas HSE específicas para Mantenimiento": true,
+        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
+        "Riesgos asociados a las actividades de mantenimiento": true,
+        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
+        "Lineamientos específicos aplicables al cargo": true,
+        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:31:55.609Z"
+      "updatedAt": "2026-11-19T20:32:02.565Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21286,10 +21295,10 @@
       "ultimoModuloNombre": "Módulo 11: Bienestar y beneficios",
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
-      "totalModulosHabilitados": 11,
+      "totalModulosHabilitados": 12,
       "temasVistos": 32,
-      "totalTemasHabilitados": 53,
-      "porcentajeAvance": 60,
+      "totalTemasHabilitados": 56,
+      "porcentajeAvance": 57,
       "progresoModulos": {
         "1": {
           "0": true,
