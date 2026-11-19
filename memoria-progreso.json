@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T19:51:52.939Z",
+  "ultimaActualizacion": "2026-11-19T19:51:59.540Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -23671,14 +23671,14 @@
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 13,
-      "ultimoModuloNombre": "Módulo 13: Tarjeta Funcionario",
-      "ultimoTemaTitulo": "Tarjeta Funcionario",
-      "modulosCompletados": 7,
+      "ultimoModuloId": 12,
+      "ultimoModuloNombre": "Módulo 12: Herramientas corporativas",
+      "ultimoTemaTitulo": "Correo corporativo",
+      "modulosCompletados": 8,
       "totalModulosHabilitados": 14,
-      "temasVistos": 39,
+      "temasVistos": 40,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 63,
+      "porcentajeAvance": 65,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -23781,6 +23781,10 @@
         "12": {
           "0": true,
           "col_67": true
+        },
+        "13": {
+          "0": true,
+          "col_73": true
         }
       }
     },
