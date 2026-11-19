@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:31:41.445Z",
+  "ultimaActualizacion": "2026-11-19T20:31:53.810Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1651,6 +1651,9 @@
         "35": true,
         "36": true,
         "37": true,
+        "38": true,
+        "39": true,
+        "40": true,
         "41": true,
         "47": true,
         "49": true,
@@ -1677,7 +1680,7 @@
         "Objetivo de la inducción": true,
         "OBJETIVO DE LA INDUCCION": true,
         "¿Quiénes somos?": true,
-        "QUIENES SOMOS": true,
+        "¿QUIENES SOMOS?": true,
         "Misión": true,
         "MISION": true,
         "Visión": true,
@@ -1709,7 +1712,6 @@
         "Validadores y Torniquetes": true,
         "VALIDADORES Y TORNIQUETES": true,
         "BCA, DCA, TCS": true,
-        "BCA DCA TCS": true,
         "Flota SITP": true,
         "FLOTA SITP": true,
         "Canales de Comunicación": true,
@@ -1735,11 +1737,11 @@
         "Principales áreas": true,
         "PRINCIPALES AREAS": true,
         "Roles operativos:": true,
-        "ROLES OPERATIVOS": true,
+        "ROLES OPERATIVOS:": true,
         "Política HSE": true,
         "POLITICA HSE": true,
         "Compromiso de la organización con la salud, seguridad y ambiente": true,
-        "COMPROMISO DE LA ORGANIZACION CON LA SALUD SEGURIDAD Y AMBIENTE": true,
+        "COMPROMISO DE LA ORGANIZACION CON LA SALUD, SEGURIDAD Y AMBIENTE": true,
         "Principios y responsabilidades generales": true,
         "PRINCIPIOS Y RESPONSABILIDADES GENERALES": true,
         "Seguridad informática general": true,
@@ -1747,11 +1749,10 @@
         "Gobierno corporativo": true,
         "GOBIERNO CORPORATIVO": true,
         "Acoso laboral y Acoso sexual 🎥": true,
-        "ACOSO LABORAL Y ACOSO SEXUAL": true,
+        "ACOSO LABORAL Y ACOSO SEXUAL 🎥": true,
         "Conductas esperadas y Canales de reporte": true,
         "CONDUCTAS ESPERADAS Y CANALES DE REPORTE": true,
         "SARLAFT / SAGRILAFT": true,
-        "SARLAFT  SAGRILAFT": true,
         "Recomendaciones y Lineamientos": true,
         "RECOMENDACIONES Y LINEAMIENTOS": true,
         "Bienestar": true,
@@ -1765,18 +1766,25 @@
         "Beneficios para colaboradores": true,
         "BENEFICIOS PARA COLABORADORES": true,
         "Beneficios para la familia (si aplica)": true,
-        "BENEFICIOS PARA LA FAMILIA SI APLICA": true,
+        "BENEFICIOS PARA LA FAMILIA (SI APLICA)": true,
         "Canales/plataformas para consultar beneficios": true,
-        "CANALESPLATAFORMAS PARA CONSULTAR BENEFICIOS": true,
+        "CANALES/PLATAFORMAS PARA CONSULTAR BENEFICIOS": true,
         "Correo corporativo": true,
         "CORREO CORPORATIVO": true,
         "Moodle": true,
         "MOODLE": true,
         "BUK": true,
         "Otros sistemas corporativos": true,
-        "OTROS SISTEMAS CORPORATIVOS": true
+        "OTROS SISTEMAS CORPORATIVOS": true,
+        "Políticas HSE específicas para Mantenimiento": true,
+        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
+        "Riesgos asociados a las actividades de mantenimiento": true,
+        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
+        "Lineamientos específicos aplicables al cargo": true,
+        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true
       },
-      "updatedAt": "2026-11-19T17:55:00.000Z"
+      "isCustomizedByAdmin": true,
+      "updatedAt": "2026-11-19T20:31:53.557Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21287,10 +21295,10 @@
       "ultimoModuloNombre": "Módulo 11: Bienestar y beneficios",
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
-      "totalModulosHabilitados": 11,
+      "totalModulosHabilitados": 12,
       "temasVistos": 32,
-      "totalTemasHabilitados": 53,
-      "porcentajeAvance": 60,
+      "totalTemasHabilitados": 56,
+      "porcentajeAvance": 57,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -24289,6 +24297,5 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
-  "_syncJsFile": true
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
