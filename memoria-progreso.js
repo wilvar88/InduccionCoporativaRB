@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T17:15:29.085Z",
+  "ultimaActualizacion": "2026-11-19T17:16:17.079Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -11,7 +11,14 @@ window.RB_MEMORIA_INICIAL_JSON = {
     45,
     44,
     46,
-    48
+    48,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
   ],
   "temasAgregados": [
     {
@@ -509,7 +516,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "audio": "",
       "popup": null,
       "isAddedByAdmin": false,
-      "updatedAt": "2026-11-19T17:15:28.190Z"
+      "updatedAt": "2026-11-19T17:16:16.261Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -5816,11 +5823,11 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloId": 10,
       "ultimoModuloNombre": "Módulo 10: Normas y cultura operacional",
       "ultimoTemaTitulo": "Seguridad física y otros lineamientos",
-      "modulosCompletados": 6,
+      "modulosCompletados": 7,
       "totalModulosHabilitados": 11,
       "temasVistos": 37,
-      "totalTemasHabilitados": 54,
-      "porcentajeAvance": 69,
+      "totalTemasHabilitados": 47,
+      "porcentajeAvance": 79,
       "progresoModulos": {
         "1": {
           "0": true,
