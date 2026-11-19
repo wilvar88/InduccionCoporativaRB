@@ -2325,3 +2325,192 @@ body {
     color: #ffffff;
     border-color: #dc2626;
 }
+
+/* ==========================================================================
+   VISTA DE GESTIÓN DE CARGOS Y TEMAS HABILITADOS POR CARGO (SUPER ADMIN)
+   ========================================================================== */
+.sa-cargos-sidebar {
+    width: 340px;
+}
+
+.sa-cargo-search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 0.45rem 0.75rem;
+    margin-top: 0.35rem;
+}
+
+.sa-cargo-search-box i {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.sa-cargo-search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.83rem;
+    color: #0f172a;
+}
+
+.sa-cargo-editor-header {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
+.sa-cargo-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+}
+
+.btn-sa-cargo-action {
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #0f172a;
+    padding: 0.5rem 0.85rem;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38rem;
+    transition: var(--transicion);
+}
+
+.btn-sa-mark-all:hover {
+    background: #dcfce7;
+    color: #166534;
+    border-color: #86efac;
+}
+
+.btn-sa-unmark-all:hover {
+    background: #fef2f2;
+    color: #dc2626;
+    border-color: #fecaca;
+}
+
+.sa-cargo-modulos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1rem;
+}
+
+.sa-cargo-mod-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transicion);
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.sa-cargo-mod-card.mod-all-enabled {
+    border-color: #22c55e;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.08);
+}
+
+.sa-cargo-mod-card.mod-part-enabled {
+    border-color: #0284c7;
+}
+
+.sa-cargo-mod-header {
+    background: #f8fafc;
+    padding: 0.75rem 0.95rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+}
+
+.sa-cargo-mod-card.mod-all-enabled .sa-cargo-mod-header {
+    background: #f0fdf4;
+    border-bottom-color: #bbf7d0;
+}
+
+.sa-cargo-mod-title-label {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    cursor: pointer;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: #001e47;
+    flex: 1;
+}
+
+.sa-cargo-mod-title-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #0088cc;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.sa-cargo-mod-count-pill {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.18rem 0.55rem;
+    border-radius: 12px;
+    background: #e2e8f0;
+    color: #475569;
+    white-space: nowrap;
+}
+
+.sa-cargo-mod-card.mod-all-enabled .sa-cargo-mod-count-pill {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.sa-cargo-mod-card.mod-part-enabled .sa-cargo-mod-count-pill {
+    background: #0284c7;
+    color: #ffffff;
+}
+
+.sa-cargo-topics-list {
+    padding: 0.65rem 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.42rem;
+}
+
+.sa-cargo-topic-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.82rem;
+    color: #334155;
+    cursor: pointer;
+    padding: 0.28rem 0.4rem;
+    border-radius: 6px;
+    transition: background 0.15s ease;
+}
+
+.sa-cargo-topic-item:hover {
+    background: #f1f5f9;
+}
+
+.sa-cargo-topic-item input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #16a34a;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.sa-cargo-topic-item.topic-checked {
+    color: #0f172a;
+    font-weight: 600;
+}
+

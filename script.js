@@ -501,6 +501,9 @@ let contenidosDesdeArchivoJson = {};
 let temasEliminadosCache = [21, 22, 23];
 // Lista de nuevos temas añadidos por el Super Administrador ({ colIndex, moduloId, titulo, descripcion, tipo, content, ... })
 let temasAgregadosCache = [];
+// Mapa de permisos de temas habilitados por cargo configurados o sincronizados en memoria-progreso.json
+let permisosCargosCustomCache = {};
+let saCurrentCargoSelected = '';
 
 function abrirIndexedDB() {
     return new Promise((resolve) => {
@@ -968,6 +971,32 @@ async function fusionarDatosMemoriaExterna(jsonObj, esDesdeArchivoProyecto = tru
         }
     }
 
+    // A.2) Fusionar permisosPorCargo (matriz de cargos y temas habilitados)
+    try {
+        const lsPermisos = JSON.parse(localStorage.getItem('rb_permisos_cargos_v2') || '{}');
+        Object.keys(lsPermisos).forEach(k => {
+            if (!permisosCargosCustomCache[k] || esRegistroMasReciente(lsPermisos[k], permisosCargosCustomCache[k])) {
+                permisosCargosCustomCache[k] = lsPermisos[k];
+            }
+        });
+    } catch (e) {}
+
+    if (jsonObj.permisosPorCargo && typeof jsonObj.permisosPorCargo === 'object') {
+        Object.keys(jsonObj.permisosPorCargo).forEach(cargoKey => {
+            const item = jsonObj.permisosPorCargo[cargoKey];
+            if (!item || !item.cargo) return;
+            const normKey = normalizeStr(item.cargo);
+            const existing = permisosCargosCustomCache[normKey];
+            if (esDesdeArchivoProyecto || esRegistroMasReciente(item, existing)) {
+                permisosCargosCustomCache[normKey] = item;
+            }
+        });
+        try {
+            localStorage.setItem('rb_permisos_cargos_v2', JSON.stringify(permisosCargosCustomCache));
+        } catch (e) {}
+        aplicarPermisosCargosPersonalizados();
+    }
+
     // B) Fusionar historial y avance de colaboradores (UNIÓN ADITIVA ENTRE NAVEGADOR Y ARCHIVO .JSON)
     if (!jsonObj.colaboradores || typeof jsonObj.colaboradores !== 'object') return;
 
@@ -1092,11 +1121,12 @@ function construirObjetoMemoriaJSON(syncJsFile = false) {
 
     const payloadObj = {
         ultimaActualizacion: new Date().toISOString(),
-        version: '2.3',
+        version: '2.4',
         temasEliminados: temasEliminadosCache,
         temasAgregados: temasAgregadosCache,
         totalTemasPersonalizados: Object.keys(temasExport).length,
         contenidosTemas: temasExport,
+        permisosPorCargo: permisosCargosCustomCache,
         totalColaboradores: Object.keys(colaboradoresMap).length,
         colaboradores: colaboradoresMap
     };
@@ -1602,7 +1632,8 @@ function parseGvizTableToModulosCargo(table) {
 
 async function cargarDatosGoogleSheets() {
     let loadedColab = false;
-    let loadedModulos = false;
+    let parsedModJsonp = [];
+    let parsedModCsv = [];
 
     try {
         const tableColab = await fetchGoogleSheetViaJSONP(null);
@@ -1617,11 +1648,7 @@ async function cargarDatosGoogleSheets() {
 
     try {
         const tableMod = await fetchGoogleSheetViaJSONP('Módulos por cargo');
-        const parsedMod = parseGvizTableToModulosCargo(tableMod);
-        if (parsedMod.length > 0) {
-            modulosPorCargoData = parsedMod;
-            loadedModulos = true;
-        }
+        parsedModJsonp = parseGvizTableToModulosCargo(tableMod);
     } catch (errJsonp2) {
         console.warn('JSONP Módulos por cargo aviso:', errJsonp2);
     }
@@ -1640,18 +1667,26 @@ async function cargarDatosGoogleSheets() {
         } catch (e) {}
     }
 
-    if (!loadedModulos) {
-        try {
-            const resMod = await fetch(MODULES_CARGO_CSV_URL);
-            if (resMod.ok) {
-                const csvModText = await resMod.text();
-                const parsed = parseCSV(csvModText, mapModulosCargo);
-                if (parsed.length > 0) {
-                    modulosPorCargoData = parsed;
-                    loadedModulos = true;
-                }
-            }
-        } catch (e) {}
+    // Consultar también CSV de exportación para obtener todos los 110 cargos incluso si hay un filtro activo en la hoja de Google Sheets
+    try {
+        const resMod = await fetch(MODULES_CARGO_CSV_URL);
+        if (resMod.ok) {
+            const csvModText = await resMod.text();
+            parsedModCsv = parseCSV(csvModText, mapModulosCargo);
+        }
+    } catch (e) {}
+
+    // Combinar filas de CSV (110 cargos) con JSONP (por si hay cambios recientes en las filas visibles)
+    const mapaCargosSheet = new Map();
+    parsedModCsv.forEach(item => {
+        if (item && item.cargo) mapaCargosSheet.set(normalizeStr(item.cargo), item);
+    });
+    parsedModJsonp.forEach(item => {
+        if (item && item.cargo) mapaCargosSheet.set(normalizeStr(item.cargo), item);
+    });
+
+    if (mapaCargosSheet.size > 0) {
+        modulosPorCargoData = Array.from(mapaCargosSheet.values());
     }
 
     if (!colaboradoresData || colaboradoresData.length === 0) {
@@ -1661,7 +1696,10 @@ async function cargarDatosGoogleSheets() {
         modulosPorCargoData = FALLBACK_MODULOS_CARGO;
     }
 
-    actualizarSheetStatus(`✓ Sincronizado con Google Sheets: ${colaboradoresData.length} colaboradores activos.`);
+    // Aplicar permisos de cargos guardados en memoria-progreso.json y asegurar que todos los cargos de colaboradores existan
+    aplicarPermisosCargosPersonalizados();
+
+    actualizarSheetStatus(`✓ Sincronizado con Google Sheets: ${colaboradoresData.length} colaboradores activos · ${modulosPorCargoData.length} cargos configurados.`);
 }
 
 // ROBUST CSV PARSER (RESPALDO)
@@ -1724,19 +1762,75 @@ function mapColaboradores(headers, row) {
     return { cedula, nombre, cargo, area, gerencia, jefe, foto, rol };
 }
 
+function obtenerSubtemasActivosOrdenados() {
+    const lista = [];
+    const sourceModulos = (CATALOGO_MODULOS && CATALOGO_MODULOS.length > 0) ? CATALOGO_MODULOS : CATALOGO_MODULOS_BASE;
+    sourceModulos.forEach(mod => {
+        (mod.subtemas || []).forEach(st => {
+            const colNum = Number(st.colIndex);
+            if (!temasEliminadosCache.includes(colNum)) {
+                lista.push({
+                    colIndex: colNum,
+                    moduloId: Number(mod.id),
+                    titulo: st.titulo,
+                    tituloNorm: normalizeStr(st.titulo)
+                });
+            }
+        });
+    });
+    return lista;
+}
+
+function resolverColIndexDesdeColumnaSheet(sheetColIdx, headerTitle, activosList) {
+    const posEsperada = sheetColIdx - 1;
+    const topicNorm = normalizeStr(headerTitle || '');
+
+    // 1. Si el tema en la misma posición secuencial (1..61) coincide en título o el encabezado viene vacío
+    if (activosList[posEsperada]) {
+        if (!topicNorm || activosList[posEsperada].tituloNorm === topicNorm) {
+            return activosList[posEsperada].colIndex;
+        }
+    }
+
+    // 2. Buscar por título normalizado exacto (eligiendo el más cercano a la posición secuencial por si hubiera nombres similares)
+    if (topicNorm) {
+        let mejorMatch = null;
+        let menorDistancia = Infinity;
+        activosList.forEach((item, idx) => {
+            if (item.tituloNorm === topicNorm) {
+                const dist = Math.abs(idx - posEsperada);
+                if (dist < menorDistancia) {
+                    menorDistancia = dist;
+                    mejorMatch = item;
+                }
+            }
+        });
+        if (mejorMatch) return mejorMatch.colIndex;
+    }
+
+    // 3. Fallback a la posición secuencial activa si está dentro del rango de temas activos
+    if (activosList[posEsperada]) {
+        return activosList[posEsperada].colIndex;
+    }
+
+    return sheetColIdx;
+}
+
 function mapModulosCargo(headers, row) {
     const cargo = row[0] ? String(row[0]).trim() : '';
     if (!cargo || normalizeStr(cargo) === 'CARGO') return null;
 
     const modulosHabilitados = {};
     const enabledCols = {};
+    const activosList = obtenerSubtemasActivosOrdenados();
 
     const maxLen = Math.max(headers.length, row.length);
     for (let i = 1; i < maxLen; i++) {
         const topic = headers[i] ? String(headers[i]).trim() : '';
         const val = row[i] ? String(row[i]).toUpperCase().trim() : '';
         if (val === 'X') {
-            enabledCols[i] = true;
+            const mappedColIndex = resolverColIndexDesdeColumnaSheet(i, topic, activosList);
+            enabledCols[mappedColIndex] = true;
             if (topic) {
                 modulosHabilitados[topic] = true;
                 modulosHabilitados[normalizeStr(topic)] = true;
@@ -1745,6 +1839,52 @@ function mapModulosCargo(headers, row) {
     }
 
     return { cargo, modulosHabilitados, enabledCols };
+}
+
+function aplicarPermisosCargosPersonalizados() {
+    const mapa = new Map();
+
+    // 1. Cargar los que vienen de Google Sheets / Fallback
+    (modulosPorCargoData || []).forEach(item => {
+        if (item && item.cargo) {
+            mapa.set(normalizeStr(item.cargo), { ...item });
+        }
+    });
+
+    // 2. Sobrescribir/añadir con permisosPorCargo guardados en memoria-progreso.json / Super Admin
+    Object.keys(permisosCargosCustomCache || {}).forEach(k => {
+        const customItem = permisosCargosCustomCache[k];
+        if (customItem && customItem.cargo) {
+            const normKey = normalizeStr(customItem.cargo);
+            const prev = mapa.get(normKey);
+            // Si fue editado explícitamente por el Super Admin o si no existía en la hoja (ej. filtro activo en Google Sheets), aplicarlo
+            if (!prev || customItem.isCustomizedByAdmin) {
+                mapa.set(normKey, {
+                    ...prev,
+                    ...customItem,
+                    cargo: (prev && prev.cargo) ? prev.cargo : customItem.cargo,
+                    enabledCols: { ...(customItem.enabledCols || {}) },
+                    modulosHabilitados: { ...(customItem.modulosHabilitados || {}) }
+                });
+            }
+        }
+    });
+
+    // 3. Asegurar que cualquier cargo presente en la hoja Colaboradores también aparezca en la lista de cargos
+    (colaboradoresData || []).forEach(colab => {
+        if (colab && colab.cargo) {
+            const normKey = normalizeStr(colab.cargo);
+            if (normKey && !mapa.has(normKey)) {
+                mapa.set(normKey, {
+                    cargo: colab.cargo.trim(),
+                    enabledCols: {},
+                    modulosHabilitados: {}
+                });
+            }
+        }
+    });
+
+    modulosPorCargoData = Array.from(mapa.values()).sort((a, b) => a.cargo.localeCompare(b.cargo, 'es'));
 }
 
 // =============================================================================
@@ -1929,22 +2069,25 @@ function cerrarSesion() {
 // =============================================================================
 function isSubtemaHabilitadoParaCargo(subtema, cargoPerms, moduloObj = null) {
     if (!cargoPerms) return false;
-    // 1. Verificar por índice exacto de columna en la hoja "Módulos por cargo" (1..81)
+    // 1. Verificar por colIndex mapeado del tema (incluye temas 1..81 y temas añadidos 1001, 1002...)
     if (cargoPerms.enabledCols && subtema.colIndex && cargoPerms.enabledCols[subtema.colIndex]) {
         return true;
     }
-    // 2. Si es un tema nuevo añadido por el Super Administrador (colIndex >= 1000 o isAddedByAdmin),
-    // habilitarlo si el cargo ya tiene habilitado al menos un tema de ese mismo módulo
-    if ((subtema.isAddedByAdmin || Number(subtema.colIndex) >= 1000) && moduloObj && Array.isArray(moduloObj.subtemas)) {
-        const tieneModuloHabilitado = moduloObj.subtemas.some(
-            other => Number(other.colIndex) < 1000 && cargoPerms.enabledCols && cargoPerms.enabledCols[other.colIndex]
-        );
-        if (tieneModuloHabilitado) return true;
+    // Si el cargo fue configurado explícitamente desde el gestor "Temas por Cargo", respetar exactamente sus checks
+    if (cargoPerms.isCustomizedByAdmin) {
+        return false;
     }
-    // 3. Verificar por título normalizado (solo si no hay colIndex o coincide único)
-    if ((!subtema.colIndex || Number(subtema.colIndex) >= 1000) && cargoPerms.modulosHabilitados) {
-        if (cargoPerms.modulosHabilitados[subtema.titulo] || cargoPerms.modulosHabilitados[normalizeStr(subtema.titulo)]) {
+    // 2. Si es un tema nuevo añadido por el Super Administrador (colIndex >= 1000 o isAddedByAdmin),
+    // verificar primero si su título está en modulosHabilitados o si el cargo tiene habilitado ese módulo
+    if (subtema.isAddedByAdmin || Number(subtema.colIndex) >= 1000) {
+        if (cargoPerms.modulosHabilitados && (cargoPerms.modulosHabilitados[subtema.titulo] || cargoPerms.modulosHabilitados[normalizeStr(subtema.titulo)])) {
             return true;
+        }
+        if (moduloObj && Array.isArray(moduloObj.subtemas)) {
+            const tieneModuloHabilitado = moduloObj.subtemas.some(
+                other => Number(other.colIndex) < 1000 && cargoPerms.enabledCols && cargoPerms.enabledCols[other.colIndex]
+            );
+            if (tieneModuloHabilitado) return true;
         }
     }
     return false;
@@ -2678,14 +2821,18 @@ function abrirPanelAdmin(defaultTab = 'contenidos') {
     }
 
     const tabBtnContenidos = document.getElementById('tabBtnContenidos');
+    const tabBtnCargos = document.getElementById('tabBtnCargos');
     if (isSuperAdmin(currentUser)) {
-        tabBtnContenidos.style.display = 'flex';
+        if (tabBtnContenidos) tabBtnContenidos.style.display = 'flex';
+        if (tabBtnCargos) tabBtnCargos.style.display = 'flex';
     } else {
-        tabBtnContenidos.style.display = 'none';
+        if (tabBtnContenidos) tabBtnContenidos.style.display = 'none';
+        if (tabBtnCargos) tabBtnCargos.style.display = 'none';
         defaultTab = 'avance';
     }
 
     inicializarSelectorModulosSA();
+    inicializarGestorCargosSA();
     renderizarTablaAdmin();
     cambiarTabAdmin(defaultTab);
 
@@ -2698,24 +2845,351 @@ function cerrarPanelAdmin() {
 
 function cambiarTabAdmin(tab) {
     const tabContenidos = document.getElementById('adminTabContenidos');
+    const tabCargos = document.getElementById('adminTabCargos');
     const tabAvance = document.getElementById('adminTabAvance');
     const btnContenidos = document.getElementById('tabBtnContenidos');
+    const btnCargos = document.getElementById('tabBtnCargos');
     const btnAvance = document.getElementById('tabBtnAvance');
 
     if (tab === 'contenidos' && isSuperAdmin(currentUser)) {
         tabContenidos.style.display = 'flex';
+        if (tabCargos) tabCargos.style.display = 'none';
         tabAvance.style.display = 'none';
         btnContenidos.classList.add('active');
+        if (btnCargos) btnCargos.classList.remove('active');
         btnAvance.classList.remove('active');
+    } else if (tab === 'cargos' && isSuperAdmin(currentUser)) {
+        tabContenidos.style.display = 'none';
+        if (tabCargos) tabCargos.style.display = 'flex';
+        tabAvance.style.display = 'none';
+        btnContenidos.classList.remove('active');
+        if (btnCargos) btnCargos.classList.add('active');
+        btnAvance.classList.remove('active');
+        inicializarGestorCargosSA();
     } else {
         tabContenidos.style.display = 'none';
+        if (tabCargos) tabCargos.style.display = 'none';
         tabAvance.style.display = 'flex';
         btnContenidos.classList.remove('active');
+        if (btnCargos) btnCargos.classList.remove('active');
         btnAvance.classList.add('active');
         renderizarTablaAdmin(document.getElementById('adminSearchInput') ? document.getElementById('adminSearchInput').value : '');
         // Consultar memoria-progreso.json en tiempo real al abrir la tabla de Status de Colaboradores
         refrescarProgresoDesdeNube(true);
     }
+}
+
+// =============================================================================
+// GESTOR DE CARGOS Y TEMAS HABILITADOS POR CARGO (SUPER ADMINISTRADOR)
+// =============================================================================
+function inicializarGestorCargosSA() {
+    aplicarPermisosCargosPersonalizados();
+    if (!saCurrentCargoSelected) {
+        if (currentUser && currentUser.cargo) {
+            saCurrentCargoSelected = normalizeStr(currentUser.cargo);
+        } else if (modulosPorCargoData.length > 0) {
+            saCurrentCargoSelected = normalizeStr(modulosPorCargoData[0].cargo);
+        }
+    }
+    renderizarListaCargosSA();
+    renderizarEditorCargoSA();
+}
+
+function obtenerObjetoPermisosCargo(cargoNormKey) {
+    let found = modulosPorCargoData.find(m => normalizeStr(m.cargo) === cargoNormKey);
+    if (!found && modulosPorCargoData.length > 0) {
+        found = modulosPorCargoData[0];
+        saCurrentCargoSelected = normalizeStr(found.cargo);
+    }
+    return found || null;
+}
+
+function contarModulosYTemasDeCargo(cargoPerms) {
+    if (!cargoPerms) return { modulos: 0, temas: 0, totalModulos: CATALOGO_MODULOS.length, totalTemas: 0 };
+    let modCount = 0;
+    let temaCount = 0;
+    let totalTemas = 0;
+    CATALOGO_MODULOS.forEach(mod => {
+        let habilitadosEnMod = 0;
+        (mod.subtemas || []).forEach(st => {
+            totalTemas++;
+            if (isSubtemaHabilitadoParaCargo(st, cargoPerms, mod)) {
+                habilitadosEnMod++;
+                temaCount++;
+            }
+        });
+        if (habilitadosEnMod > 0) modCount++;
+    });
+    return { modulos: modCount, temas: temaCount, totalModulos: CATALOGO_MODULOS.length, totalTemas };
+}
+
+function renderizarListaCargosSA() {
+    const listEl = document.getElementById('saCargosList');
+    const countEl = document.getElementById('saTotalCargosCount');
+    const searchInput = document.getElementById('saCargoSearchInput');
+    if (!listEl) return;
+
+    const query = searchInput ? normalizeStr(searchInput.value) : '';
+    if (countEl) countEl.textContent = String(modulosPorCargoData.length);
+
+    const filtrados = modulosPorCargoData.filter(item => {
+        if (!query) return true;
+        return normalizeStr(item.cargo).includes(query);
+    });
+
+    let html = '';
+    filtrados.forEach(item => {
+        const normKey = normalizeStr(item.cargo);
+        const isActive = normKey === saCurrentCargoSelected;
+        const stats = contarModulosYTemasDeCargo(item);
+        const pillColor = stats.temas === stats.totalTemas && stats.totalTemas > 0
+            ? 'background:#16a34a; color:#fff;'
+            : (stats.temas > 0 ? 'background:#0284c7; color:#fff;' : 'background:#e2e8f0; color:#64748b;');
+        const safeKey = normKey.replace(/'/g, "\\'");
+
+        html += `
+            <div class="sa-tema-item ${isActive ? 'active' : ''}" onclick="seleccionarCargoSA('${safeKey}')">
+                <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1;" title="${item.cargo}">
+                    ${item.isCustomizedByAdmin ? '<i class="fas fa-check-circle" style="color:#22c55e; margin-right:4px;" title="Configurado en plataforma"></i>' : ''}
+                    ${item.cargo}
+                </span>
+                <span class="sa-tema-type-pill" style="${isActive ? '' : pillColor}">${stats.modulos}M · ${stats.temas}T</span>
+            </div>
+        `;
+    });
+
+    listEl.innerHTML = html || `<div style="padding:1rem; text-align:center; color:#64748b; font-size:0.84rem;">No se encontraron cargos con ese filtro.</div>`;
+}
+
+function seleccionarCargoSA(cargoNormKey) {
+    saCurrentCargoSelected = cargoNormKey;
+    renderizarListaCargosSA();
+    renderizarEditorCargoSA();
+}
+
+function renderizarEditorCargoSA() {
+    const cargoObj = obtenerObjetoPermisosCargo(saCurrentCargoSelected);
+    const titleEl = document.getElementById('saCargoSelectedTitle');
+    const badgeEl = document.getElementById('saCargoSelectedBadge');
+    const subtitleEl = document.getElementById('saCargoSelectedSubtitle');
+    const gridEl = document.getElementById('saCargoModulosGrid');
+    if (!gridEl || !cargoObj) return;
+
+    const stats = contarModulosYTemasDeCargo(cargoObj);
+    const colaboradoresConCargo = colaboradoresData.filter(c => normalizeStr(c.cargo) === normalizeStr(cargoObj.cargo));
+
+    if (titleEl) titleEl.textContent = cargoObj.cargo;
+    if (badgeEl) badgeEl.textContent = `${stats.modulos} DE ${stats.totalModulos} MÓDULOS · ${stats.temas} DE ${stats.totalTemas} TEMAS HABILITADOS`;
+    if (subtitleEl) {
+        subtitleEl.innerHTML = colaboradoresConCargo.length > 0
+            ? `<i class="fas fa-users" style="color:#0284c7;"></i> <strong>${colaboradoresConCargo.length} colaborador(es)</strong> activo(s) con este cargo (${colaboradoresConCargo.slice(0, 3).map(c => c.nombre).join(', ')}${colaboradoresConCargo.length > 3 ? '...' : ''}).`
+            : `Marca con un check los módulos y temas que los colaboradores con el cargo <strong>${cargoObj.cargo}</strong> pueden visualizar.`;
+    }
+
+    let cardsHtml = '';
+    CATALOGO_MODULOS.forEach(mod => {
+        const subtemas = mod.subtemas || [];
+        let habilitadosMod = 0;
+        subtemas.forEach(st => {
+            if (isSubtemaHabilitadoParaCargo(st, cargoObj, mod)) habilitadosMod++;
+        });
+
+        const allChecked = subtemas.length > 0 && habilitadosMod === subtemas.length;
+        const partChecked = habilitadosMod > 0 && habilitadosMod < subtemas.length;
+        const cardStateClass = allChecked ? 'mod-all-enabled' : (partChecked ? 'mod-part-enabled' : '');
+
+        const topicsHtml = subtemas.map(st => {
+            const checked = isSubtemaHabilitadoParaCargo(st, cargoObj, mod);
+            return `
+                <label class="sa-cargo-topic-item ${checked ? 'topic-checked' : ''}">
+                    <input type="checkbox" ${checked ? 'checked' : ''} onchange="onToggleTemaCargoSA(${mod.id}, ${st.colIndex}, this.checked)">
+                    <span>${st.titulo}</span>
+                </label>
+            `;
+        }).join('');
+
+        cardsHtml += `
+            <div class="sa-cargo-mod-card ${cardStateClass}">
+                <div class="sa-cargo-mod-header">
+                    <label class="sa-cargo-mod-title-label">
+                        <input type="checkbox" ${allChecked ? 'checked' : ''} onchange="onToggleModuloCargoSA(${mod.id}, this.checked)">
+                        <span>${mod.numero}: ${mod.titulo}</span>
+                    </label>
+                    <span class="sa-cargo-mod-count-pill">${habilitadosMod}/${subtemas.length}</span>
+                </div>
+                <div class="sa-cargo-topics-list">
+                    ${topicsHtml || '<small style="color:#94a3b8;">Sin temas en este módulo</small>'}
+                </div>
+            </div>
+        `;
+    });
+
+    gridEl.innerHTML = cardsHtml;
+}
+
+function sincronizarEstadoExplicitoCargo(cargoObj) {
+    const newEnabledCols = {};
+    const newModulosHab = {};
+    CATALOGO_MODULOS.forEach(mod => {
+        (mod.subtemas || []).forEach(st => {
+            if (isSubtemaHabilitadoParaCargo(st, cargoObj, mod)) {
+                newEnabledCols[st.colIndex] = true;
+                newModulosHab[st.titulo] = true;
+                newModulosHab[normalizeStr(st.titulo)] = true;
+            }
+        });
+    });
+    cargoObj.enabledCols = newEnabledCols;
+    cargoObj.modulosHabilitados = newModulosHab;
+    cargoObj.isCustomizedByAdmin = true;
+    cargoObj.updatedAt = new Date().toISOString();
+}
+
+function onToggleTemaCargoSA(moduloId, colIndex, isChecked) {
+    const cargoObj = obtenerObjetoPermisosCargo(saCurrentCargoSelected);
+    if (!cargoObj) return;
+
+    // Convertir primero todos los temas actualmente visibles en enabledCols explícitos
+    sincronizarEstadoExplicitoCargo(cargoObj);
+
+    const numCol = Number(colIndex);
+    const found = obtenerSubtemaCatalogoPorCol(numCol);
+    if (isChecked) {
+        cargoObj.enabledCols[numCol] = true;
+        if (found && found.subtema) {
+            cargoObj.modulosHabilitados[found.subtema.titulo] = true;
+            cargoObj.modulosHabilitados[normalizeStr(found.subtema.titulo)] = true;
+        }
+    } else {
+        delete cargoObj.enabledCols[numCol];
+        if (found && found.subtema) {
+            delete cargoObj.modulosHabilitados[found.subtema.titulo];
+            delete cargoObj.modulosHabilitados[normalizeStr(found.subtema.titulo)];
+        }
+    }
+
+    guardarPermisosCargoActualSA(false);
+}
+
+function onToggleModuloCargoSA(moduloId, isChecked) {
+    const cargoObj = obtenerObjetoPermisosCargo(saCurrentCargoSelected);
+    if (!cargoObj) return;
+
+    sincronizarEstadoExplicitoCargo(cargoObj);
+
+    const mod = CATALOGO_MODULOS.find(m => Number(m.id) === Number(moduloId));
+    if (!mod) return;
+
+    (mod.subtemas || []).forEach(st => {
+        const numCol = Number(st.colIndex);
+        if (isChecked) {
+            cargoObj.enabledCols[numCol] = true;
+            cargoObj.modulosHabilitados[st.titulo] = true;
+            cargoObj.modulosHabilitados[normalizeStr(st.titulo)] = true;
+        } else {
+            delete cargoObj.enabledCols[numCol];
+            delete cargoObj.modulosHabilitados[st.titulo];
+            delete cargoObj.modulosHabilitados[normalizeStr(st.titulo)];
+        }
+    });
+
+    guardarPermisosCargoActualSA(false);
+}
+
+function marcarTodosTemasCargoActualSA(habilitarTodos) {
+    const cargoObj = obtenerObjetoPermisosCargo(saCurrentCargoSelected);
+    if (!cargoObj) return;
+
+    cargoObj.enabledCols = {};
+    cargoObj.modulosHabilitados = {};
+    cargoObj.isCustomizedByAdmin = true;
+    cargoObj.updatedAt = new Date().toISOString();
+
+    if (habilitarTodos) {
+        CATALOGO_MODULOS.forEach(mod => {
+            (mod.subtemas || []).forEach(st => {
+                cargoObj.enabledCols[Number(st.colIndex)] = true;
+                cargoObj.modulosHabilitados[st.titulo] = true;
+                cargoObj.modulosHabilitados[normalizeStr(st.titulo)] = true;
+            });
+        });
+    }
+
+    guardarPermisosCargoActualSA(true);
+}
+
+async function guardarPermisosCargoActualSA(mostrarMensajeExplicito = true) {
+    const cargoObj = obtenerObjetoPermisosCargo(saCurrentCargoSelected);
+    if (!cargoObj) return;
+
+    const normKey = normalizeStr(cargoObj.cargo);
+    cargoObj.isCustomizedByAdmin = true;
+    cargoObj.updatedAt = new Date().toISOString();
+
+    permisosCargosCustomCache[normKey] = {
+        cargo: cargoObj.cargo,
+        enabledCols: { ...(cargoObj.enabledCols || {}) },
+        modulosHabilitados: { ...(cargoObj.modulosHabilitados || {}) },
+        isCustomizedByAdmin: true,
+        updatedAt: cargoObj.updatedAt
+    };
+
+    try {
+        localStorage.setItem('rb_permisos_cargos_v2', JSON.stringify(permisosCargosCustomCache));
+    } catch (e) {}
+
+    renderizarListaCargosSA();
+    renderizarEditorCargoSA();
+
+    // Si el usuario actual tiene este cargo, refrescar inmediatamente sus módulos en pantalla
+    if (currentUser) {
+        renderizarCategoriasLaterales();
+        renderizarModulos(currentUser, document.getElementById('busquedaInput') ? document.getElementById('busquedaInput').value : '');
+        actualizarGraficaCircularBanner(currentUser);
+    }
+
+    const feedback = document.getElementById('saCargoSaveFeedback');
+    if (feedback) {
+        feedback.innerHTML = '<i class="fas fa-sync fa-spin"></i> Guardando configuración del cargo en memoria-progreso.json...';
+    }
+
+    const syncRes = await sincronizarMemoriaJSONPersistente(mostrarMensajeExplicito, mostrarMensajeExplicito);
+    if (feedback) {
+        feedback.innerHTML = (syncRes && syncRes.guardadoEnNube)
+            ? `<i class="fas fa-check-circle"></i> ¡Permisos del cargo "${cargoObj.cargo}" guardados y sincronizados en GitHub / Vercel!`
+            : `<i class="fas fa-check-circle"></i> Permisos del cargo "${cargoObj.cargo}" actualizados en memoria-progreso.json.`;
+    }
+}
+
+function crearNuevoCargoSA() {
+    const nombre = prompt('Ingresa el nombre del nuevo Cargo (tal como aparece en la hoja de Colaboradores):');
+    if (!nombre || !nombre.trim()) return;
+
+    const limpio = nombre.trim().toUpperCase();
+    const normKey = normalizeStr(limpio);
+    const existente = modulosPorCargoData.find(m => normalizeStr(m.cargo) === normKey);
+    if (existente) {
+        seleccionarCargoSA(normKey);
+        return;
+    }
+
+    const nuevoObj = {
+        cargo: limpio,
+        enabledCols: {},
+        modulosHabilitados: {},
+        isCustomizedByAdmin: true,
+        updatedAt: new Date().toISOString()
+    };
+
+    modulosPorCargoData.push(nuevoObj);
+    modulosPorCargoData.sort((a, b) => a.cargo.localeCompare(b.cargo, 'es'));
+    permisosCargosCustomCache[normKey] = { ...nuevoObj };
+    try {
+        localStorage.setItem('rb_permisos_cargos_v2', JSON.stringify(permisosCargosCustomCache));
+    } catch (e) {}
+
+    seleccionarCargoSA(normKey);
+    guardarPermisosCargoActualSA(true);
 }
 
 function abrirEditorDirectoModulo(moduloId) {

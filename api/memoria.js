@@ -116,6 +116,19 @@ function fusionarMemoriaEnServidor(actual, entrante) {
     resultado.contenidosTemas = temasCombinados;
     resultado.totalTemasPersonalizados = Object.keys(temasCombinados).length;
 
+    // 3.5. Fusionar permisosPorCargo (configuración personalizada de temas habilitados por cargo desde el Super Admin)
+    const permisosActuales = actual.permisosPorCargo || {};
+    const permisosEntrantes = entrante.permisosPorCargo || {};
+    const permisosCombinados = { ...permisosActuales };
+    Object.keys(permisosEntrantes).forEach(cargoKey => {
+        const entranteItem = permisosEntrantes[cargoKey];
+        const actualItem = permisosCombinados[cargoKey];
+        if (entranteItem && esMasReciente(entranteItem, actualItem)) {
+            permisosCombinados[cargoKey] = entranteItem;
+        }
+    });
+    resultado.permisosPorCargo = permisosCombinados;
+
     // 4. Fusionar colaboradores y su progreso por usuario (UNIÓN ADITIVA DE AVANCES)
     const colabActuales = actual.colaboradores || {};
     const colabEntrantes = entrante.colaboradores || {};
@@ -345,7 +358,8 @@ module.exports = async function handler(req, res) {
                     return res.status(200).json({
                         ok: true,
                         updatedAt: mergedPayload.ultimaActualizacion,
-                        colaboradores: mergedPayload.colaboradores
+                        colaboradores: mergedPayload.colaboradores,
+                        permisosPorCargo: mergedPayload.permisosPorCargo
                     });
                 }
 

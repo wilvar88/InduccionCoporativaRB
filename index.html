@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
     <!-- Estilos de la aplicación -->
-    <link rel="stylesheet" href="style.css?v=20261110v2">
+    <link rel="stylesheet" href="style.css?v=20261119v1">
 </head>
 
 <body>
@@ -192,6 +192,9 @@
                 <div class="admin-header-tabs">
                     <button class="admin-tab-btn active" id="tabBtnContenidos" onclick="cambiarTabAdmin('contenidos')">
                         <i class="fas fa-cloud-upload-alt"></i> Subir / Editar Contenidos
+                    </button>
+                    <button class="admin-tab-btn" id="tabBtnCargos" onclick="cambiarTabAdmin('cargos')">
+                        <i class="fas fa-id-badge"></i> Temas por Cargo
                     </button>
                     <button class="admin-tab-btn" id="tabBtnAvance" onclick="cambiarTabAdmin('avance')">
                         <i class="fas fa-users-cog"></i> Status de Colaboradores y Reporte Excel
@@ -409,7 +412,68 @@
                 </div>
             </div>
 
-            <!-- VISTA 2: STATUS DETALLADO DE COLABORADORES, MEMORIA JSON Y DESCARGA DE EXCEL / ACTAS -->
+            <!-- VISTA 2: MATRIZ DE CARGOS Y TEMAS HABILITADOS POR CARGO -->
+            <div class="modal-admin-body" id="adminTabCargos" style="display: none;">
+                <div class="superadmin-layout">
+                    <!-- Panel Izquierdo: Lista y Búsqueda de Cargos -->
+                    <div class="superadmin-sidebar sa-cargos-sidebar">
+                        <div class="sa-section-group">
+                            <div class="sa-temas-header-row">
+                                <label style="margin: 0;"><i class="fas fa-briefcase"></i> 1. Selecciona el Cargo (<span id="saTotalCargosCount">0</span>):</label>
+                                <button type="button" class="btn-sa-add-tema" onclick="crearNuevoCargoSA()" title="Añadir un nuevo cargo a la matriz">
+                                    <i class="fas fa-plus-circle"></i> Añadir Cargo
+                                </button>
+                            </div>
+                            <div class="sa-cargo-search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="saCargoSearchInput" placeholder="Buscar cargo (ej: ANALISTA SENIOR)..." oninput="renderizarListaCargosSA()">
+                            </div>
+                        </div>
+                        <div class="sa-temas-list" id="saCargosList" style="flex: 1;">
+                            <!-- Lista dinámica de cargos -->
+                        </div>
+                    </div>
+
+                    <!-- Panel Derecho: Módulos y Temas que puede ver el Cargo seleccionado -->
+                    <div class="superadmin-editor">
+                        <div class="sa-editor-header sa-cargo-editor-header">
+                            <div>
+                                <span class="sa-badge-modulo" id="saCargoSelectedBadge">CONFIGURACIÓN DE ACCESO POR CARGO</span>
+                                <h3 id="saCargoSelectedTitle">Selecciona un cargo</h3>
+                                <p id="saCargoSelectedSubtitle" style="margin: 0.25rem 0 0; font-size: 0.84rem; color: #64748b;">Marca con un check los módulos y temas que los colaboradores con este cargo pueden visualizar.</p>
+                            </div>
+                            <div class="sa-cargo-header-actions">
+                                <button type="button" class="btn-sa-cargo-action btn-sa-mark-all" onclick="marcarTodosTemasCargoActualSA(true)" title="Habilitar los 14 módulos y todos los temas para este cargo">
+                                    <i class="fas fa-check-double"></i> Marcar Todos
+                                </button>
+                                <button type="button" class="btn-sa-cargo-action btn-sa-unmark-all" onclick="marcarTodosTemasCargoActualSA(false)" title="Desmarcar todos los temas para este cargo">
+                                    <i class="fas fa-ban"></i> Desmarcar Todos
+                                </button>
+                                <button type="button" class="btn-sa-save" onclick="guardarPermisosCargoActualSA(true)">
+                                    <i class="fas fa-save"></i> Guardar Cambios del Cargo
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="sa-editor-body" id="saCargoModulosBody">
+                            <div class="sa-cargo-modulos-grid" id="saCargoModulosGrid">
+                                <!-- Tarjetas de los 14 módulos con sus checkboxes de temas -->
+                            </div>
+                        </div>
+
+                        <div class="sa-editor-footer">
+                            <span id="saCargoSaveFeedback" class="sa-save-feedback"></span>
+                            <div class="sa-footer-btns">
+                                <button type="button" class="btn-sa-save" onclick="guardarPermisosCargoActualSA(true)">
+                                    <i class="fas fa-save"></i> Guardar Permisos en memoria-progreso.json
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISTA 3: STATUS DETALLADO DE COLABORADORES, MEMORIA JSON Y DESCARGA DE EXCEL / ACTAS -->
             <div class="modal-admin-body" id="adminTabAvance" style="display: none;">
                 <div class="admin-toolbar admin-toolbar-wrap">
                     <div class="busqueda-admin-box">
@@ -532,7 +596,7 @@
     </div>
 
     <!-- MEMORIA INICIAL DE PROGRESO Y CONTENIDOS (.JSON / .JS) -->
-    <script src="memoria-progreso.js?v=20261110v2" onerror="console.info('Memoria inicial se gestionará desde almacenamiento local / JSON.')"></script>
+    <script src="memoria-progreso.js?v=20261119v1" onerror="console.info('Memoria inicial se gestionará desde almacenamiento local / JSON.')"></script>
 
     <!-- MODAL POPUP COMPLEMENTARIO DE INFORMACIÓN ADICIONAL -->
     <div class="modal-info-popup" id="infoPopupModal">
@@ -556,7 +620,7 @@
     </div>
 
     <!-- JAVASCRIPT PRINCIPAL -->
-    <script src="script.js?v=20261110v2"></script>
+    <script src="script.js?v=20261119v1"></script>
 </body>
 
 </html>
