@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T19:36:17.633Z",
+  "ultimaActualizacion": "2026-11-19T19:36:22.759Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -55,9 +55,24 @@
       "popup": null,
       "isAddedByAdmin": true,
       "updatedAt": "2026-11-10T20:34:50.211Z"
+    },
+    {
+      "colIndex": 1003,
+      "moduloId": 14,
+      "titulo": "Nuevo Tema (Módulo 14)",
+      "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.",
+      "tipo": "html",
+      "url": "",
+      "content": "<h3>Nuevo Tema (Módulo 14)</h3><p>Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.</p>",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": true,
+      "updatedAt": "2026-11-19T19:36:22.541Z"
     }
   ],
-  "totalTemasPersonalizados": 41,
+  "totalTemasPersonalizados": 42,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -597,6 +612,21 @@
       "popup": null,
       "isAddedByAdmin": true,
       "updatedAt": "2026-11-10T20:34:50.211Z"
+    },
+    "1003": {
+      "colIndex": 1003,
+      "moduloId": 14,
+      "titulo": "Nuevo Tema (Módulo 14)",
+      "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.",
+      "tipo": "html",
+      "url": "",
+      "content": "<h3>Nuevo Tema (Módulo 14)</h3><p>Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.</p>",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": true,
+      "updatedAt": "2026-11-19T19:36:22.541Z"
     }
   },
   "permisosPorCargo": {
@@ -23647,8 +23677,8 @@
       "modulosCompletados": 7,
       "totalModulosHabilitados": 14,
       "temasVistos": 38,
-      "totalTemasHabilitados": 61,
-      "porcentajeAvance": 62,
+      "totalTemasHabilitados": 62,
+      "porcentajeAvance": 61,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -24234,6 +24264,5 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
-  "_syncJsFile": true
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
