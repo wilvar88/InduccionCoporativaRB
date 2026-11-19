@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:16:05.872Z",
+  "ultimaActualizacion": "2026-11-19T17:16:13.147Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -16,7 +16,8 @@
     55,
     56,
     57,
-    58
+    58,
+    59
   ],
   "temasAgregados": [
     {
@@ -5821,11 +5822,11 @@
       "ultimoModuloId": 10,
       "ultimoModuloNombre": "Módulo 10: Normas y cultura operacional",
       "ultimoTemaTitulo": "Seguridad física y otros lineamientos",
-      "modulosCompletados": 6,
+      "modulosCompletados": 7,
       "totalModulosHabilitados": 11,
       "temasVistos": 37,
-      "totalTemasHabilitados": 48,
-      "porcentajeAvance": 77,
+      "totalTemasHabilitados": 47,
+      "porcentajeAvance": 79,
       "progresoModulos": {
         "1": {
           "0": true,
