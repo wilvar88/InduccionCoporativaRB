@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T21:33:10.149Z",
+  "ultimaActualizacion": "2026-11-19T21:33:25.874Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -72,7 +72,7 @@
       "updatedAt": "2026-11-19T19:37:03.554Z"
     }
   ],
-  "totalTemasPersonalizados": 42,
+  "totalTemasPersonalizados": 43,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -462,6 +462,21 @@
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-18T21:27:00.406Z"
+    },
+    "38": {
+      "colIndex": 38,
+      "moduloId": 7,
+      "titulo": "Políticas HSE específicas para Mantenimiento",
+      "descripcion": "Protocolos de seguridad para tareas de alto riesgo, trabajo en alturas, riesgo eléctrico y bloqueo/etiquetado (LOTO).",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1ZU0HjfAtJcaFKaNyTZPYzAXG3doKG3nh/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T21:33:25.501Z"
     },
     "41": {
       "colIndex": 41,
@@ -23714,9 +23729,9 @@
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 7,
-      "ultimoModuloNombre": "Módulo 7: Políticas HSE – Mantenimiento",
-      "ultimoTemaTitulo": "Políticas HSE específicas para Mantenimiento",
+      "ultimoModuloId": 14,
+      "ultimoModuloNombre": "Módulo 14: Procesos administrativos",
+      "ultimoTemaTitulo": "Contratos:",
       "modulosCompletados": 8,
       "totalModulosHabilitados": 14,
       "temasVistos": 40,
@@ -24315,5 +24330,6 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
+  "_syncJsFile": true
 }
