@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T20:32:56.317Z",
+  "ultimaActualizacion": "2026-11-19T21:33:25.874Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -73,7 +73,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "updatedAt": "2026-11-19T19:37:03.554Z"
     }
   ],
-  "totalTemasPersonalizados": 42,
+  "totalTemasPersonalizados": 43,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -463,6 +463,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-18T21:27:00.406Z"
+    },
+    "38": {
+      "colIndex": 38,
+      "moduloId": 7,
+      "titulo": "Políticas HSE específicas para Mantenimiento",
+      "descripcion": "Protocolos de seguridad para tareas de alto riesgo, trabajo en alturas, riesgo eléctrico y bloqueo/etiquetado (LOTO).",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1ZU0HjfAtJcaFKaNyTZPYzAXG3doKG3nh/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T21:33:25.501Z"
     },
     "41": {
       "colIndex": 41,
@@ -1751,12 +1766,6 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "COMPROMISO DE LA ORGANIZACION CON LA SALUD, SEGURIDAD Y AMBIENTE": true,
         "Principios y responsabilidades generales": true,
         "PRINCIPIOS Y RESPONSABILIDADES GENERALES": true,
-        "Políticas HSE específicas para Mantenimiento": true,
-        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
-        "Riesgos asociados a las actividades de mantenimiento": true,
-        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
-        "Lineamientos específicos aplicables al cargo": true,
-        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true,
         "Seguridad informática general": true,
         "SEGURIDAD INFORMATICA GENERAL": true,
         "Gobierno corporativo": true,
@@ -1800,10 +1809,16 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "Contratos:": true,
         "CONTRATOS:": true,
         "Gestión de Proveedores": true,
-        "GESTION DE PROVEEDORES": true
+        "GESTION DE PROVEEDORES": true,
+        "Políticas HSE específicas para Mantenimiento": true,
+        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
+        "Riesgos asociados a las actividades de mantenimiento": true,
+        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
+        "Lineamientos específicos aplicables al cargo": true,
+        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:55.877Z"
+      "updatedAt": "2026-11-19T20:32:35.375Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
