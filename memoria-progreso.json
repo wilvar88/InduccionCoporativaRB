@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:14:49.257Z",
+  "ultimaActualizacion": "2026-11-19T17:14:55.662Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5802,9 +5802,9 @@
       "ultimoTemaTitulo": "Seguridad física y otros lineamientos",
       "modulosCompletados": 6,
       "totalModulosHabilitados": 11,
-      "temasVistos": 36,
+      "temasVistos": 37,
       "totalTemasHabilitados": 54,
-      "porcentajeAvance": 67,
+      "porcentajeAvance": 69,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -5895,6 +5895,10 @@
         "8": {
           "0": true,
           "col_41": true
+        },
+        "10": {
+          "0": true,
+          "col_52": true
         }
       }
     },
