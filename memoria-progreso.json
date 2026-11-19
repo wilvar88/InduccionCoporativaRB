@@ -1,10 +1,11 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:11:17.564Z",
+  "ultimaActualizacion": "2026-11-19T17:11:27.308Z",
   "version": "2.3",
   "temasEliminados": [
     21,
     22,
-    23
+    23,
+    42
   ],
   "temasAgregados": [
     {
@@ -5752,8 +5753,8 @@
       "modulosCompletados": 6,
       "totalModulosHabilitados": 11,
       "temasVistos": 36,
-      "totalTemasHabilitados": 60,
-      "porcentajeAvance": 60,
+      "totalTemasHabilitados": 59,
+      "porcentajeAvance": 61,
       "progresoModulos": {
         "1": {
           "0": true,
