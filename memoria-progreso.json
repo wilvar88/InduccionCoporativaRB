@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:32:27.909Z",
+  "ultimaActualizacion": "2026-11-19T20:32:31.687Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1651,6 +1651,9 @@
         "35": true,
         "36": true,
         "37": true,
+        "38": true,
+        "39": true,
+        "40": true,
         "41": true,
         "47": true,
         "49": true,
@@ -1774,9 +1777,13 @@
         "CANALES/PLATAFORMAS PARA CONSULTAR BENEFICIOS": true,
         "Correo corporativo": true,
         "CORREO CORPORATIVO": true,
+        "Workforce": true,
+        "WORKFORCE": true,
         "Moodle": true,
         "MOODLE": true,
         "BUK": true,
+        "Biblioteca de Gestión del Conocimiento": true,
+        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true,
         "Otros sistemas corporativos": true,
         "OTROS SISTEMAS CORPORATIVOS": true,
         "Tarjeta Funcionario": true,
@@ -1787,13 +1794,15 @@
         "CONTRATOS:": true,
         "Gestión de Proveedores": true,
         "GESTION DE PROVEEDORES": true,
-        "Workforce": true,
-        "WORKFORCE": true,
-        "Biblioteca de Gestión del Conocimiento": true,
-        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true
+        "Políticas HSE específicas para Mantenimiento": true,
+        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
+        "Riesgos asociados a las actividades de mantenimiento": true,
+        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
+        "Lineamientos específicos aplicables al cargo": true,
+        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:27.702Z"
+      "updatedAt": "2026-11-19T20:32:31.269Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21304,10 +21313,10 @@
       "ultimoModuloNombre": "Módulo 11: Bienestar y beneficios",
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
-      "totalModulosHabilitados": 13,
+      "totalModulosHabilitados": 14,
       "temasVistos": 33,
-      "totalTemasHabilitados": 59,
-      "porcentajeAvance": 56,
+      "totalTemasHabilitados": 62,
+      "porcentajeAvance": 53,
       "progresoModulos": {
         "1": {
           "0": true,
