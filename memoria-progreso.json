@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:25:30.320Z",
+  "ultimaActualizacion": "2026-11-19T17:25:39.197Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5845,9 +5845,9 @@
       "ultimoTemaTitulo": "Conductas esperadas y Canales de reporte",
       "modulosCompletados": 7,
       "totalModulosHabilitados": 11,
-      "temasVistos": 37,
+      "temasVistos": 38,
       "totalTemasHabilitados": 47,
-      "porcentajeAvance": 79,
+      "porcentajeAvance": 81,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -5938,6 +5938,10 @@
         "8": {
           "0": true,
           "col_41": true
+        },
+        "9": {
+          "3": true,
+          "col_51": true
         },
         "10": {
           "0": true,
