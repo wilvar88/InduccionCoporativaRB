@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T17:13:35.159Z",
+  "ultimaActualizacion": "2026-11-19T17:14:03.065Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -45,7 +45,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 36,
+  "totalTemasPersonalizados": 37,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -480,6 +480,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-19T17:13:34.346Z"
+    },
+    "51": {
+      "colIndex": 51,
+      "moduloId": 9,
+      "titulo": "SARLAFT / SAGRILAFT",
+      "descripcion": "Sistema de Autocontrol y Gestión del Riesgo Integral de Lavado de Activos, Financiación del Terrorismo y Financiamiento de la Proliferación de Armas de Destrucción Masiva.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/13HEyB0KikwhXH5IyVqpk7NxFprWVBrLV/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T17:14:02.238Z"
     },
     "1001": {
       "colIndex": 1001,
