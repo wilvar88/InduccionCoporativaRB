@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:31:36.414Z",
+  "ultimaActualizacion": "2026-11-19T20:31:38.492Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -4789,6 +4789,7 @@
         "70": true,
         "71": true,
         "72": true,
+        "73": true,
         "80": true,
         "81": true,
         "1001": true,
@@ -4912,10 +4913,12 @@
         "Contratos:": true,
         "CONTRATOS:": true,
         "Gestión de Proveedores": true,
-        "GESTION DE PROVEEDORES": true
+        "GESTION DE PROVEEDORES": true,
+        "Tarjeta Funcionario": true,
+        "TARJETA FUNCIONARIO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:31:36.039Z"
+      "updatedAt": "2026-11-19T20:31:37.244Z"
     },
     "ANALISTA III DE GESTION HUMANA": {
       "cargo": "ANALISTA III DE GESTION HUMANA",
@@ -19427,10 +19430,10 @@
       "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
       "ultimoTemaTitulo": "Objetivo de la inducción",
       "modulosCompletados": 2,
-      "totalModulosHabilitados": 13,
+      "totalModulosHabilitados": 14,
       "temasVistos": 22,
-      "totalTemasHabilitados": 61,
-      "porcentajeAvance": 36,
+      "totalTemasHabilitados": 62,
+      "porcentajeAvance": 35,
       "progresoModulos": {
         "1": {
           "0": true,
