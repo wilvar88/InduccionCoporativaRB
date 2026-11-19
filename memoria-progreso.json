@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:18:08.823Z",
+  "ultimaActualizacion": "2026-11-19T17:18:13.146Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -18,7 +18,8 @@
     57,
     58,
     59,
-    74
+    74,
+    75
   ],
   "temasAgregados": [
     {
