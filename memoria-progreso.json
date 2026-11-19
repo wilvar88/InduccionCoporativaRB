@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:06:37.872Z",
+  "ultimaActualizacion": "2026-11-19T17:06:43.748Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5731,9 +5731,9 @@
       "cantidadIngresos": 17,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 6,
-      "ultimoModuloNombre": "Módulo 6: Política HSE",
-      "ultimoTemaTitulo": "Política HSE",
+      "ultimoModuloId": 8,
+      "ultimoModuloNombre": "Módulo 8: Seguridad informática",
+      "ultimoTemaTitulo": "Seguridad informática general",
       "modulosCompletados": 6,
       "totalModulosHabilitados": 11,
       "temasVistos": 35,
