@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T19:34:45.655Z",
+  "ultimaActualizacion": "2026-11-19T19:35:31.304Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -58,7 +58,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 39,
+  "totalTemasPersonalizados": 40,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -537,7 +537,22 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "audio": "",
       "popup": null,
       "isAddedByAdmin": false,
-      "updatedAt": "2026-11-19T19:34:45.421Z"
+      "updatedAt": "2026-11-19T19:34:38.643Z"
+    },
+    "80": {
+      "colIndex": 80,
+      "moduloId": 14,
+      "titulo": "Compras:",
+      "descripcion": "Lineamientos para la solicitud de bienes y servicios, cotizaciones, órdenes de compra y recepción de proveedores.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1rUm7hXqbpRDlUeOZOpOOOlxRKOfhqToT/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T19:35:30.907Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -23612,9 +23627,9 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 9,
-      "ultimoModuloNombre": "Módulo 9: Gobierno corporativo y ética",
-      "ultimoTemaTitulo": "Gobierno corporativo",
+      "ultimoModuloId": 14,
+      "ultimoModuloNombre": "Módulo 14: Procesos administrativos",
+      "ultimoTemaTitulo": "Compras:",
       "modulosCompletados": 7,
       "totalModulosHabilitados": 14,
       "temasVistos": 38,
