@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T19:34:45.655Z",
+  "ultimaActualizacion": "2026-11-19T19:34:57.011Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -536,7 +536,7 @@
       "audio": "",
       "popup": null,
       "isAddedByAdmin": false,
-      "updatedAt": "2026-11-19T19:34:45.421Z"
+      "updatedAt": "2026-11-19T19:34:38.643Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -23611,9 +23611,9 @@
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 9,
-      "ultimoModuloNombre": "Módulo 9: Gobierno corporativo y ética",
-      "ultimoTemaTitulo": "Gobierno corporativo",
+      "ultimoModuloId": 14,
+      "ultimoModuloNombre": "Módulo 14: Procesos administrativos",
+      "ultimoTemaTitulo": "Compras:",
       "modulosCompletados": 7,
       "totalModulosHabilitados": 14,
       "temasVistos": 38,
@@ -24204,6 +24204,5 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
-  "_syncJsFile": true
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
