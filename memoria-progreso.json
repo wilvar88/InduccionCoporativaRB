@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T19:37:03.774Z",
+  "ultimaActualizacion": "2026-11-19T19:38:18.326Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -23671,9 +23671,9 @@
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 14,
-      "ultimoModuloNombre": "Módulo 14: Procesos administrativos",
-      "ultimoTemaTitulo": "Compras:",
+      "ultimoModuloId": 12,
+      "ultimoModuloNombre": "Módulo 12: Herramientas corporativas",
+      "ultimoTemaTitulo": "Correo corporativo",
       "modulosCompletados": 7,
       "totalModulosHabilitados": 14,
       "temasVistos": 38,
@@ -24264,6 +24264,5 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
-  "_syncJsFile": true
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
