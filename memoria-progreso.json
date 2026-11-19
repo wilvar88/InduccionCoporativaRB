@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T19:36:22.759Z",
+  "ultimaActualizacion": "2026-11-19T19:37:03.774Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -59,17 +59,17 @@
     {
       "colIndex": 1003,
       "moduloId": 14,
-      "titulo": "Nuevo Tema (Módulo 14)",
+      "titulo": "Gestión de Proveedores",
       "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.",
-      "tipo": "html",
-      "url": "",
-      "content": "<h3>Nuevo Tema (Módulo 14)</h3><p>Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.</p>",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1LyEMCPDj7Oxvnzf1qMLb_0hHnCoVPAX0/preview",
+      "content": "",
       "fileDataUrl": null,
       "fileName": null,
       "audio": "",
       "popup": null,
       "isAddedByAdmin": true,
-      "updatedAt": "2026-11-19T19:36:22.541Z"
+      "updatedAt": "2026-11-19T19:37:03.554Z"
     }
   ],
   "totalTemasPersonalizados": 42,
@@ -616,17 +616,17 @@
     "1003": {
       "colIndex": 1003,
       "moduloId": 14,
-      "titulo": "Nuevo Tema (Módulo 14)",
+      "titulo": "Gestión de Proveedores",
       "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.",
-      "tipo": "html",
-      "url": "",
-      "content": "<h3>Nuevo Tema (Módulo 14)</h3><p>Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.</p>",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1LyEMCPDj7Oxvnzf1qMLb_0hHnCoVPAX0/preview",
+      "content": "",
       "fileDataUrl": null,
       "fileName": null,
       "audio": "",
       "popup": null,
       "isAddedByAdmin": true,
-      "updatedAt": "2026-11-19T19:36:22.541Z"
+      "updatedAt": "2026-11-19T19:37:03.554Z"
     }
   },
   "permisosPorCargo": {
@@ -24264,5 +24264,6 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
+  "_syncJsFile": true
 }
