@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T17:12:51.943Z",
+  "ultimaActualizacion": "2026-11-19T17:13:35.159Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -10,7 +10,8 @@ window.RB_MEMORIA_INICIAL_JSON = {
     43,
     45,
     44,
-    46
+    46,
+    48
   ],
   "temasAgregados": [
     {
@@ -44,7 +45,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 35,
+  "totalTemasPersonalizados": 36,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -464,6 +465,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-19T17:12:51.127Z"
+    },
+    "49": {
+      "colIndex": 49,
+      "moduloId": 9,
+      "titulo": "Acoso laboral y Acoso sexual 🎥",
+      "descripcion": "Política de cero tolerancia frente a cualquier conducta de acoso laboral o sexual y ruta de atención del Comité de Convivencia.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1OptZSqPBHYQ0QV4dqIgj2yttB6uCLS_-/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T17:13:34.346Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -5773,8 +5789,8 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 6,
       "totalModulosHabilitados": 11,
       "temasVistos": 36,
-      "totalTemasHabilitados": 55,
-      "porcentajeAvance": 65,
+      "totalTemasHabilitados": 54,
+      "porcentajeAvance": 67,
       "progresoModulos": {
         "1": {
           "0": true,
