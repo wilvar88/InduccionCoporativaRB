@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:06:43.748Z",
+  "ultimaActualizacion": "2026-11-19T17:06:53.032Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5736,9 +5736,9 @@
       "ultimoTemaTitulo": "Seguridad informática general",
       "modulosCompletados": 6,
       "totalModulosHabilitados": 11,
-      "temasVistos": 35,
+      "temasVistos": 36,
       "totalTemasHabilitados": 60,
-      "porcentajeAvance": 58,
+      "porcentajeAvance": 60,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -5825,6 +5825,10 @@
           "1": true,
           "col_35": true,
           "col_36": true
+        },
+        "8": {
+          "0": true,
+          "col_41": true
         }
       }
     },
