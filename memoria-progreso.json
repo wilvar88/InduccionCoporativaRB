@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:32:24.663Z",
+  "ultimaActualizacion": "2026-11-19T20:32:27.909Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1665,8 +1665,10 @@
         "65": true,
         "66": true,
         "67": true,
+        "68": true,
         "69": true,
         "70": true,
+        "71": true,
         "72": true,
         "73": true,
         "80": true,
@@ -1784,10 +1786,14 @@
         "Contratos:": true,
         "CONTRATOS:": true,
         "Gestión de Proveedores": true,
-        "GESTION DE PROVEEDORES": true
+        "GESTION DE PROVEEDORES": true,
+        "Workforce": true,
+        "WORKFORCE": true,
+        "Biblioteca de Gestión del Conocimiento": true,
+        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:24.313Z"
+      "updatedAt": "2026-11-19T20:32:27.702Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21299,8 +21305,8 @@
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
       "totalModulosHabilitados": 13,
-      "temasVistos": 32,
-      "totalTemasHabilitados": 57,
+      "temasVistos": 33,
+      "totalTemasHabilitados": 59,
       "porcentajeAvance": 56,
       "progresoModulos": {
         "1": {
