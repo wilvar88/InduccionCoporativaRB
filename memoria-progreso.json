@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:32:11.294Z",
+  "ultimaActualizacion": "2026-11-19T20:32:13.643Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -24315,5 +24315,6 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
+  "_syncJsFile": true
 }
