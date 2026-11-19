@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T17:12:00.305Z",
+  "ultimaActualizacion": "2026-11-19T17:12:51.943Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -44,7 +44,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 34,
+  "totalTemasPersonalizados": 35,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -449,6 +449,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-19T17:11:59.518Z"
+    },
+    "47": {
+      "colIndex": 47,
+      "moduloId": 9,
+      "titulo": "Gobierno corporativo",
+      "descripcion": "Valores corporativos, transparencia, prevención de conflictos de interés y actuación íntegra en Recaudo Bogotá S.A.S.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1yKDC1pNXdG0PZURhBUdlmCGOf6xt3u5X/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T17:12:51.127Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -5752,9 +5767,9 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 8,
-      "ultimoModuloNombre": "Módulo 8: Seguridad informática",
-      "ultimoTemaTitulo": "Seguridad informática general",
+      "ultimoModuloId": 9,
+      "ultimoModuloNombre": "Módulo 9: Gobierno corporativo y ética",
+      "ultimoTemaTitulo": "Gobierno corporativo",
       "modulosCompletados": 6,
       "totalModulosHabilitados": 11,
       "temasVistos": 36,
