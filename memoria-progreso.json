@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T19:38:18.326Z",
+  "ultimaActualizacion": "2026-11-19T19:38:24.789Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -23676,9 +23676,9 @@
       "ultimoTemaTitulo": "Correo corporativo",
       "modulosCompletados": 7,
       "totalModulosHabilitados": 14,
-      "temasVistos": 38,
+      "temasVistos": 39,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 61,
+      "porcentajeAvance": 63,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -23777,6 +23777,10 @@
         "10": {
           "0": true,
           "col_52": true
+        },
+        "12": {
+          "0": true,
+          "col_67": true
         }
       }
     },
