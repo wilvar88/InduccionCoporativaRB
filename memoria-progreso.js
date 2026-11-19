@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T19:36:17.633Z",
+  "ultimaActualizacion": "2026-11-19T19:37:03.774Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -56,9 +56,24 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": true,
       "updatedAt": "2026-11-10T20:34:50.211Z"
+    },
+    {
+      "colIndex": 1003,
+      "moduloId": 14,
+      "titulo": "Gestión de Proveedores",
+      "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1LyEMCPDj7Oxvnzf1qMLb_0hHnCoVPAX0/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": true,
+      "updatedAt": "2026-11-19T19:37:03.554Z"
     }
   ],
-  "totalTemasPersonalizados": 41,
+  "totalTemasPersonalizados": 42,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -598,6 +613,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": true,
       "updatedAt": "2026-11-10T20:34:50.211Z"
+    },
+    "1003": {
+      "colIndex": 1003,
+      "moduloId": 14,
+      "titulo": "Gestión de Proveedores",
+      "descripcion": "Ingresa aquí la descripción y los lineamientos principales de este tema para el Módulo 14: Procesos administrativos.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1LyEMCPDj7Oxvnzf1qMLb_0hHnCoVPAX0/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": true,
+      "updatedAt": "2026-11-19T19:37:03.554Z"
     }
   },
   "permisosPorCargo": {
@@ -23648,8 +23678,8 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "modulosCompletados": 7,
       "totalModulosHabilitados": 14,
       "temasVistos": 38,
-      "totalTemasHabilitados": 61,
-      "porcentajeAvance": 62,
+      "totalTemasHabilitados": 62,
+      "porcentajeAvance": 61,
       "progresoModulos": {
         "1": {
           "0": true,
