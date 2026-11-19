@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T20:32:13.643Z",
+  "ultimaActualizacion": "2026-11-19T20:32:20.724Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1652,9 +1652,6 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "35": true,
         "36": true,
         "37": true,
-        "38": true,
-        "39": true,
-        "40": true,
         "41": true,
         "47": true,
         "49": true,
@@ -1669,17 +1666,11 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "65": true,
         "66": true,
         "67": true,
-        "68": true,
         "69": true,
         "70": true,
-        "71": true,
         "72": true,
-        "73": true,
-        "80": true,
-        "81": true,
         "1001": true,
-        "1002": true,
-        "1003": true
+        "1002": true
       },
       "modulosHabilitados": {
         "Bienvenida": true,
@@ -1751,12 +1742,6 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "COMPROMISO DE LA ORGANIZACION CON LA SALUD, SEGURIDAD Y AMBIENTE": true,
         "Principios y responsabilidades generales": true,
         "PRINCIPIOS Y RESPONSABILIDADES GENERALES": true,
-        "Políticas HSE específicas para Mantenimiento": true,
-        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
-        "Riesgos asociados a las actividades de mantenimiento": true,
-        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
-        "Lineamientos específicos aplicables al cargo": true,
-        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true,
         "Seguridad informática general": true,
         "SEGURIDAD INFORMATICA GENERAL": true,
         "Gobierno corporativo": true,
@@ -1784,26 +1769,14 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "CANALES/PLATAFORMAS PARA CONSULTAR BENEFICIOS": true,
         "Correo corporativo": true,
         "CORREO CORPORATIVO": true,
-        "Workforce": true,
-        "WORKFORCE": true,
         "Moodle": true,
         "MOODLE": true,
         "BUK": true,
-        "Biblioteca de Gestión del Conocimiento": true,
-        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true,
         "Otros sistemas corporativos": true,
-        "OTROS SISTEMAS CORPORATIVOS": true,
-        "Tarjeta Funcionario": true,
-        "TARJETA FUNCIONARIO": true,
-        "Compras:": true,
-        "COMPRAS:": true,
-        "Contratos:": true,
-        "CONTRATOS:": true,
-        "Gestión de Proveedores": true,
-        "GESTION DE PROVEEDORES": true
+        "OTROS SISTEMAS CORPORATIVOS": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:11.316Z"
+      "updatedAt": "2026-11-19T20:32:20.517Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21314,10 +21287,10 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloNombre": "Módulo 11: Bienestar y beneficios",
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
-      "totalModulosHabilitados": 14,
-      "temasVistos": 33,
-      "totalTemasHabilitados": 62,
-      "porcentajeAvance": 53,
+      "totalModulosHabilitados": 11,
+      "temasVistos": 32,
+      "totalTemasHabilitados": 53,
+      "porcentajeAvance": 60,
       "progresoModulos": {
         "1": {
           "0": true,
