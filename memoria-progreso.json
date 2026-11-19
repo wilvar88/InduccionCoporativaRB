@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:18:55.415Z",
+  "ultimaActualizacion": "2026-11-19T17:25:15.726Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -5840,9 +5840,9 @@
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 6,
-      "ultimoModuloNombre": "Módulo 6: Política HSE",
-      "ultimoTemaTitulo": "Política HSE",
+      "ultimoModuloId": 9,
+      "ultimoModuloNombre": "Módulo 9: Gobierno corporativo y ética",
+      "ultimoTemaTitulo": "Gobierno corporativo",
       "modulosCompletados": 7,
       "totalModulosHabilitados": 11,
       "temasVistos": 37,
