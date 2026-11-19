@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:32:56.317Z",
+  "ultimaActualizacion": "2026-11-19T21:33:10.149Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1750,12 +1750,6 @@
         "COMPROMISO DE LA ORGANIZACION CON LA SALUD, SEGURIDAD Y AMBIENTE": true,
         "Principios y responsabilidades generales": true,
         "PRINCIPIOS Y RESPONSABILIDADES GENERALES": true,
-        "Políticas HSE específicas para Mantenimiento": true,
-        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
-        "Riesgos asociados a las actividades de mantenimiento": true,
-        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
-        "Lineamientos específicos aplicables al cargo": true,
-        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true,
         "Seguridad informática general": true,
         "SEGURIDAD INFORMATICA GENERAL": true,
         "Gobierno corporativo": true,
@@ -1799,10 +1793,16 @@
         "Contratos:": true,
         "CONTRATOS:": true,
         "Gestión de Proveedores": true,
-        "GESTION DE PROVEEDORES": true
+        "GESTION DE PROVEEDORES": true,
+        "Políticas HSE específicas para Mantenimiento": true,
+        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
+        "Riesgos asociados a las actividades de mantenimiento": true,
+        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
+        "Lineamientos específicos aplicables al cargo": true,
+        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:55.877Z"
+      "updatedAt": "2026-11-19T20:32:35.375Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -23714,9 +23714,9 @@
       "cantidadIngresos": 18,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 14,
-      "ultimoModuloNombre": "Módulo 14: Procesos administrativos",
-      "ultimoTemaTitulo": "Contratos:",
+      "ultimoModuloId": 7,
+      "ultimoModuloNombre": "Módulo 7: Políticas HSE – Mantenimiento",
+      "ultimoTemaTitulo": "Políticas HSE específicas para Mantenimiento",
       "modulosCompletados": 8,
       "totalModulosHabilitados": 14,
       "temasVistos": 40,
@@ -24315,6 +24315,5 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
-  "_syncJsFile": true
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
