@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T19:37:03.774Z",
+  "ultimaActualizacion": "2026-11-19T20:31:41.445Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -4785,11 +4785,17 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "65": true,
         "66": true,
         "67": true,
+        "68": true,
         "69": true,
         "70": true,
+        "71": true,
         "72": true,
+        "73": true,
+        "80": true,
+        "81": true,
         "1001": true,
-        "1002": true
+        "1002": true,
+        "1003": true
       },
       "modulosHabilitados": {
         "Bienvenida": true,
@@ -4797,7 +4803,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "Objetivo de la inducción": true,
         "OBJETIVO DE LA INDUCCION": true,
         "¿Quiénes somos?": true,
-        "QUIENES SOMOS": true,
+        "¿QUIENES SOMOS?": true,
         "Misión": true,
         "MISION": true,
         "Visión": true,
@@ -4829,7 +4835,6 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "Validadores y Torniquetes": true,
         "VALIDADORES Y TORNIQUETES": true,
         "BCA, DCA, TCS": true,
-        "BCA DCA TCS": true,
         "Flota SITP": true,
         "FLOTA SITP": true,
         "Canales de Comunicación": true,
@@ -4855,11 +4860,11 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "Principales áreas": true,
         "PRINCIPALES AREAS": true,
         "Roles operativos:": true,
-        "ROLES OPERATIVOS": true,
+        "ROLES OPERATIVOS:": true,
         "Política HSE": true,
         "POLITICA HSE": true,
         "Compromiso de la organización con la salud, seguridad y ambiente": true,
-        "COMPROMISO DE LA ORGANIZACION CON LA SALUD SEGURIDAD Y AMBIENTE": true,
+        "COMPROMISO DE LA ORGANIZACION CON LA SALUD, SEGURIDAD Y AMBIENTE": true,
         "Principios y responsabilidades generales": true,
         "PRINCIPIOS Y RESPONSABILIDADES GENERALES": true,
         "Políticas HSE específicas para Mantenimiento": true,
@@ -4873,11 +4878,10 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "Gobierno corporativo": true,
         "GOBIERNO CORPORATIVO": true,
         "Acoso laboral y Acoso sexual 🎥": true,
-        "ACOSO LABORAL Y ACOSO SEXUAL": true,
+        "ACOSO LABORAL Y ACOSO SEXUAL 🎥": true,
         "Conductas esperadas y Canales de reporte": true,
         "CONDUCTAS ESPERADAS Y CANALES DE REPORTE": true,
         "SARLAFT / SAGRILAFT": true,
-        "SARLAFT  SAGRILAFT": true,
         "Recomendaciones y Lineamientos": true,
         "RECOMENDACIONES Y LINEAMIENTOS": true,
         "Bienestar": true,
@@ -4891,18 +4895,31 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "Beneficios para colaboradores": true,
         "BENEFICIOS PARA COLABORADORES": true,
         "Beneficios para la familia (si aplica)": true,
-        "BENEFICIOS PARA LA FAMILIA SI APLICA": true,
+        "BENEFICIOS PARA LA FAMILIA (SI APLICA)": true,
         "Canales/plataformas para consultar beneficios": true,
-        "CANALESPLATAFORMAS PARA CONSULTAR BENEFICIOS": true,
+        "CANALES/PLATAFORMAS PARA CONSULTAR BENEFICIOS": true,
         "Correo corporativo": true,
         "CORREO CORPORATIVO": true,
+        "Workforce": true,
+        "WORKFORCE": true,
         "Moodle": true,
         "MOODLE": true,
         "BUK": true,
+        "Biblioteca de Gestión del Conocimiento": true,
+        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true,
         "Otros sistemas corporativos": true,
-        "OTROS SISTEMAS CORPORATIVOS": true
+        "OTROS SISTEMAS CORPORATIVOS": true,
+        "Compras:": true,
+        "COMPRAS:": true,
+        "Contratos:": true,
+        "CONTRATOS:": true,
+        "Gestión de Proveedores": true,
+        "GESTION DE PROVEEDORES": true,
+        "Tarjeta Funcionario": true,
+        "TARJETA FUNCIONARIO": true
       },
-      "updatedAt": "2026-11-19T17:55:00.000Z"
+      "isCustomizedByAdmin": true,
+      "updatedAt": "2026-11-19T20:31:41.110Z"
     },
     "ANALISTA III DE GESTION HUMANA": {
       "cargo": "ANALISTA III DE GESTION HUMANA",
@@ -19414,10 +19431,10 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "ultimoModuloNombre": "Módulo 1: Bienvenida e introducción corporativa",
       "ultimoTemaTitulo": "Objetivo de la inducción",
       "modulosCompletados": 2,
-      "totalModulosHabilitados": 12,
+      "totalModulosHabilitados": 14,
       "temasVistos": 22,
-      "totalTemasHabilitados": 56,
-      "porcentajeAvance": 39,
+      "totalTemasHabilitados": 62,
+      "porcentajeAvance": 35,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -23674,12 +23691,12 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "temaActual": "Principios y responsabilidades generales",
       "ultimoModuloId": 14,
       "ultimoModuloNombre": "Módulo 14: Procesos administrativos",
-      "ultimoTemaTitulo": "Compras:",
-      "modulosCompletados": 7,
+      "ultimoTemaTitulo": "Contratos:",
+      "modulosCompletados": 8,
       "totalModulosHabilitados": 14,
-      "temasVistos": 38,
+      "temasVistos": 40,
       "totalTemasHabilitados": 62,
-      "porcentajeAvance": 61,
+      "porcentajeAvance": 65,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -23778,6 +23795,14 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "10": {
           "0": true,
           "col_52": true
+        },
+        "12": {
+          "0": true,
+          "col_67": true
+        },
+        "13": {
+          "0": true,
+          "col_73": true
         }
       }
     },
