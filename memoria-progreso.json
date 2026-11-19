@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T19:34:57.011Z",
+  "ultimaActualizacion": "2026-11-19T19:35:31.304Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -57,7 +57,7 @@
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 39,
+  "totalTemasPersonalizados": 40,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -537,6 +537,21 @@
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-19T19:34:38.643Z"
+    },
+    "80": {
+      "colIndex": 80,
+      "moduloId": 14,
+      "titulo": "Compras:",
+      "descripcion": "Lineamientos para la solicitud de bienes y servicios, cotizaciones, órdenes de compra y recepción de proveedores.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1rUm7hXqbpRDlUeOZOpOOOlxRKOfhqToT/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T19:35:30.907Z"
     },
     "1001": {
       "colIndex": 1001,
@@ -24204,5 +24219,6 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
+  "_syncJsFile": true
 }
