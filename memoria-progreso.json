@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:32:02.846Z",
+  "ultimaActualizacion": "2026-11-19T20:32:05.950Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1668,8 +1668,10 @@
         "65": true,
         "66": true,
         "67": true,
+        "68": true,
         "69": true,
         "70": true,
+        "71": true,
         "72": true,
         "1001": true,
         "1002": true
@@ -1744,6 +1746,12 @@
         "COMPROMISO DE LA ORGANIZACION CON LA SALUD, SEGURIDAD Y AMBIENTE": true,
         "Principios y responsabilidades generales": true,
         "PRINCIPIOS Y RESPONSABILIDADES GENERALES": true,
+        "Políticas HSE específicas para Mantenimiento": true,
+        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
+        "Riesgos asociados a las actividades de mantenimiento": true,
+        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
+        "Lineamientos específicos aplicables al cargo": true,
+        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true,
         "Seguridad informática general": true,
         "SEGURIDAD INFORMATICA GENERAL": true,
         "Gobierno corporativo": true,
@@ -1776,15 +1784,13 @@
         "BUK": true,
         "Otros sistemas corporativos": true,
         "OTROS SISTEMAS CORPORATIVOS": true,
-        "Políticas HSE específicas para Mantenimiento": true,
-        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
-        "Riesgos asociados a las actividades de mantenimiento": true,
-        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
-        "Lineamientos específicos aplicables al cargo": true,
-        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true
+        "Workforce": true,
+        "WORKFORCE": true,
+        "Biblioteca de Gestión del Conocimiento": true,
+        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:02.565Z"
+      "updatedAt": "2026-11-19T20:32:05.637Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21296,8 +21302,8 @@
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
       "totalModulosHabilitados": 12,
-      "temasVistos": 32,
-      "totalTemasHabilitados": 56,
+      "temasVistos": 33,
+      "totalTemasHabilitados": 58,
       "porcentajeAvance": 57,
       "progresoModulos": {
         "1": {
