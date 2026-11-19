@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:32:05.950Z",
+  "ultimaActualizacion": "2026-11-19T20:32:09.052Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1673,6 +1673,7 @@
         "70": true,
         "71": true,
         "72": true,
+        "73": true,
         "1001": true,
         "1002": true
       },
@@ -1779,18 +1780,20 @@
         "CANALES/PLATAFORMAS PARA CONSULTAR BENEFICIOS": true,
         "Correo corporativo": true,
         "CORREO CORPORATIVO": true,
+        "Workforce": true,
+        "WORKFORCE": true,
         "Moodle": true,
         "MOODLE": true,
         "BUK": true,
+        "Biblioteca de Gestión del Conocimiento": true,
+        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true,
         "Otros sistemas corporativos": true,
         "OTROS SISTEMAS CORPORATIVOS": true,
-        "Workforce": true,
-        "WORKFORCE": true,
-        "Biblioteca de Gestión del Conocimiento": true,
-        "BIBLIOTECA DE GESTION DEL CONOCIMIENTO": true
+        "Tarjeta Funcionario": true,
+        "TARJETA FUNCIONARIO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:05.637Z"
+      "updatedAt": "2026-11-19T20:32:08.734Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21301,10 +21304,10 @@
       "ultimoModuloNombre": "Módulo 11: Bienestar y beneficios",
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
-      "totalModulosHabilitados": 12,
+      "totalModulosHabilitados": 13,
       "temasVistos": 33,
-      "totalTemasHabilitados": 58,
-      "porcentajeAvance": 57,
+      "totalTemasHabilitados": 59,
+      "porcentajeAvance": 56,
       "progresoModulos": {
         "1": {
           "0": true,
