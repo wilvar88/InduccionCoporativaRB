@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T17:10:31.886Z",
+  "ultimaActualizacion": "2026-11-19T17:11:17.564Z",
   "version": "2.3",
   "temasEliminados": [
     21,
@@ -38,7 +38,7 @@
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 33,
+  "totalTemasPersonalizados": 34,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -428,6 +428,21 @@
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-18T21:27:00.406Z"
+    },
+    "41": {
+      "colIndex": 41,
+      "moduloId": 8,
+      "titulo": "Seguridad informática general",
+      "descripcion": "Principios de Confidencialidad, Integridad y Disponibilidad de la información corporativa.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/19sCFR6ZV7o1WnJibUq2a2Ow0fScai7fZ/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T17:11:16.803Z"
     },
     "1001": {
       "colIndex": 1001,
