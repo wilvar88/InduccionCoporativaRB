@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T20:32:35.589Z",
+  "ultimaActualizacion": "2026-11-19T20:32:56.317Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1751,6 +1751,12 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "COMPROMISO DE LA ORGANIZACION CON LA SALUD, SEGURIDAD Y AMBIENTE": true,
         "Principios y responsabilidades generales": true,
         "PRINCIPIOS Y RESPONSABILIDADES GENERALES": true,
+        "Políticas HSE específicas para Mantenimiento": true,
+        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
+        "Riesgos asociados a las actividades de mantenimiento": true,
+        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
+        "Lineamientos específicos aplicables al cargo": true,
+        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true,
         "Seguridad informática general": true,
         "SEGURIDAD INFORMATICA GENERAL": true,
         "Gobierno corporativo": true,
@@ -1794,16 +1800,10 @@ window.RB_MEMORIA_INICIAL_JSON = {
         "Contratos:": true,
         "CONTRATOS:": true,
         "Gestión de Proveedores": true,
-        "GESTION DE PROVEEDORES": true,
-        "Políticas HSE específicas para Mantenimiento": true,
-        "POLITICAS HSE ESPECIFICAS PARA MANTENIMIENTO": true,
-        "Riesgos asociados a las actividades de mantenimiento": true,
-        "RIESGOS ASOCIADOS A LAS ACTIVIDADES DE MANTENIMIENTO": true,
-        "Lineamientos específicos aplicables al cargo": true,
-        "LINEAMIENTOS ESPECIFICOS APLICABLES AL CARGO": true
+        "GESTION DE PROVEEDORES": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:35.375Z"
+      "updatedAt": "2026-11-19T20:32:55.877Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
