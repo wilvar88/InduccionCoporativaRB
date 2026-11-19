@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:32:20.724Z",
+  "ultimaActualizacion": "2026-11-19T20:32:24.663Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -1668,8 +1668,12 @@
         "69": true,
         "70": true,
         "72": true,
+        "73": true,
+        "80": true,
+        "81": true,
         "1001": true,
-        "1002": true
+        "1002": true,
+        "1003": true
       },
       "modulosHabilitados": {
         "Bienvenida": true,
@@ -1772,10 +1776,18 @@
         "MOODLE": true,
         "BUK": true,
         "Otros sistemas corporativos": true,
-        "OTROS SISTEMAS CORPORATIVOS": true
+        "OTROS SISTEMAS CORPORATIVOS": true,
+        "Tarjeta Funcionario": true,
+        "TARJETA FUNCIONARIO": true,
+        "Compras:": true,
+        "COMPRAS:": true,
+        "Contratos:": true,
+        "CONTRATOS:": true,
+        "Gestión de Proveedores": true,
+        "GESTION DE PROVEEDORES": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:32:20.517Z"
+      "updatedAt": "2026-11-19T20:32:24.313Z"
     },
     "ANALISTA I DE MESA DE SERVICIOS": {
       "cargo": "ANALISTA I DE MESA DE SERVICIOS",
@@ -21286,10 +21298,10 @@
       "ultimoModuloNombre": "Módulo 11: Bienestar y beneficios",
       "ultimoTemaTitulo": "Bienestar",
       "modulosCompletados": 4,
-      "totalModulosHabilitados": 11,
+      "totalModulosHabilitados": 13,
       "temasVistos": 32,
-      "totalTemasHabilitados": 53,
-      "porcentajeAvance": 60,
+      "totalTemasHabilitados": 57,
+      "porcentajeAvance": 56,
       "progresoModulos": {
         "1": {
           "0": true,
@@ -24288,6 +24300,5 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
-  "_syncJsFile": true
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
