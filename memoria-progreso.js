@@ -1,6 +1,6 @@
 // Archivo de memoria inicial compatible con apertura local (file://) y sincronizado con memoria-progreso.json
 window.RB_MEMORIA_INICIAL_JSON = {
-  "ultimaActualizacion": "2026-11-19T19:35:31.304Z",
+  "ultimaActualizacion": "2026-11-19T19:36:17.633Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -58,7 +58,7 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "updatedAt": "2026-11-10T20:34:50.211Z"
     }
   ],
-  "totalTemasPersonalizados": 40,
+  "totalTemasPersonalizados": 41,
   "contenidosTemas": {
     "2": {
       "colIndex": 2,
@@ -553,6 +553,21 @@ window.RB_MEMORIA_INICIAL_JSON = {
       "popup": null,
       "isAddedByAdmin": false,
       "updatedAt": "2026-11-19T19:35:30.907Z"
+    },
+    "81": {
+      "colIndex": 81,
+      "moduloId": 14,
+      "titulo": "Contratos:",
+      "descripcion": "Etapas de estructuración, revisión jurídica, firma, pólizas y supervisión de contratos.",
+      "tipo": "video",
+      "url": "https://drive.google.com/file/d/1SEVt_8HyWUb5aNSBBGryJgq1_lZjgquP/preview",
+      "content": "",
+      "fileDataUrl": null,
+      "fileName": null,
+      "audio": "",
+      "popup": null,
+      "isAddedByAdmin": false,
+      "updatedAt": "2026-11-19T19:36:17.319Z"
     },
     "1001": {
       "colIndex": 1001,
