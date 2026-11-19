@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T20:31:38.492Z",
+  "ultimaActualizacion": "2026-11-19T20:31:41.445Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -4918,7 +4918,7 @@
         "TARJETA FUNCIONARIO": true
       },
       "isCustomizedByAdmin": true,
-      "updatedAt": "2026-11-19T20:31:37.244Z"
+      "updatedAt": "2026-11-19T20:31:41.110Z"
     },
     "ANALISTA III DE GESTION HUMANA": {
       "cargo": "ANALISTA III DE GESTION HUMANA",
@@ -24289,5 +24289,6 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
+  "_syncJsFile": true
 }
