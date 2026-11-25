@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-25T21:50:05.535Z",
+  "ultimaActualizacion": "2026-11-25T21:56:45.294Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -23729,9 +23729,9 @@
       "cantidadIngresos": 19,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 10,
-      "ultimoModuloNombre": "Módulo 10: Normas y cultura operacional",
-      "ultimoTemaTitulo": "Recomendaciones y Lineamientos",
+      "ultimoModuloId": 12,
+      "ultimoModuloNombre": "Módulo 12: Herramientas corporativas",
+      "ultimoTemaTitulo": "Correo corporativo",
       "modulosCompletados": 8,
       "totalModulosHabilitados": 14,
       "temasVistos": 40,
