@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-19T21:33:44.399Z",
+  "ultimaActualizacion": "2026-11-25T21:49:56.708Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -23725,8 +23725,8 @@
       "jefe": "",
       "rol": "Super Administrador",
       "primerIngreso": "5/11/26, 10:33:56 p. m.",
-      "ultimoIngreso": "19/11/26, 12:10:21 p. m.",
-      "cantidadIngresos": 18,
+      "ultimoIngreso": "25/11/26, 4:49:56 p. m.",
+      "cantidadIngresos": 19,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
       "ultimoModuloId": 14,
@@ -24330,6 +24330,5 @@
       "progresoModulos": {}
     }
   },
-  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA==",
-  "_syncJsFile": true
+  "_syncVault": "BwOR84V1kVMWHJSv.QBnr6clhaTFC2fDPSyTzGA==.ebsz1iIcjkECsEXK3LqzNgMxFmsUTA2rgoFqLVwTkm9FObaCYacllA=="
 }
