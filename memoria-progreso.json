@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-11-25T21:49:56.708Z",
+  "ultimaActualizacion": "2026-11-25T21:50:05.535Z",
   "version": "2.4",
   "temasEliminados": [
     21,
@@ -476,7 +476,7 @@
       "audio": "",
       "popup": null,
       "isAddedByAdmin": false,
-      "updatedAt": "2026-11-19T21:33:44.034Z"
+      "updatedAt": "2026-11-19T21:33:28.845Z"
     },
     "41": {
       "colIndex": 41,
@@ -23729,9 +23729,9 @@
       "cantidadIngresos": 19,
       "moduloActual": "Módulo 6: Política HSE",
       "temaActual": "Principios y responsabilidades generales",
-      "ultimoModuloId": 14,
-      "ultimoModuloNombre": "Módulo 14: Procesos administrativos",
-      "ultimoTemaTitulo": "Contratos:",
+      "ultimoModuloId": 10,
+      "ultimoModuloNombre": "Módulo 10: Normas y cultura operacional",
+      "ultimoTemaTitulo": "Recomendaciones y Lineamientos",
       "modulosCompletados": 8,
       "totalModulosHabilitados": 14,
       "temasVistos": 40,
